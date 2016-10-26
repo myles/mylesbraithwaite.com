@@ -1,0 +1,34 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		{% if page.title %}
+		<title>{{ page.title | xml_escape }}</title>
+		{% else %}
+		<title>{{ site.title | xml_escape }}</title>
+		{% endif %}
+
+		{% if page.description %}
+		<description>{{ page.description | xml_escape }}</description>
+		{% else %}
+		<description>{{ site.description | xml_escape }}</description>
+		{% endif %}
+
+    {% if page.link %}
+    <link>{{ page.link | xml_escape }}</link>
+    {% else %}
+		<link>{{ site.baseurl | prepend: site.url | xml_escape }}/</link>
+    {% endif %}
+
+		<atom:link href="{{ page.url | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
+
+		<pubDate>{{ site.time | date_to_rfc822 | xml_escape }}</pubDate>
+		<lastBuildDate>{{ site.time | date_to_rfc822 | xml_escape }}</lastBuildDate>
+
+		<generator>{{ 'Jekyll v' | xml_escape }}{{ jekyll.version | xml_escape }}</generator>
+
+		{{ content }}
+	</channel>
+</rss>

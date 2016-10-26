@@ -1,0 +1,6 @@
+.navigation {
+  @at-root #{&}__item {
+    display: inline;
+    margin: .5rem 1rem;
+  }
+}

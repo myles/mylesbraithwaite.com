@@ -1,0 +1,43 @@
+---
+layout: post
+---
+
+<div class="post post--article">
+    <div class="post__feature-image">
+        <div class="post__header-image" style="background-image: url('{{ page.feature_image | prepend: page.url | prepend: site.upload_url }}')">
+
+        <div class="post__header-overlay">
+            <h1 class="post__title post__title--overlay">
+                <a class="post__link post__link--overlay" href="{{ page.url }}">{{ page.title }}</a>
+            </h1>
+
+            <h2 class="post__abstract post__abstract--overlay">{{ page.abstract }}</h2>
+        </div>
+    </div>
+
+    <div class="post__wrapper">
+        <div class="post__aside">
+            <ul class="post__meta-list">
+                <li class="post__meta post__meta--date">
+                    {{ page.date | date: '%d %B, %Y %I:%M %p' }}
+                </li>
+
+                <li class="post__meta post__meta--tags">
+                    {% include c_tags.html tags=page.tags %}
+                </li>
+
+                <li class="post__meta post__meta--time-to-read">
+                    {{ page.content | reading_time_as_s }}
+                </li>
+
+                <li class="post__meta post__meta--permalink">
+                    <a href="{{ post.url }}">Permalink</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="post__body">
+            {{ page.excerpt }}
+        </div>
+    </div>
+</div>

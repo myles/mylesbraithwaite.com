@@ -1,0 +1,69 @@
+<div class="post post--bookmark">
+    <div class="post__wrapper">
+        <div class="post__header">
+            <h1 class="post__title">
+                <a class="post__bookmark-link" href="{{ post.bookmark.url }}">{{ post.title }}</a>
+                <a class="post__link" href="{{ post.url }}" title="{{ post.title }}">
+                    {% include c_eyeglasses.svg css_class="post__link-icon" %}
+                </a>
+            </h1>
+
+            {% if post.abstract %}
+            <h2 class="post__abstract">{{ post.abstract }}</h2>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="post__wrapper">
+        <div class="post__aside">
+            <ul class="post__meta-list">
+                <li class="post__meta post__meta--date">
+                    {{ post.date | date: '%d %B, %Y %I:%M %p' }}
+                </li>
+
+                <li class="post__meta post__meta--tags">
+                    {% include c_tags.html tags=post.tags %}
+                </li>
+
+                <li class="post__meta post__meta--time-to-read">
+                    {{ post.content | reading_time_as_s }}
+                </li>
+
+                <li class="post__meta post__meta--permalink">
+                    <a href="{{ post.url }}">Permalink</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="post__body">
+            {% if post.quote %}
+            <blockquote class="blockquote" cite="{{ post.bookmark.url }}">
+                {{ post.excerpt }}
+
+                {% if post.bookmark.title and post.bookmark.author %}
+                <p class="blockquote__footer">
+                    <cite>{{ post.bookmark.title }}</cite> by
+                    <a href="{{ post.bookmark.url }}">{{ post.bookmark.author }}</a>.
+                </p>
+                {% elsif post.bookmark.title %}
+                <p class="blockquote__footer">
+                    <cite>
+                        <a href="{{ post.bookmark.url }}">
+                            {{ post.bookmark.title }}
+                        </a>
+                    </cite>
+                </p>
+                {% elsif post.bookmark.author %}
+                <p class="blockquote__footer">
+                    <a href="{{ post.bookmark.url }}">
+                        {{ post.bookmark.atuhor }}
+                    </a>
+                </p>
+                {% endif %}
+            </blockquote>
+            {% else %}
+            {{ post.excerpt }}
+            {% endif %}
+        </div>
+    </div>
+</div>

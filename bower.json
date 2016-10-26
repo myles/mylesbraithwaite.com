@@ -1,0 +1,6 @@
+{
+  "name": "mylesbraithwaite.com-www",
+  "dependencies": {
+    "old-fashioned": "https://github.com/myles/old-fashioned.git"
+  }
+}

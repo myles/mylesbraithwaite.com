@@ -1,0 +1,64 @@
+source: ./source/
+destination: ./build/
+
+# Rubygems
+gems:
+  - jekyll-watch
+  - jekyll-assets
+  - jekyll-sitemap
+  - jekyll-archives
+  - jekyll-paginate
+  - jekyll-typogrify
+  - jekyll-time-to-read
+
+# URL Settings
+url: http://127.0.0.1:4000
+base_url: ""
+upload_url: http://127.0.0.1:4000/uploads
+permalink: /:year/:y_day/:title/
+
+# Site Meta Data
+title: Myles Braithwaite
+subtitle: "Hoping for the Best, Imagining the Worst."
+
+# Date Time Format
+date_format: '%d %B, %Y'
+time_format: '%I:%M %p'
+datetime_format: '%d %B, %Y %I:%M %p'
+
+# Build Settings
+markdown: redcarpet
+redcarpet:
+  extensions: []
+
+# Pagination Settings
+paginate: 20
+paginate_path: /page:num/
+
+# Jekyll-Assets Settings
+assets:
+  dirname: assets
+  baseurl: /assets/
+  cachebust: soft
+  sources:
+    - _assets/js
+    - _assets/img
+    - _assets/scss
+    - _assets/bower
+  debug: true
+
+# Jekyll-Archives Settings
+jekyll-archives:
+  eanbled: all
+  permalinks:
+    year: '/archive/:year/'
+    month: '/archive/:year/:month/'
+    day: '/:year/:y_day/'
+    tag: '/tag/:name/'
+    category: '/:name/'
+  layouts:
+    year: archive_year
+    month: archive_month
+    day: archive_day
+    tag: archive_tag
+    category: archive_category

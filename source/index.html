@@ -1,0 +1,47 @@
+---
+layout: base
+title: Myles Braithwaite
+subtitle: "Hoping for the Best, Imagining the Worst."
+---
+
+<div class="post-list">
+    {% for post in paginator.posts %}
+        {% if post.category == 'article' %}
+            {% include post_article.html post=post %}
+        {% elsif post.category == 'bookmark' %}
+            {% include post_bookmark.html post=post %}
+        {% else %}
+            {% include post_simple.html post=post %}
+        {% endif %}
+
+        {% if forloop.last == false %}
+            <hr class="post-list__separator"/>
+        {% endif %}
+    {% endfor %}
+
+    {% if paginator.total_pages == '1' %}
+    <div class="post-list__pagination pagination">
+        {% if paginator.previous_page %}
+        <a class="c-button c-button--colour-primary pagination__previous pagination__previous--active" href="{{ paginator.previous_page_path }}">&larr; Prev</a>
+        {% else %}
+        <span class="c-button pagination__previous pagination__previous--passive">&larr; Prev</span>
+        {% endif %}
+
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+                <span class="c-button pagination__page pagination__page--current">{{ page }}</span>
+            {% elsif page == 1 %}
+                <a class="c-button pagination__page" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
+            {% else %}
+                <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if paginator.next_page %}
+        <a class="c-button c-button--colour-primary pagination__next pagination__next--active" href="{{ paginator.next_page_path }}">Next &rarr;</a>
+        {% else %}
+        <span class="c-button pagination__next pagination__next--passive">Next &rarr;</span>
+        {% endif %}
+    </div>
+    {% endif %}
+</div>

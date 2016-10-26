@@ -1,0 +1,39 @@
+<div class="post post--simple">
+    <div class="post__wrapper">
+        <div class="post__header">
+            <h1 class="post__title">
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </h1>
+
+            {% if post.abstract %}
+            <h2 class="post__abstract">{{ post.abstract }}</h2>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="post__wrapper">
+        <div class="post__aside">
+            <ul class="post__meta-list">
+                <li class="post__meta post__meta--date">
+                    {{ post.date | date: '%d %B, %Y %I:%M %p' }}
+                </li>
+
+                <li class="post__meta post__meta--tags">
+                    {% include c_tags.html tags=post.tags %}
+                </li>
+
+                <li class="post__meta post__meta--time-to-read">
+                    {{ post.content | reading_time_as_s }}
+                </li>
+
+                <li class="post__meta post__meta--permalink">
+                    <a href="{{ post.url }}">Permalink</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="post__body">
+            {{ post.excerpt }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+.post-detail {
+  @at-root #{&}__footer {
+    @include outer-container;
+  }
+
+  @at-root #{&}__footer-title {
+    margin-top: 0;
+  }
+
+  @at-root #{&}__author {
+    @include span-columns(6);
+    @include shift(2);
+    @include omega();
+  }
+
+  @at-root #{&}__author-image {
+    @include span-columns(1 of 6);
+  }
+
+  @at-root #{&}__author-info {
+    @include span-columns(5 of 6);
+  }
+
+  @at-root #{&}__share {
+    @include span-columns(4);
+  }
+
+  @at-root #{&}__pagination {
+    @include span-columns(12);
+    @include omega();
+  }
+}

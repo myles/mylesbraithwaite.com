@@ -1,0 +1,19 @@
+{% for tag_id in include.tags %}
+    {% assign tag = site.data.tags[tag_id] %}
+
+    {% if tag %}
+        <a href="/tag/{{ tag_id }}/" rel="tag" class="post__meta--tag-link">
+            {% if tag.acronym %}
+                <acronym title="{{ tag.name }}">
+                    {{ tag.acronym | improve }}
+                </acronym>
+            {% else %}
+                {{ tag.name | improve }}
+            {% endif %}
+        </a>
+    {% else %}
+        <a href="/tag/{{ tag_id | uri_escape }}/" rel="tag">
+            {{ tag_id | improve }}
+        </a>
+    {% endif %}
+{% endfor %}

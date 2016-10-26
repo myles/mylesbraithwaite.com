@@ -1,0 +1,42 @@
+// Abstracts
+// ---------
+@import 'old-fashioned/source/css/scss/abstracts/variables';
+@import 'old-fashioned/source/css/scss/abstracts/maps';
+
+// Mixins
+@import 'old-fashioned/source/css/scss/abstracts/mixins/background-variant';
+@import 'old-fashioned/source/css/scss/abstracts/mixins/border-radius';
+@import 'old-fashioned/source/css/scss/abstracts/mixins/buttons';
+@import 'old-fashioned/source/css/scss/abstracts/mixins/font-size';
+@import 'old-fashioned/source/css/scss/abstracts/mixins/hover';
+@import 'old-fashioned/source/css/scss/abstracts/mixins/lists';
+@import 'old-fashioned/source/css/scss/abstracts/mixins/svg';
+@import 'old-fashioned/source/css/scss/abstracts/mixins/tab-focus';
+@import 'old-fashioned/source/css/scss/abstracts/mixins/text-color-variant';
+
+// Base
+// ----
+@import 'old-fashioned/source/css/scss/base/normalize';
+@import 'old-fashioned/source/css/scss/base/reboot';
+@import 'old-fashioned/source/css/scss/base/html';
+@import 'old-fashioned/source/css/scss/base/body';
+
+@import 'old-fashioned/source/css/scss/base/code';
+@import 'old-fashioned/source/css/scss/base/forms';
+@import 'old-fashioned/source/css/scss/base/global-classes';
+@import 'old-fashioned/source/css/scss/base/headings';
+@import 'old-fashioned/source/css/scss/base/links';
+@import 'old-fashioned/source/css/scss/base/tables';
+@import 'old-fashioned/source/css/scss/base/text';
+
+// Components
+// ----------
+@import 'old-fashioned/source/css/scss/components/background-variants';
+@import 'old-fashioned/source/css/scss/components/buttons';
+@import 'old-fashioned/source/css/scss/components/logos';
+@import 'old-fashioned/source/css/scss/components/svg';
+@import 'old-fashioned/source/css/scss/components/text-colour-variants';
+
+// Layout
+// ------
+@import 'old-fashioned/source/css/scss/layout/layout';

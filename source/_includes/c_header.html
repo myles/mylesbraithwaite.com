@@ -1,0 +1,16 @@
+<div class="header">
+    <nav class="header__navigation navigation">
+        <ul class="navigation__list">
+            {% for link in site.data.navigation %}
+            <li class="navigation__item">
+                <a href="{{ link.url }}" class="navigation__link" {% if link.title %}title="{{ link.title }}"{% endif %}>
+                    {{ link.name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    <h1 class="header__title">{{ site.title }}</h1>
+    <h2 class="header__subtitle">{{ site.subtitle }}</h2>
+</div>

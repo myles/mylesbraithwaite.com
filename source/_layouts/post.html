@@ -1,0 +1,51 @@
+---
+layout: base
+---
+
+<div class="post-detail">
+    {{ content }}
+
+    <div class="post-detail__footer">
+        <div class="post-detail__author">
+            <div class="post-detail__author-image">
+                <img src="" alt="{{ site.data.author.name }}">
+            </div>
+
+            <div class="post-detail__author-info">
+                <h5 class="post-detail__footer-title post-detail__author-name">
+                    <a class="post-detail__author-link" href="{{ site.data.author.homepage }}">
+                        {{ site.data.author.name }}
+                    </a>
+                </h5>
+
+                <div class="post-detail__author-copy">{{ site.data.author.copy | markdownify }}</div>
+            </div>
+        </div>
+
+        <div class="post-detail__share">
+            <h5 class="post-detail__footer-title">Share</h5>
+
+            <ul>
+                <li><a class="c-button c-button--colour-corp-twitter" href="https://twitter.com/intent/tweet?text={{ page.title | cgi_escape }}&url={{ page.url | absolute_url | cgi_escape }}&via=mylesb&related=mylesb" rel="nofollow" target="_blank" title="Share on Twitter">Twitter</a></li>
+
+                <li><a class="c-button c-button--colour-corp-facebook" href="https://facebook.com/sharer.php?u={{ page.url | absolute_url | cgi_escape }}" rel="nofollow" target="_blank" title="Share on Facebook">Facebook</a></li>
+
+                <li><a class="c-button c-button--colour-corp-google-plus" href="https://plus.google.com/share?url={{ page.url | absolute_url | cgi_escape }}" rel="nofollow" target="_blank" title="Share on Google+">Google+</a></li>
+            </ul>
+        </div>
+
+        <div class="post-detail__pagination pagination">
+            {% if page.previous.url %}
+            <a class="pagination__previous pagination__previous--active" title="{{ page.previous.title }}" href="{{ page.previous.url }}">&larr; {{ page.previous.title }}</a>
+            {% else %}
+            <span class="pagination__previous pagination__previous--passive">Prev</span>
+            {% endif %}
+
+            {% if page.next.url %}
+            <a class="pagination__next pagination__next--active" title="{{ page.next.title }}" href="{{ page.next.url }}">{{ page.next.title }} &rarr;</a>
+            {% else %}
+            <span class="pagination__next pagination__next--passive">Next</span>
+            {% endif %}
+        </div>
+    </div>
+</div>

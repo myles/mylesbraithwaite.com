@@ -1,0 +1,20 @@
+---
+apple:
+  name: Apple
+brutal-design:
+  name: Brutal Desgin
+html:
+  name: HTML
+  acronym: HyperText Markup Language
+ipod:
+  name: iPod
+js:
+  name: Javascript
+lorem-ipsum:
+  name: Lorem Ipsum
+music:
+  name: Music
+steve-jobs:
+  name: Steve Jobs
+web-design:
+  name: Web Design

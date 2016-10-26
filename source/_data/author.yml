@@ -1,0 +1,33 @@
+name: Myles Braithwaite
+email: me@mylesbraithwaite.com
+homepage: https://mylesb.ca/
+
+copy: |
+      Myles Braithwaite lives in Toronto, Ontario, Canada where he run a small consulting company called [Monkey in your Soul](https://monkeyinyoursoul.com/) (you should hire me). His interests range from photography to hiking. He is also interested in programming, music, snowboarding, and films.
+
+location:
+  locality: Toronto
+  region: Ontario
+  country: Canada
+
+social:
+  - name: Twitter
+    slug: twitter
+    url: https://twitter.com/mylesb
+  - name: GitHub
+    slug: github
+    url: https://github.com/myles
+  - name: Pinterest
+    slug: pinterest
+    url: https://pinterest.com/mylesb/
+  - name: Instagram
+    slug: instagram
+    url: https://instagram.com/myles
+
+elsewhere:
+  - name: I Love Myles
+    slug: ilovemyles
+    url: https://ilovemyles.com/
+  - name: Myles' Lab
+    slug: myleslab
+    url: https://mylesbraithwaite.org/

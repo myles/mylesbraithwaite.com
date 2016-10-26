@@ -1,0 +1,91 @@
+.post {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+  @at-root #{&}__wrapper {
+    @include outer-container;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @at-root #{&}__header {
+    @include span-columns(10);
+    @include shift(2);
+    @include omega();
+
+    margin-bottom: .5rem;
+  }
+
+  @at-root #{&}__header-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 20rem;
+    margin-bottom: .5rem;
+    width: 100%;
+  }
+
+  @at-root #{&}__header-overlay {
+    background-color: rgba(0, 0, 0, .5);
+    bottom: 35%;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+
+  @at-root #{&}__title {
+    font-size: $font-size-heading-three;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    @at-root #{&}--overlay {
+      color: $colour-white;
+    }
+  }
+
+  @at-root #{&}__link {
+    @at-root #{&}--overlay {
+      color: $colour-white;
+
+      // scss-lint:disable NestingDepth
+      // `scss-lint` doesn't understand that these aren't more than one NestingDepth
+      &:hover {
+        color: darken($colour-white, 25%);
+      }
+      // scss-lint:enable NestingDepth
+    }
+  }
+
+  @at-root #{&}__link-icon {
+    height: 1em;
+    vertical-align: middle;
+    width: 1em;
+  }
+
+  @at-root #{&}__abstract {
+    font-size: $font-size-heading-five;
+    font-weight: normal;
+    margin-bottom: 0;
+    margin-top: 0;
+
+    @at-root #{&}--overlay {
+      color: $colour-white;
+    }
+  }
+
+  @at-root #{&}__body {
+    @include span-columns(10);
+    @include omega();
+  }
+
+  @at-root #{&}__aside {
+    @include span-columns(2);
+  }
+
+  @at-root #{&}__meta-list {
+    list-style: none;
+    padding-left: 0;
+  }
+}
