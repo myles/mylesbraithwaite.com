@@ -1,7 +1,7 @@
 /.bundle/
 /build/
 /node_modules/
-/vendor/
 /source/.asset-cache/
 /source/_assets/bower/
 /source/uploads/
+/vendor/
