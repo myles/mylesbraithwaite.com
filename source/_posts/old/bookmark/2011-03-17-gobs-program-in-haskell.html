@@ -1,0 +1,23 @@
+---
+layout: post
+category: bookmark
+date: 2011-03-17 10:05:00
+title: "Gob's Program in Haskell"
+author: myles
+tags: [programming, haskell, arrested-development, gobs-program]
+link:
+  url: http://timcowlishaw.co.uk/post/3919258574/fans-of-arrested-development-will-doubtless
+---
+
+```haskell
+import System.Exit
+import Control.Monad
+main = do
+	putStrLn "Gob's Program: Y/N?"
+	ans <- getLine
+	case ans of
+		"Y" -> sequence_ $ map putStr penuses
+		_   -> exitSuccess
+
+penuses = ["Penus " | _ <- [1..]]
+```

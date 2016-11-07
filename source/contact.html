@@ -1,0 +1,147 @@
+---
+layout: page
+title: Contact Myles
+page_css_class: contact
+recaptcha: true
+---
+
+{% assign author = site.data.author %}
+
+<p>
+    You can email me at
+    <a href="mailto:{{ author.email }}">{{ author.email }}</a>.
+</p>
+
+<ul class="list list--inline">
+    {% for social in author.social %}
+    <li class="list-item list-item--inline">
+        <a href="{{ social.url }}">
+            {{ social.name }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+
+<p class="c-alert c-alert--success" id="js-contact-form-sucess" role="alert" style="display:none">
+    <strong class="c-alert__title">Thanks!</strong>
+    <span class="c-alert__copy">Your message has been successfully sent. I will contact you verysoon!</span>
+</p>
+
+<p class="c-alert c-alert--error" id="js-contact-form-error" role="alert" style="display:none">
+    <strong class="c-alert__title">Oh snap!</strong>
+    <span class="c-alert__copy">Something went wrong.</span>
+</p>
+
+<form class="form" action="https://raven.mylesb.ca/api/{{ site.raven_key }}" method="post" accept-charset="utf-8" id="js-contact-form">
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-column l-column--6 l-column--omega form__group form__group--top-border form__group--right-border">
+                <div class="form__group-wrapper">
+                    <label for="id_name" class="form-label form-label--absolute">Your Name</label>
+                    <input type="text" name="name" value="" class="form-control form-input form-input--text" id="id_name" autocomplete="name" placeholder="River Tam">
+                </div>
+            </div>
+
+            <div class="l-column l-column--6 form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <label for="id_email" class="form-label form-label--absolute">Your Email</label>
+                    <input type="email" name="email" value="" id="id_email" autocomplete="email" placeholder="river.tam@serenity.cortex" class="form-control form-input form-input--email" required>
+                </div>
+            </div>
+        </div> <!-- .l-row (name and email) -->
+
+        <div class="l-row" id="js-subject">
+            <div class="l-column l-column--12 l-column--omega form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <label for="id_subject" class="form-label">Reason for your inquiry</label>
+                    <select name="subject" id="id_subject" class="form-control form-select">
+                        {% for subject in site.data.contact.subjects %}
+                        <option value="{{ subject.email }}" class="form-select__option">{{ subject.web }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div> <!-- .l-row (subject) -->
+
+        <div class="l-row" id="js-deadline" style="display:none">
+            <div class="l-column l-column--12 l-column--omega form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <output for="id_deadline" class="form-output" id="js-deadline-output">3 months</output>
+                    <label for="id_deadline" class="form-label">Deadline</label>
+                    <input type="range" name="deadline" id="id_deadline" min="0" max="18" value="3" step="1" class="form-control form-input form-input--range">
+                </div>
+            </div>
+        </div> <!-- .l-row (deadline) -->
+
+        <div class="l-row" id="js-budget" style="display:none">
+            <div class="l-column l-column--12 l-column--omega form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <label for="id_budget" class="form-label">Budget</label>
+                    <select name="budget" id="id_budget" class="form-control form-select">
+                        <option class="form-select__option">$1,000 to $5,000</option>
+                        <option class="form-select__option">$5,000 to $10,000</option>
+                        <option class="form-select__option">$10,000 to $15,000</option>
+                        <option class="form-select__option">$15,000 to $25,000</option>
+                        <option class="form-select__option">$25,000+</option>
+                        <option class="form-select__option">Not Sure</option>
+                    </select>
+                </div>
+            </div>
+        </div> <!-- .l-row (budget) -->
+
+        <div class="l-row" id="js-company-test" style="display:none">
+            <div class="l-column l-column--6 l-column--omega form__group form__group--top-border form__group--right-border">
+                <div class="form__group-wrapper">
+                    <legend class="form-legend">Joel Test</legend>
+                    <ul class="list list--unstyled">
+                        {% for q in site.data.contact.joel_test %}
+                        <li class="list__item">
+                            <input type="checkbox" name="Source Control" class="form-input--checkbox" id="id_joel_test_{{ q.name | slugify }}" value="Joel Test: {{ q.name }}">
+                            <label for="id_joel_test_{{ q.name | slugify }}" class="form-label form-label--inline">{{ q.label }}</label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div> <!-- .l-column--6 (joel test) -->
+            </div>
+
+            <div class="l-column l-column--6 form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <legend class="form-legend">Jeff Test</legend>
+                    <ul class="list list--unstyled">
+                        {% for q in site.data.contact.jeff_test %}
+                        <li class="list__item">
+                            <input type="checkbox" name="Source Control" class="form-input--checkbox" id="id_jeff_test_{{ q.name | slugify }}" value="Jeff Test: {{ q.name }}">
+                            <label for="id_jeff_test_{{ q.name | slugify }}" class="form-label form-label--inline">{{ q.label }}</label>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div> <!-- .l-column--6 (jeff test) -->
+        </div> <!-- .l-row (company-test) -->
+
+        <div class="l-row">
+            <div class="l-column l-column--12 l-column--omega form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <label for="id_body" class="form-label">Your message</label>
+                    <textarea name="body" id="id_body" rows="3" placeholder="Type your wonderful message here" class="form-control form-textarea" required></textarea>
+                </div>
+            </div>
+        </div> <!-- .l-row (message) -->
+
+        <div class="l-row">
+            <div class="l-column l-column--12 l-column--omega form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <div class="g-recaptcha form-control form-recaptcha" data-sitekey="{{ site.recaptcha_sitekey }}"></div>
+                </div>
+            </div>
+        </div> <!-- .l-row (recaptcha) -->
+
+        <div class="l-row">
+            <div class="l-column l-column--12 l-column--omega form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <button name="submit" type="submit" class="form-buttom c-button c-button--colour-primary">Send your message</button>
+                </div>
+            </div>
+        </div> <!-- .l-row (button) -->
+    </div>
+</form>

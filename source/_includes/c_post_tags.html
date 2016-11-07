@@ -3,10 +3,14 @@
 
     {% if tag %}
         <a href="/tag/{{ tag_id }}/" rel="tag" class="post__meta--tag-link">
-            {% if tag.acronym %}
-                <acronym title="{{ tag.name }}">
-                    {{ tag.acronym | improve }}
-                </acronym>
+            {% if tag.abbr %}
+                <abbr title="{{ tag.name }}">
+                    {{ tag.abbr | improve }}
+                </abbr>
+            {% elsif tag.title %}
+            <span title="{{ tag.title }}">
+                {{ tag.name | improve }}
+            </span>
             {% else %}
                 {{ tag.name | improve }}
             {% endif %}

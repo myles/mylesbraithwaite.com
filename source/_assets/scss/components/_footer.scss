@@ -1,0 +1,95 @@
+$footer-colour: #fff;
+$footer-logo-height: 3rem;
+$footer-background-colour: desaturate(darken($colour-primary, 20%), 30%);
+$footer-link-colour: transparentize($footer-colour, .6);
+$footer-disclaimer-colour: transparentize($footer-colour, .6);
+
+.footer {
+  background-color: $footer-background-colour;
+  margin-top: $spacer-x;
+  padding: ($spacer-y * 2) $spacer-x;
+  width: 100%;
+
+  @at-root #{&}__logo {
+    display: block;
+    margin-bottom: $spacer-x * 2;
+    text-align: center;
+  }
+
+  @at-root #{&}__image {
+    height: $footer-logo-height;
+  }
+
+  @at-root #{&}__sections {
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+
+    margin-bottom: $spacer-x;
+  }
+
+  @at-root #{&}__section {
+    @include flex-basis(13em);
+    @include flex-shrink(0);
+
+    margin-bottom: $spacer-x * 2;
+    padding: 0;
+  }
+
+  @at-root #{&}__section-item {
+    @include list-unstyled;
+
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+  @at-root #{&}__section-title {
+    color: $footer-colour;
+    font-size: 1em;
+    margin-bottom: .4em;
+  }
+
+  @at-root #{&}__section-link {
+    color: $footer-link-colour;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+      color: transparentize($footer-colour, 0);
+    }
+  }
+
+  @at-root #{&}__separator {
+    border: 1px solid transparentize($footer-disclaimer-colour, .3);
+    height: 1px;
+    margin: 0 auto $spacer-x;
+    width: 12em;
+  }
+
+  @at-root #{&}__disclaimer {
+    color: $footer-disclaimer-colour;
+    font-size: .9em;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 30em;
+    text-align: center;
+  }
+
+  @at-root #{&}__heart {
+    @include size(1.5em);
+
+    fill: $colour-primary;
+    vertical-align: middle;
+  }
+
+  // scss-lint:disable NestingDepth, SelectorFormat
+  &:hover {
+    .footer__heart {
+      @include animation-name(pulsate);
+      @include animation-duration(1s);
+      @include animation-timing-function(ease-out);
+      @include animation-iteration-count(infinite);
+    }
+  }
+  // scss-lint:enable NestingDepth, SelectorFormat
+}

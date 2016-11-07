@@ -1,0 +1,47 @@
+---
+layout: archive
+---
+
+<div class="archive">
+    <div class="archive__header">
+        <h1 class="archive__title">Archive of posts from&nbsp;{{ page.date | date: "%Y" }}</h1>
+    </div>
+
+    {% for post in page.posts %}
+        {% capture this %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
+        {% capture this_link %}{{ post.date | date: "/archive/%Y/%m/" }}{% endcapture %}
+        {% capture this_pretty %}{{ post.date | date: "%B %Y" }}{% endcapture %}
+
+        {% capture next %}{{ post.previous.date | date: "%Y-%m" }}{% endcapture %}
+        {% capture next_link %}{{ post.previous.date | date: "/archive/%Y/%m/" }}{% endcapture %}
+        {% capture next_pretty %}{{ post.previous.date | date: "%B %Y" }}{% endcapture %}
+
+        {% if forloop.first %}
+        <div class="archive__group">
+            <h2 class="archive__group-title" id="year-{{ this }}">
+                <a href="{{ this_link }}" class="archive__title-link archive__link">
+                    {{ this_pretty }}
+                </a>
+            </h2>
+        {% endif %}
+
+            <a class="archive__item archive__link" href="{{ post.url }}">
+                <p class="archive__item-meta">{{ post.date | date: site.datetime_short_format }}</p>
+                <h3 class="archive__item-title">{{ post.title | improve }}</h3>
+            </a>
+
+        {% if forloop.last %}
+        </div> <!-- .archive__group -->
+        {% else %}
+        {% if this != next %}
+        </div> <!-- .archive__group -->
+        <div class="archive__group">
+            <h2 class="archive__title" id="year-{{ next }}">
+                <a href="{{ next_link }}">
+                    {{ next_pretty }}
+                </a>
+            </h2>
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>

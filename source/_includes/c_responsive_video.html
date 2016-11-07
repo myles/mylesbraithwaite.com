@@ -1,0 +1,11 @@
+<figure class="responsive-video">
+    <div class="responsive-video__wrapper">
+        {% if include.iframe_url %}
+        <iframe src="{{ include.iframe_url }}" class="responsive-video__video" frameborder="0" allowfullscreen></iframe>
+        {% endif %}
+
+        {% if include.caption %}
+        <figcaption class="responsive-video__caption">{{ include.caption }}</figcaption>
+        {% endif %}
+    </div>
+</figure>

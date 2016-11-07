@@ -6,6 +6,7 @@ gems:
   - jekyll-watch
   - jekyll-assets
   - jekyll-sitemap
+  - jekyll-seo-tag
   - jekyll-archives
   - jekyll-paginate
   - jekyll-typogrify
@@ -20,11 +21,15 @@ permalink: /:year/:y_day/:title/
 # Site Meta Data
 title: Myles Braithwaite
 subtitle: "Hoping for the Best, Imagining the Worst."
+copy: >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus auctor orci at dui suscipit commodo. Sed sit amet magna ut neque tincidunt tincidunt sed vitae ante. Sed vehicula, massa vitae sollicitudin lobortis, eros nunc venenatis odio, eget tristique mi massa non odio. Aliquam erat volutpat. Vivamus posuere nulla tellus, id cursus tellus euismod et. Sed molestie libero at ligula gravida rutrum. Fusce non ornare magna. In at imperdiet ante, sit amet dapibus quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin dictum condimentum fermentum. Etiam ac tellus in nibh vestibulum porta eu at urna.
+github: https://github.com/myles/mylesbraithwaite.com/
 
 # Date Time Format
 date_format: '%d %B, %Y'
 time_format: '%I:%M %p'
 datetime_format: '%d %B, %Y %I:%M %p'
+datetime_short_format: '%d/%b/%Y'
 
 # Build Settings
 markdown: redcarpet
@@ -34,6 +39,10 @@ redcarpet:
 # Pagination Settings
 paginate: 20
 paginate_path: /page:num/
+
+# Contact Form
+raven_key: TODO
+recaptcha_sitekey: TODO
 
 # Jekyll-Assets Settings
 assets:
@@ -49,11 +58,16 @@ assets:
 
 # Jekyll-Archives Settings
 jekyll-archives:
-  eanbled: all
+  enabled:
+    - year
+    - month
+    - day
+    - categories
+    - tags
   permalinks:
     year: '/archive/:year/'
     month: '/archive/:year/:month/'
-    day: '/:year/:y_day/'
+    day: '/archive/:year/:month/:day/'
     tag: '/tag/:name/'
     category: '/:name/'
   layouts:

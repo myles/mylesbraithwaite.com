@@ -1,0 +1,50 @@
+<div class="footer">
+    <div class="footer__wrapper">
+        <a href="/" class="footer__logo">
+            <img src="{% asset_path avatar.svg %}" class="footer__image" alt="{{ site.title }}">
+        </a>
+    </div>
+
+    <div class="footer__sections">
+        <ul class="footer__section">
+            <li class="footer__section-item">
+                <h6 class="footer__section-title">Content</h6>
+            </li>
+            {% for link in site.data.navigation %}
+            <li class="footer__section-item">
+                <a href="{{ link.url }}" class="footer__section-link">
+                    {{ link.name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <ul class="footer__section">
+            <li class="footer__section-item">
+                <h6 class="footer__section-title">Sections</h6>
+            </li>
+            {% for link in site.data.categories %}
+            <li class="footer__section-item">
+                <a href="{{ link.url }}" class="footer__section-link">
+                    {{ link.name }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <ul class="footer__section">
+            <li class="footer__section-item">
+                <h6 class="footer__section-title">Follow</h6>
+            </li>
+            <li class="footer__section-item">
+                <a href="/feed/" class="footer__section-link">
+                    RSS Feed
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <hr class="footer__separator">
+
+    <p class="footer__disclaimer">Made by <a href="https://mylesb.ca/">Myles Braithwaite</a> with {% include c_heart.svg css_class='footer__heart' %} in Toronto.</p>
+</div>

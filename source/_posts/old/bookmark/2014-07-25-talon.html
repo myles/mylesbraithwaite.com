@@ -1,0 +1,28 @@
+---
+layout: post
+category: bookmark
+date: 2014-07-25 11:14:34
+title: "talon"
+author: myles
+tags: [python, email]
+link:
+  url: https://github.com/mailgun/talon
+---
+
+<p>A Python library (from <a href="http://mailgun.com">Mailgun</a>) to extract message
+quotations and signatures.</p>
+<h2 id="usage">Usage</h2>
+<div class="codehilite"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">talon.signature.bruteforce</span> <span class="kn">import</span> <span class="n">extract_signature</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">message</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;Awesome.</span>
+<span class="gp">... </span><span class="s"></span>
+<span class="gp">... </span><span class="s">---</span>
+<span class="gp">... </span><span class="s">Myles Braithwaite&quot;&quot;&quot;</span>
+<span class="go">&gt;&gt;&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">text</span><span class="p">,</span> <span class="n">signature</span> <span class="o">=</span> <span class="n">extract_signature</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">text</span>
+<span class="go">Awesome.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">print</span> <span class="n">signature</span>
+<span class="go">---</span>
+<span class="go">Myles Braithwaite</span>
+</pre></div>

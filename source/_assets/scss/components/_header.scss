@@ -1,0 +1,26 @@
+.header {
+  @at-root #{&}__wrapper {
+    @include clearfix;
+
+    position: relative;
+  }
+
+  @at-root #{&}__logo {
+    float: left;
+
+    @include media($medium-screen) {
+      display: block;
+      float: none;
+      text-align: center;
+    }
+
+    @include media($large-screen) {
+      float: left;
+    }
+  }
+
+  @at-root #{&}__image {
+    max-height: 2em;
+    padding-right: 1em;
+  }
+}

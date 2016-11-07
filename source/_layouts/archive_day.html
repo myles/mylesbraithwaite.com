@@ -1,0 +1,34 @@
+---
+layout: archive
+---
+
+<div class="archive">
+    <div class="archive__header">
+        <h1 class="archive__title">Archive of posts from {{ page.date | date: "%A %-d %B %Y" | improve }}</h1>
+    </div>
+
+    {% for post in page.posts %}
+        {% capture this %}{{ post.date | date: "%Y-%m-%d-%H" }}{% endcapture %}
+        {% capture this_pretty %}{{ post.date | date: "%A %-d %B %Y %I:%M %p" }}{% endcapture %}
+
+        {% capture next %}{{ post.previous.date | date: "%Y-%m-%d-%H" }}{% endcapture %}
+        {% capture next_pretty %}{{ post.previous.date | date: "%A %-d %B %Y %I:%M %p" }}{% endcapture %}
+
+        {% if forloop.first %}
+        <div class="archive__group">
+        {% endif %}
+
+            <a class="archive__item archive__link" href="{{ post.url }}">
+                <p class="archive__item-meta">{{ post.date | date: site.datetime_short_format }}</p>
+                <h3 class="archive__item-title">{{ post.title | improve }}</h3>
+            </a>
+
+        {% if forloop.last %}
+        </div> <!-- .archive__group -->
+        {% else %}
+        {% if this != next %}
+        </div> <!-- .archive__group -->
+        {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>

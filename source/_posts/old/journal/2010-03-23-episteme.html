@@ -1,0 +1,42 @@
+---
+layout: post
+category: journal
+date: 2010-03-23 00:00:00
+title: "Episteme"
+author: myles
+tags: [episteme, hatta, python, wiki]
+---
+
+<p>Back in February I tweeted "Starting work on #Episteme today."<a href="http://twitter.com/mylesb/status/8635677939" title="Tweet on 4th Feb 2010 at 10:17 AM">#</a>. A few hours latter I got the following query in an email:</p>
+<blockquote>
+<p>From: Ivan Avery Frey<br>
+To: Myles Braithwaite<br>
+Date: Thu, Feb 4, 2010 at 3:24 PM<br>
+Subject: What's Episteme???</p>
+<p>Self-explanatory.</p>
+</blockquote>
+<p><strong>Episteme</strong> is a wiki engine (more of a wiki library) I am currently working on (I have actually been working on it for the last two years). It was originally a fork of <a href="http://code.google.com/p/yaki/">Yaki</a> (which powers <a href="http://the.taoofmac.com/">The Tao of Mac</a>), then was powered by <a href="http://couchdb.apache.org/">CouchDB</a>, and now is a fork of <a href="http://hatta.sheep.art.pl/">Hatta</a> (not so much as a fork because I am still going to be using Hatta's <code>WikiStorage</code> module).</p>
+<p>So why am I working on yet-another-wiki-engine?</p>
+<ul>
+<li>I like flat files (easy to backup using rsync).</li>
+<li>I think that <a href="http://en.wikipedia.org/wiki/Relational_database_management_system">Relation databases</a> (like MySQL and PostgreSQL) were not design for wiki documents.</li>
+<li>I like storing the documents in a Revision Control System so I can edit them in a text editor.</li>
+<li>I like being able to search.</li>
+<li>I don't ware the same cloths every day why should I have to use the same markup language.</li>
+</ul>
+<p>This is an example of a wiki document:</p>
+<div class="codehilite"><pre><span class="n">Title</span><span class="o">:</span> <span class="n">Python</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">python</span><span class="o">,</span> <span class="n">programming</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="o">:</span> <span class="n">text</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">wiki</span>
+
+<span class="o">**</span><span class="n">Python</span><span class="o">**</span> <span class="k">is</span> <span class="n">a</span> <span class="kd">dynamic</span> <span class="n">programming</span> <span class="n">language</span><span class="o">.</span>
+
+<span class="o">==</span> <span class="n">Resources</span>
+
+<span class="o">*</span> <span class="o">[[</span><span class="n">http</span><span class="o">://</span><span class="n">www</span><span class="o">.</span><span class="na">enricozini</span><span class="o">.</span><span class="na">org</span><span class="sr">/2009/debian/using-python-datetime/</span><span class="o">|</span><span class="n">Tips</span> <span class="n">on</span> <span class="n">using</span> <span class="n">python</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">datetime</span> <span class="n">module</span><span class="o">]]</span>
+<span class="o">*</span> <span class="o">[[</span><span class="n">http</span><span class="o">://</span><span class="n">diveintopython</span><span class="o">.</span><span class="na">org</span><span class="o">/|</span><span class="n">Dive</span> <span class="n">into</span> <span class="n">Python</span><span class="o">]]</span>
+</pre></div>
+
+
+<p>I am using <a href="http://www.w3.org/Protocols/rfc822/">RFC822</a> (similar to an email) for meta information (title, tags, markup, date, author, etc).</p>
+<p>Episteme will always be a work in progress and many never be released.</p>

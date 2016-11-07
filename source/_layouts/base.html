@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+
         <meta name="description" content="{{ site.description }}">
         <meta name="author" content="{{ site.data.author.name }} ({{ site.data.author.email }})">
 
@@ -16,19 +17,27 @@
 
         <link rel="alternate" type="application/atom+xml" title="{{ site.title }} | Feed" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
+        {% if page.recaptcha %}
+        <script src='https://www.google.com/recaptcha/api.js'></script>
+        {% endif %}
+
         {% include c_favicons.html %}
         {% include c_metadata.html page=page %}
     </head>
 
-    <body>
+    <body class="mylesbraithwaite_com-www {% if page.body_css_class %}mylesbraithwaite_com-www--{{ page.body_css_class | slugify }}{% endif %}">
         {% include c_header.html %}
 
-        <div class="page">
-            <div class="page__wrapper">
+        <div class="page {% if page.page_css_class %}page--{{ page.page_css_class | slugify }}{% endif %}">
+            <div class="page__wrapper {% if page.page_css_class %}page__wrapper--{{ page.page_css_class | slugify }}{% endif %}">
                 {{ content }}
             </div>
         </div>
 
         {% include c_footer.html %}
+
+        <script src="{{ site.baseurl | prepend: site.url }}{% asset_path jquery/dist/jquery.min.js %}"></script>
+        <script src="{{ site.baseurl | prepend: site.url }}{% asset_path jquery-validation/dist/jquery.validate.min.js %}"></script>
+        <script src="{{ site.baseurl | prepend: site.url }}{% asset_path script.js %}"></script>
     </body>
 </html>

@@ -1,0 +1,33 @@
+---
+layout: post
+category: journal
+date: 2010-01-20 00:00:00
+title: "Tornado at PyGTA"
+author: myles
+tags: [tornado, toronto, python, pygta]
+---
+
+<p>Last night at <a href="http://pygta.org/2010-01/tornado/" title="PyGTA - Tornado Hacking">PyGTA</a>, <a href="http://blog.vrplumber.com/index.php?/archives/2418-Tornado-PyGTA-this-month,-PyCon-Dress-Rehearsal-next.html" title="Tornado @ PyGTA this month, PyCon Dress Rehearsal next">Mike</a> gave a short talk/demo about his
+findings using <a href="http://tornadoweb.org">Tornado</a> and <a href="http://couchdb.apache.org">CouchDB</a> to write a
+real time chat and voting application for <a href="http://us.pycon.org/2010/conference/talks/">his PyCon talk</a>.</p>
+<p>Tornado is a lightweight non-blocking web server created by
+<a href="http://bret.appspot.com/entry/tornado-web-server" title="The technology behind Tornado, FriendFeed's web server">FriendFeed</a> and Open Source by <a href="http://developers.facebook.com/news.php?blog=1&amp;story=301" title="Tornado: Facebook's Real-Time Web Framework for Python">Facebook</a>. The API is similar
+to <a href="http://webpy.org/">web.py</a> and App Engine's <a href="http://developers.facebook.com/news.php?blog=1&amp;story=301" title="Tornado: Facebook's Real-Time Web Framework for Python">webapp framework</a>. Mike's ending comments was that Tornado can out perform Twisted. But
+he found he had to write a lot of code to do things that were built
+into Twisted (or any other modern web framework) already.</p>
+<p>His thoughts on CouchDB:</p>
+<blockquote>
+<p>I'm really beginning to regret the choice of CouchDB for the
+back-end.  It's working perfectly well, but I have literally dozens
+of pieces of code hanging around for doing SQL-based paging... none
+of which are applicable to CouchDB.</p>
+</blockquote>
+<p><em>Referenced: <a href="http://blog.vrplumber.com/index.php?/archives/2419-Things-Id-like-to-play-with-given-enough-time.html" title="Things I'd like to play with (given enough time)">Things I'd like to play with (given enough time)</a></em></p>
+<p>This website (and a few other sites I manage) will be moving from
+<a href="http://httpd.apache.org" title="Apache HTTPD">Apache 2</a> and <a href="http://code.google.com/p/modwsgi/" title="mod_wsgi">WSGI</a> to Tornado and <a href="http://nginx.net">Nginx</a> <a href="http://twitter.com/mylesb/status/7772733185" title="Working on a new backend for my website (Tornado, Supervisord, &amp; Nginx). My current setup is Apache2 and WSGI. -- on Twitter at 14th Jan 6:56 PM">#</a>. It
+will still be built on top of <a href="http://djangoproject.org">Django</a> thought so most of the
+issues Mike was talking about wouldn't apply to me.</p>
+<p><strong>Other people who wrote about this event</strong>:</p>
+<ul>
+<li><a href="http://tomlowshang.blogspot.com">Tom Low-Shang</a> -- <a href="http://tomlowshang.blogspot.com/2010/01/tornado.html">Tornado</a></li>
+</ul>

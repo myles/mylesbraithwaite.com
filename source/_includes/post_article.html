@@ -1,41 +1,13 @@
 <div class="post post--article">
-    <div class="post__feature-image">
-        <div class="post__header-image" style="background-image: url('{{ post.feature_image | prepend: post.url | prepend: site.upload_url }}')">
-
-        <div class="post__header-overlay">
-            <h1 class="post__title post__title--overlay">
-                <a class="post__link post__link--overlay" href="{{ post.url }}">{{ post.title }}</a>
-            </h1>
-
-            {% if post.abstract %}
-            <h2 class="post__abstract">{{ post.abstract }}</h2>
-            {% endif %}
-        </div>
+    <div class="post__wrapper">
+        {% include c_post_header.html post=post %}
     </div>
 
     <div class="post__wrapper">
-        <div class="post__aside">
-            <ul class="post__meta-list">
-                <li class="post__meta post__meta--date">
-                    {{ post.date | date: '%d %B, %Y %I:%M %p' }}
-                </li>
-
-                <li class="post__meta post__meta--tags">
-                    {% include c_tags.html tags=post.tags %}
-                </li>
-
-                <li class="post__meta post__meta--time-to-read">
-                    {{ post.content | reading_time_as_s }}
-                </li>
-
-                <li class="post__meta post__meta--permalink">
-                    <a href="{{ post.url }}">Permalink</a>
-                </li>
-            </ul>
-        </div>
+        {% include c_post_aside.html post=post content=post.content %}
 
         <div class="post__body">
-            {{ post.excerpt }}
+            {{ post.excerpt | improve }}
         </div>
     </div>
 </div>

@@ -5,6 +5,7 @@
 
 // Mixins
 @import 'old-fashioned/source/css/scss/abstracts/mixins/background-variant';
+@import 'old-fashioned/source/css/scss/abstracts/mixins/bem-modifiers';
 @import 'old-fashioned/source/css/scss/abstracts/mixins/border-radius';
 @import 'old-fashioned/source/css/scss/abstracts/mixins/buttons';
 @import 'old-fashioned/source/css/scss/abstracts/mixins/font-size';
@@ -21,6 +22,7 @@
 @import 'old-fashioned/source/css/scss/base/html';
 @import 'old-fashioned/source/css/scss/base/body';
 
+@import 'old-fashioned/source/css/scss/base/animations';
 @import 'old-fashioned/source/css/scss/base/code';
 @import 'old-fashioned/source/css/scss/base/forms';
 @import 'old-fashioned/source/css/scss/base/global-classes';

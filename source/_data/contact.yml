@@ -1,0 +1,51 @@
+subjects:
+  - email: I just wanted to say hello
+    web: You just wanted to say hello
+  - email: I'm interested in hiring you for a project
+    web: You are interested in hiring me for a project.
+  - email: I'm interested in hiring you full-time
+    web: You are interested in hiring me full-time.
+  - email: I'm intereested in you speaking at my event
+    web: You are interested in me to speak at your event.
+  - email: I was browsing Tor while drunk
+    web: You found this site on Tor and are currently drinking.
+
+joel_test:
+  - name: Source Control
+    label: Do you use source control?
+  - name: One Step Build
+    label: Can you make a build in one step?
+  - name: Daily Builds
+    label: Do you make daily builds?
+  - name: Bug Database
+    label: Do you have a bug database?
+  - name: Fix Bugs Before Writing New Code
+    label: Do you fix bugs before writing new code?
+  - name: Up to Date Schedule
+    label: Do you have an up-to-date schedule?
+  - name: Spec
+    label: Do you have a spec?
+  - name: Quiet Working Conditions
+    label: Do programmers have quiet working conditions?
+  - name: Best Tools
+    label: Do you use the best tools money can buy?
+  - name: Testers
+    label: Do you have testers?
+  - name: Potential Candidates Write Code During Interviews
+    label: Do new candidates write code during their interview?
+  - name: Hallway Usability Testing
+    label: Do you do hallway usability testing?
+
+jeff_test:
+  - name: Two Monitors
+    label: Every programmer has two monitors
+  - name: Fast Computer
+    label: Every programmer has a fast Computer
+  - name: Choice of Mouse and Keyboard
+    label: Every programmer has their choice of mouse and keyboard
+  - name: Confortable Chair
+    label: Every programmer has a comfortable chair
+  - name: Fast Internet Connection
+    label: Every programmer has a fast internet connection
+  - name: Quite Working Conditions
+    label: Every programmer has quite working conditions

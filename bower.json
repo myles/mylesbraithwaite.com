@@ -1,6 +1,8 @@
 {
   "name": "mylesbraithwaite.com-www",
   "dependencies": {
-    "old-fashioned": "https://github.com/myles/old-fashioned.git"
+    "old-fashioned": "https://github.com/myles/old-fashioned.git",
+    "jquery": "^3.1.1",
+    "jquery-validation": "^1.15.1"
   }
 }

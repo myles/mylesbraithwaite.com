@@ -1,0 +1,57 @@
+.archive {
+  @at-root #{&}__header,
+           #{&}__group {
+    @include media(min-width $large-screen) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+  }
+
+  @at-root #{&}__title {
+    @extend %display-one;
+  }
+
+  @at-root #{&}__group-title {
+    @extend %display-two;
+  }
+
+  @at-root #{&}__link {
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @at-root #{&}__item {
+    line-height: $font-size-heading-three;
+    margin-bottom: $spacer-y;
+    padding: $spacer 0;
+    vertical-align: middle;
+
+    @at-root #{&}-title,
+             #{&}-meta {
+      display: block;
+      margin-bottom: 0;
+      margin-top: 0;
+      vertical-align: middle;
+    }
+
+    @at-root #{&}-meta {
+      @include span-columns(2 of 8);
+      text-align: right;
+    }
+
+    @at-root #{&}-title {
+      @extend %heading-three;
+      @include span-columns(6 of 8);
+    }
+
+    @at-root #{&}-icon {
+      @include size(1em);
+
+      vertical-align: middle;
+    }
+  }
+}

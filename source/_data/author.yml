@@ -1,9 +1,16 @@
+---
 name: Myles Braithwaite
 email: me@mylesbraithwaite.com
 homepage: https://mylesb.ca/
 
 copy: |
-      Myles Braithwaite lives in Toronto, Ontario, Canada where he run a small consulting company called [Monkey in your Soul](https://monkeyinyoursoul.com/) (you should hire me). His interests range from photography to hiking. He is also interested in programming, music, snowboarding, and films.
+      Myles Braithwaite lives in Toronto, Ontario, Canada where he run a small consulting company called [Monkey in your Soul](https://monkeyinyoursoul.com/) (you should hire him). His interests range from photography to hiking. He is also interested in programming, music, snowboarding, and films.
+
+born:
+  date: 1986-09-19
+  locality: Richmond Hill
+  region: Ontario
+  country: Canada
 
 location:
   locality: Toronto

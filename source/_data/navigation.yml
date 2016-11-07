@@ -1,6 +1,7 @@
+---
 - name: About
   url: /about/
-- name: Subscribe
-  url: /subscribe/
-- name: Archives
-  url: /archives/
+- name: Contact
+  url: /contact/
+- name: Archive
+  url: /archive/

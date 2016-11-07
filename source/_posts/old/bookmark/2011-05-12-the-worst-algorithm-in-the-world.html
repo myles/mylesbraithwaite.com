@@ -1,0 +1,56 @@
+---
+layout: post
+category: bookmark
+date: 2011-05-12 14:40:00
+title: "The Worst Algorithm in the World?"
+author: myles
+tags: [python, programming, algorithm]
+link:
+  url: http://bosker.wordpress.com/2011/04/29/the-worst-algorithm-in-the-world/
+---
+
+<p>An interesting look at the worst algorithm in the world:</p>
+
+```python
+#!/usr/bin/env python
+
+import sys
+
+def fib_rec(n):
+    assert n >= 0
+    if n < 2: return n
+    return fib_rec(n - 2) + fib_rec(n - 1)
+
+if __name__ == "__main__":
+    print fib_rec(int(sys.argv[1]))
+```
+
+<p>Which when calculating to forty takes one minute and seven seconds. Verses the improved version:</p>
+
+```python
+#!/usr/bin/env python
+
+import sys
+
+def bits(n):
+    bits = []
+    while n > 0:
+            n, bit = divmod(n, 2)
+            bits.append(bit)
+    bits.reverse()
+    return bits
+
+def fib_mat(n):
+    assert n >= 0
+    a, b, c = 1, 0, 1
+    for bit in bits(n):
+        a, b, c = a*a + b*b, a*b + b*c, b*b + c*c
+        if bit: a, b, c = b, c, b+c
+    return b
+
+if __name__ == "__main__":
+    print fib_mat(int(sys.argv[1]))
+```
+
+<p>Which when calculating to four hundred thousand takes four seconds.</p>
+<p>Definitely worth the read.</p>

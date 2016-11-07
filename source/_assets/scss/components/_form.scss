@@ -1,0 +1,50 @@
+.form {
+  @at-root #{&}__group {
+    margin-right: 0;
+
+    @at-root #{&}-wrapper {
+      margin: .5em .25em;
+    }
+
+    @at-root #{&}--top-border {
+      border-top: 1px solid;
+    }
+
+    @at-root #{&}--right-border {
+      border-right: 1px solid;
+    }
+  }
+}
+
+.form-label,
+.form-legend {
+  color: $colour-grey;
+  display: block;
+  font-size: 1em;
+  font-weight: normal;
+  margin-bottom: .5em;
+  padding-bottom: .25em;
+  text-transform: uppercase;
+}
+
+.form-label--inline {
+  color: $body-colour;
+  display: inline;
+  text-transform: none;
+}
+
+.form-control {
+  font-size: 1em;
+  width: 100%;
+}
+
+.form-output {
+  color: $colour-grey;
+  float: right;
+}
+
+.form-recaptcha {
+  div {
+    margin: 0 auto;
+  }
+}

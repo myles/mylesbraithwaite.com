@@ -4,12 +4,21 @@
 @import 'neat/app/assets/stylesheets/neat';
 @import 'old-fashioned';
 
+$medium-screen: 30em;
+$large-screen: 50em;
+
 // Components
+@import 'components/archive';
 @import 'components/card';
+@import 'components/footer';
+@import 'components/form';
+@import 'components/header';
 @import 'components/navigation';
 @import 'components/pagination';
+@import 'components/responsive-elements';
 
 // Layouts
+@import 'layouts/page';
 @import 'layouts/post-detail';
 @import 'layouts/post-list';
 @import 'layouts/post';

@@ -1,0 +1,7 @@
+---
+- name: Articles
+  url: /article/
+- name: Bookmarks
+  url: /bookmark/
+- name: Simple
+  url: /simple/

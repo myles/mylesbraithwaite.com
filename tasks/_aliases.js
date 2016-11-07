@@ -3,5 +3,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('develop', ['jekyll:serve']);
 
+    grunt.registerTask('build', ['jekyll:build']);
+
     grunt.registerTask('default', ['develop']);
 };

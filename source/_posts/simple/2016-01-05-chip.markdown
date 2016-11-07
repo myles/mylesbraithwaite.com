@@ -1,0 +1,11 @@
+---
+layout: post_simple
+category: simple
+date: 2016-01-05T13:25
+tags:
+  - chip
+---
+
+{% capture image %}{{ site.upload_url }}{% post_url /simple/2016-01-05-chip %}chip.jpg{% endcapture %}
+
+{% include c_responsive_image.html src=image alt="CHIP" caption="Got my CHIP today!" %}

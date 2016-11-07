@@ -3,33 +3,15 @@ layout: post
 ---
 
 <div class="post post--simple">
-    <div class="post__header">
-        <h1 class="post__title">
-            <a href="{{ page.url }}">{{ page.title }}</a>
-        </h1>
-
-        <h2 class="post__abstract">{{ page.abstract }}</h2>
+    <div class="post__wrapper">
+        {% include c_post_header.html post=page %}
     </div>
 
-    <ul class="post__aside">
-        <li class="post__meta post__meta--date">
-            {{ page.date | date: '%d %B, %Y %I:%M %p' }}
-        </li>
+    <div class="post__wrapper">
+        {% include c_post_aside.html post=page content=content %}
 
-        <li class="post__meta post__meta--tags">
-            {% include c_tags.html tags=post.tags %}
-        </li>
-
-        <li class="post__meta post__meta--time-to-read">
-            {{ page.content | reading_time_as_s }}
-        </li>
-
-        <li class="post__meta post__meta--permalink">
-            <a href="{{ page.url }}">Permalink</a>
-        </li>
-    </ul>
-
-    <div class="post__body">
-        {{ page.content }}
+        <div class="post__body">
+            {{ content | improve }}
+        </div>
     </div>
 </div>

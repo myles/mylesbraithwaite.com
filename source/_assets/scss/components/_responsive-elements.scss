@@ -1,0 +1,41 @@
+.responsive-video {
+  @at-root #{&}__wrapper {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: percentage(9 / 16);
+    position: relative;
+
+    @at-root #{&}--21by9 {
+      padding-bottom: percentage(9 / 21);
+    }
+
+    @at-root #{&}--16by9 {
+      padding-bottom: percentage(9 / 16);
+    }
+
+    @at-root #{&}--4by3 {
+      padding-bottom: percentage(3 / 4);
+    }
+
+    @at-root #{&}--1by1 {
+      padding-bottom: percentage(1 / 1);
+    }
+  }
+
+  @at-root #{&}__video {
+    @include position(absolute, 0 null null 0);
+    @include size(100%);
+
+    border: 0;
+  }
+}
+
+.responsive-image {
+  @at-root #{&}__wrapper {}
+
+  @at-root #{&}__image {
+    height: auto;
+    max-width: 100%;
+  }
+}

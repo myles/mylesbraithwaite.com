@@ -1,0 +1,27 @@
+<div class="post__header {% if include.post.feature_image %}post__header--feature-image{% endif %}">
+    {% if include.post.feature_image %}
+    <div class="post__feature-image" style="background-image: url('{{ include.post.feature_image | prepend: include.post.url | prepend: site.upload_url }}')"></div>
+    {% endif %}
+
+    <div class="{% if include.post.feature_image %}post__header-overlay{% endif %}">
+        <h1 class="post__title {% if include.post.feature_image %}post__title--overlay{% endif %}">
+            {% if include.post.bookmark %}
+                <a href="{{ include.post.bookmark.url }}" class="post__link post__link--bookmark {% if include.post.feature_image %}post__link--overlay{% endif %}" {% if include.post.bookmark.title %}title="{{ include.post.bookmark.title }}{% endif %}">
+                    {{ include.post.title | improve }}
+                </a>
+            {% endif %}
+
+            <a href="{{ include.post.url }}" class="post__link {% if include.post.feature_image %}post__link--overlay{% endif %}">
+                {% if include.post.bookmark %}
+                    {% include c_eyeglasses.svg css_class="post__link-icon" %}
+                {% else %}
+                    {{ include.post.title | improve }}
+                {% endif %}
+            </a>
+        </h1>
+
+        {% if include.post.abstract %}
+            <h2 class="post__abstract">{{ include.post.abstract | improve }}</h2>
+        {% endif %}
+    </div>
+</div>
