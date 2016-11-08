@@ -14,7 +14,7 @@ gems:
 
 # URL Settings
 url: http://127.0.0.1:4000
-base_url: ""
+baseurl: ""
 upload_url: http://127.0.0.1:4000/uploads
 permalink: /:year/:y_day/:title/
 
