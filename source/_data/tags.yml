@@ -73,3 +73,6 @@ jabber:
   name: Jabber
   related:
     - xmpp
+gtalug:
+  name: GTALUG
+  title: Greater Toronto Area Linux User Group
