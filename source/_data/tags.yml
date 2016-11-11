@@ -50,3 +50,26 @@ web-design:
   name: Web Design
 chip:
   name: C.H.I.P.
+pyconca:
+  name: PyConCA
+  title: PyCon Canada
+pyconca2016:
+  name: PyConCA2016
+  title: PyCon Canada 2016
+toronto:
+  name: Toronto
+  title: Toronto, Ontario, Canada
+  location:
+    lat: 43.7
+    lon: -79.4
+xmpp:
+  abbr: XMPP
+  name: Extensible Messaging and Presence Protocol
+  wikipedia: https://en.wikipedia.org/wiki/XMPP
+pygta:
+  name: PyGTA
+  title: Greater Toronto Area Python User Group
+jabber:
+  name: Jabber
+  related:
+    - xmpp

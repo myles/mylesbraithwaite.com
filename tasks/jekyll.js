@@ -14,7 +14,9 @@ module.exports = function (grunt) {
         serve: {
             options: {
                 serve: true,
-                auto: true
+                auto: true,
+                future: true,
+                unpublished: true
             }
         }
     };

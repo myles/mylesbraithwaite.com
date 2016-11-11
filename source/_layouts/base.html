@@ -37,7 +37,15 @@
         {% include c_footer.html %}
 
         <script src="{{ site.baseurl | prepend: site.url }}{% asset_path jquery/dist/jquery.min.js %}"></script>
+
+        {% if page.javascript_libs contains 'jquery_validate' %}
         <script src="{{ site.baseurl | prepend: site.url }}{% asset_path jquery-validation/dist/jquery.validate.min.js %}"></script>
+        {% endif %}
+
+        {% if page.javascript_libs contains 'twitter' %}
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        {% endif %}
+
         <script src="{{ site.baseurl | prepend: site.url }}{% asset_path script.js %}"></script>
     </body>
 </html>
