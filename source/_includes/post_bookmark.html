@@ -33,7 +33,7 @@
                 {% endif %}
             </blockquote>
             {% else %}
-            {{ post.excerpt | improve }}
+            {{ post.excerpt | markdownify | improve }}
             {% endif %}
         </div>
     </div>

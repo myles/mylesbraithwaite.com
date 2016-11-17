@@ -10,11 +10,14 @@
 <!-- END RDFa Metadata (in DublinCore) -->
 
 <!-- RDFa Metadata (in OpenGraph) -->
+<!-- TODO: Add og:description and og:image -->
 <meta property="og:title" content="{{ page.title }}">
 <meta property="og:author" content="{{ site.data.author.name }}">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url }}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">{% if page.date %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta property="article:author" content="{{ site.data.author.name }}">{% endif %}
 <!-- END RDFa Metadata (in OpenGraph) -->
 
 <!-- Google Scholar Metadata -->
@@ -24,8 +27,34 @@
 <meta name="citation_journal_tilte" content="{{ site.title }}">
 <!-- END Google Scholar Metadata -->
 
-<!-- TODO: Add Schema.org -->
+<!-- Schema.org Metadata -->
+<!-- TODO: image and publisher.logo are required vaules. -->
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "author": {{ site.data.author.name | jsonify }},
+        "headline": {{ page.title | jsonify }},
+        {% if page.date %}"articleSection": {{ page.category | jsonify }},
+        "wordCount": {{ page.content | size }},
+        "datePublished": {{ page.date | date_to_xmlschema | jsonify }},{% if page.started %}
+        "dateCreated": {{ page.started | date_to_xmlschema | jsonify }},{% endif %}{% if page.updated %}
+        "dateModified": {{ page.updated | date_to_xmlschema | jsonify }},{% endif %}
+        "keywords": {{ page.tags | jsonify }}{% endif %},
+        {% if page.category == 'bookmark' or page.via %}"isBasedOn": [
+            {% if page.category == 'bookmark' %}{{ page.bookmark.url | jsonify }}{% endif %}{% if page.category == 'bookmark' or page.via %},{% endif %}
+            {% if page.via %}{{ page.via.url | jsonify }}{% endif %}
+        ],{% endif %}
+        "publisher": {
+            "@type": "Organization",
+            "name": {{ site.title | jsonify }}
+        }
+    }
+</script>
+<!-- END Schema.org Metadata -->
 
-<!-- TODO: Add Twitter Cards -->
-
-<!-- TODO: Add what ever Google+ and Pintrest use -->
+<!-- Twitter Cards Metadata -->
+<meta name="twitter:card" content="summary">
+<meta nmae="twitter:site" content="@MylesWeb">
+<meta name="twitter:creator" content="@MylesB">
+<!-- END Twitter Cards Metadata -->

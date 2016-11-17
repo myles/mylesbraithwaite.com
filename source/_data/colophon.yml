@@ -6,3 +6,9 @@ runs_on:
 powered_by:
   name: Jekyll
   url: https://jekyllrb.com/
+
+tools_used:
+  - name: Affinity Designer
+    url: https://affinity.serif.com/en-gb/designer/
+  - name: Atom
+    url: https://atom.io/

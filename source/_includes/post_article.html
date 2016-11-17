@@ -7,7 +7,7 @@
         {% include c_post_aside.html post=post content=post.content %}
 
         <div class="post__body">
-            {{ post.excerpt | improve }}
+            {{ post.excerpt | markdownify | improve }}
         </div>
     </div>
 </div>

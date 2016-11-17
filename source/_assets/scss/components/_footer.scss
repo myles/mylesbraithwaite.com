@@ -73,6 +73,17 @@ $footer-disclaimer-colour: transparentize($footer-colour, .6);
     margin: auto;
     max-width: 30em;
     text-align: center;
+
+    // scss-lint:disable NestingDepth, SelectorFormat
+    &:hover {
+      .footer__heart {
+        @include animation-name(pulsate);
+        @include animation-duration(1s);
+        @include animation-timing-function(ease-out);
+        @include animation-iteration-count(infinite);
+      }
+    }
+    // scss-lint:enable NestingDepth, SelectorFormat
   }
 
   @at-root #{&}__heart {
@@ -81,15 +92,4 @@ $footer-disclaimer-colour: transparentize($footer-colour, .6);
     fill: $colour-primary;
     vertical-align: middle;
   }
-
-  // scss-lint:disable NestingDepth, SelectorFormat
-  &:hover {
-    .footer__heart {
-      @include animation-name(pulsate);
-      @include animation-duration(1s);
-      @include animation-timing-function(ease-out);
-      @include animation-iteration-count(infinite);
-    }
-  }
-  // scss-lint:enable NestingDepth, SelectorFormat
 }

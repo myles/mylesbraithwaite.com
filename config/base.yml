@@ -40,6 +40,13 @@ redcarpet:
 paginate: 20
 paginate_path: /page:num/
 
+# Collections
+# See: <https://jekyllrb.com/docs/collections/>
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
 # Contact Form
 raven_key: TODO
 recaptcha_sitekey: TODO
