@@ -1,0 +1,39 @@
+.blockquote {
+  @at-root #{&}--screenplay {
+    border-left: 0;
+    font-family: $font-family-monospace;
+    font-size: 12pt;
+  }
+
+  @at-root #{&}__line {
+    padding: 2em 0;
+  }
+
+  @at-root #{&}__character {
+    display: block;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  @at-root #{&}__expression {
+    display: block;
+    margin-left: -5em;
+    text-align: center;
+    text-transform: lowercase;
+
+    &::before {
+      content: '(';
+    }
+
+    &::after {
+      content: ')';
+    }
+  }
+
+  @at-root #{&}__dialogue {
+    display: block;
+    margin: 0 auto;
+    max-width: 25em;
+  }
+}
