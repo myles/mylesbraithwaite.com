@@ -41,8 +41,8 @@ music:
   name: Music
 ontario:
   name: Ontario
-  title: Ontario, Canada
   parent: canada
+  title: Ontario, Canada
 photography:
   name: Photography
 postgres:
@@ -52,8 +52,8 @@ pyconca:
   title: PyCon Canada
 pyconca2016:
   name: PyConCA2016
-  title: PyCon Canada 2016
   parent: pyconca
+  title: PyCon Canada 2016
 pygta:
   name: PyGTA
   title: Greater Toronto Area Python User Group
@@ -67,12 +67,12 @@ snowboarding:
 steve-jobs:
   name: Steve Jobs
 toronto:
-  name: Toronto
-  title: Toronto, Ontario, Canada
   location:
     lat: 43.7
     lon: -79.4
+  name: Toronto
   parent: ontario
+  title: Toronto, Ontario, Canada
 ux:
   abbr: UX
   name: User experience
