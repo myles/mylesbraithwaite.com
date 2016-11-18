@@ -22,7 +22,8 @@ def main():
     # chdir(data_dir)
     # yaml_files = iglob('*.yml')
 
-    yaml_files = [join(data_dir, 'tags.yml')]
+    yaml_files = [join(data_dir, 'tags.yml'), join(data_dir, 'navigation.yml'),
+                  join(data_dir, 'categories.yml')]
 
     for yaml_file in yaml_files:
         raw = sort_yaml_file(yaml_file)
