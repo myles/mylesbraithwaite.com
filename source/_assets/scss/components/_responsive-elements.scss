@@ -39,3 +39,16 @@
     max-width: 100%;
   }
 }
+
+.responsive-bandcamp {
+  @at-root #{&}__wrapper {
+    @include display(flex);
+    @include justify-content(center);
+  }
+
+  @at-root #{&}__element {
+    border: 0;
+    min-height: 720px;
+    min-width: 400px;
+  }
+}

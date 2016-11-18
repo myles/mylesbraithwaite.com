@@ -4,6 +4,10 @@ apple:
 brutal-design:
   name: Brutal Design
   wikipedia: https://en.wikipedia.org/wiki/Brutalist_architecture
+canada:
+  name: Canada
+chip:
+  name: C.H.I.P.
 css:
   abbr: CSS
   name: Cascading Style Sheets
@@ -15,11 +19,18 @@ death-cab-for-cutie:
 devops:
   name: DevOps
   wikipedia: https://en.wikipedia.org/wiki/DevOps
+gtalug:
+  name: GTALUG
+  title: Greater Toronto Area Linux User Group
 html:
   abbr: HTML
   name: HyperText Markup Language
 ipod:
   name: iPod
+jabber:
+  name: Jabber
+  related:
+  - xmpp
 js:
   name: Javascript
 json:
@@ -28,10 +39,24 @@ lorem-ipsum:
   name: Lorem Ipsum
 music:
   name: Music
+ontario:
+  name: Ontario
+  title: Ontario, Canada
+  parent: canada
 photography:
   name: Photography
 postgres:
   name: Postgres
+pyconca:
+  name: PyConCA
+  title: PyCon Canada
+pyconca2016:
+  name: PyConCA2016
+  title: PyCon Canada 2016
+  parent: pyconca
+pygta:
+  name: PyGTA
+  title: Greater Toronto Area Python User Group
 python:
   name: Python
 r:
@@ -41,6 +66,13 @@ snowboarding:
   name: Snowboarding
 steve-jobs:
   name: Steve Jobs
+toronto:
+  name: Toronto
+  title: Toronto, Ontario, Canada
+  location:
+    lat: 43.7
+    lon: -79.4
+  parent: ontario
 ux:
   abbr: UX
   name: User experience
@@ -48,31 +80,7 @@ wakeboarding:
   name: Wakeboarding
 web-design:
   name: Web Design
-chip:
-  name: C.H.I.P.
-pyconca:
-  name: PyConCA
-  title: PyCon Canada
-pyconca2016:
-  name: PyConCA2016
-  title: PyCon Canada 2016
-toronto:
-  name: Toronto
-  title: Toronto, Ontario, Canada
-  location:
-    lat: 43.7
-    lon: -79.4
 xmpp:
   abbr: XMPP
   name: Extensible Messaging and Presence Protocol
   wikipedia: https://en.wikipedia.org/wiki/XMPP
-pygta:
-  name: PyGTA
-  title: Greater Toronto Area Python User Group
-jabber:
-  name: Jabber
-  related:
-    - xmpp
-gtalug:
-  name: GTALUG
-  title: Greater Toronto Area Linux User Group
