@@ -12,6 +12,8 @@ tags: [django, snippets, python]
 import string
 from random import choice
 
-print ''.join([
-    choice(string.letters + string.digits + string.punctuation) for i in range(50)])
+characters = "{0}{1}{2}".format(string.letters, string.digits,
+                                string.punctuation)
+
+print ''.join([choice(characters) for i in range(50)])
 ```
