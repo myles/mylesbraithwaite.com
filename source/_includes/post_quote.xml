@@ -1,0 +1,2 @@
+<title>{{ post.title | xml_escape }}</title>
+<description>{{ post.content | xml_escape }}{% include c_feed_entry_footer.xml post=post %}</description>

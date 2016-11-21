@@ -5,6 +5,12 @@ layout: feed
 <item>
   {% if post.category == 'article' %}
     {% include post_article.xml post=post %}
+  {% elsif post.category == 'bookmark' %}
+    {% include post_bookmark.xml post=post %}
+  {% elsif post.category == 'list' %}
+    {% include post_list.xml post=post %}
+  {% elsif post.category == 'quote' %}
+    {% include post_quote.xml post=post %}
   {% else %}
     {% include post_simple.xml post=post %}
   {% endif %}

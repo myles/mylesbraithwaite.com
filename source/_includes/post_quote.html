@@ -1,0 +1,13 @@
+<div class="post post--quote">
+    <div class="post__wrapper">
+        {% include c_post_header.html post=post %}
+    </div>
+
+    <div class="post__wrapper">
+        {% include c_post_aside.html post=post content=post.content %}
+
+        <div class="post__body">
+            {{ post.excerpt | markdownify | improve }}
+        </div>
+    </div>
+</div>

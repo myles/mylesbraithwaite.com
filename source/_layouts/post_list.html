@@ -1,0 +1,17 @@
+---
+layout: post
+---
+
+<div class="post post--list">
+    <div class="post__wrapper">
+        {% include c_post_header.html post=page %}
+    </div>
+
+    <div class="post__wrapper">
+        {% include c_post_aside.html post=page content=content %}
+
+        <div class="post__body">
+            {{ content | improve }}
+        </div>
+    </div>
+</div>

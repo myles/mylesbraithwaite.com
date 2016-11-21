@@ -10,6 +10,10 @@ subtitle: "Hoping for the Best, Imagining the Worst."
             {% include post_article.html post=post %}
         {% elsif post.category == 'bookmark' %}
             {% include post_bookmark.html post=post %}
+        {% elsif post.category == 'list' %}
+            {% include post_list.html post=post %}
+        {% elsif post.category == 'quote' %}
+            {% include post_quote.html post=post %}
         {% else %}
             {% include post_simple.html post=post %}
         {% endif %}
@@ -33,7 +37,7 @@ subtitle: "Hoping for the Best, Imagining the Worst."
             {% elsif page == 1 %}
                 <a class="c-button pagination__page" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
             {% else %}
-                <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+                <a class="c-button pagination__page" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
             {% endif %}
         {% endfor %}
 
