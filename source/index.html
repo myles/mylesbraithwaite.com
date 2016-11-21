@@ -19,7 +19,7 @@ subtitle: "Hoping for the Best, Imagining the Worst."
         {% endif %}
     {% endfor %}
 
-    {% if paginator.total_pages == '1' %}
+    {% if paginator.total_pages != '1' %}
     <div class="post-list__pagination pagination">
         {% if paginator.previous_page %}
             <a class="c-button c-button--colour-primary pagination__previous pagination__previous--active" href="{{ paginator.previous_page_path }}">&larr; Prev</a>
