@@ -1,6 +1,7 @@
 ---
 layout: post_simple
 category: simple
+title: CHIP Arrived
 date: 2016-01-05T13:25
 tags:
   - chip

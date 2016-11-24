@@ -1,0 +1,40 @@
+---
+layout: archive
+title: Tags
+permalink: /tag/
+---
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+
+{% assign tag_words = site_tags | split:',' | sort %}
+
+<div class="archive archive--tag-cloud">
+    <ul class="tag-cloud">
+    {% for tag_info in site.tags %}
+        {% capture tag_id %}{{ tag_info | first }}{% endcapture %}
+        {% assign tag = site.data.tags[tag_id] %}
+
+        <li class="tag-cloud__item">
+            <a href="/tag/{{ tag_id |cgi_escape }}/" rel="tag" class="tag-cloud__link">
+                {% if tag.abbr %}
+                <abbr title="{{ tag.name }}" class="tag-cloud__name tag-cloud__name--abbr">
+                    {{ tag.abbr | improve }}
+                </abbr>
+                {% elsif tag.title %}
+                <span title="{{ tag.title }}" class="tag-cloud__name tag-cloud__name--title">
+                    {{ tag.name | improve }}
+                </span>
+                {% elsif tag.name %}
+                <span class="tag-cloud__name">
+                    {{ tag.name | improve }}
+                </span>
+                {% else %}
+                <span class="tag-cloud__name">
+                    {{ tag_id | improve }}
+                </span>
+                {% endif %}
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,11 @@
+.tag-cloud {
+  @include list-unstyled;
+
+  @at-root #{&}__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}

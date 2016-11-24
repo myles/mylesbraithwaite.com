@@ -67,19 +67,16 @@ assets:
 jekyll-archives:
   enabled:
     - year
-    - month
     - day
     - categories
     - tags
   permalinks:
-    year: '/archive/:year/'
-    month: '/archive/:year/:month/'
-    day: '/archive/:year/:month/:day/'
+    year: '/:year/'
+    day: '/archive/:year-:month-:day/'
     tag: '/tag/:name/'
     category: '/:name/'
   layouts:
     year: archive_year
-    month: archive_month
     day: archive_day
     tag: archive_tag
     category: archive_category
