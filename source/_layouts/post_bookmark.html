@@ -3,42 +3,38 @@ layout: post
 ---
 
 <div class="post post--bookmark">
-    <div class="post__wrapper">
-        {% include c_post_header.html post=page %}
-    </div>
+    {% include c_post_header.html post=page %}
 
-    <div class="post__wrapper">
-        {% include c_post_aside.html post=page content=content %}
-
-        <div class="post__body">
-            {% if page.quote %}
-            <blockquote class="blockquote" cite="{{ page.bookmark.url }}">
-                {{ content | improve }}
-
-                {% if page.bookmark.title and page.bookmark.author %}
-                <p class="blockquote__footer">
-                    <cite>{{ page.bookmark.title | improve }}</cite> by
-                    <a href="{{ page.bookmark.url }}">{{ page.bookmark.author | improve }}</a>.
-                </p>
-                {% elsif page.bookmark.title %}
-                <p class="blockquote__footer">
-                    <cite>
-                        <a href="{{ page.bookmark.url }}">
-                            {{ page.bookmark.title | improve }}
-                        </a>
-                    </cite>
-                </p>
-                {% elsif page.bookmark.author %}
-                <p class="blockquote__footer">
-                    <a href="{{ page.bookmark.url }}">
-                        {{ page.bookmark.atuhor | improve }}
-                    </a>
-                </p>
-                {% endif %}
-            </blockquote>
-            {% else %}
+    <section class="post__content">
+        {% if page.quote %}
+        <blockquote class="blockquote" cite="{{ page.bookmark.url }}">
             {{ content | improve }}
+
+            {% if page.bookmark.title and page.bookmark.author %}
+            <p class="blockquote__footer">
+                <cite>{{ page.bookmark.title | improve }}</cite> by
+                <a href="{{ page.bookmark.url }}">{{ page.bookmark.author | improve }}</a>.
+            </p>
+            {% elsif page.bookmark.title %}
+            <p class="blockquote__footer">
+                <cite>
+                    <a href="{{ page.bookmark.url }}">
+                        {{ page.bookmark.title | improve }}
+                    </a>
+                </cite>
+            </p>
+            {% elsif page.bookmark.author %}
+            <p class="blockquote__footer">
+                <a href="{{ page.bookmark.url }}">
+                    {{ page.bookmark.atuhor | improve }}
+                </a>
+            </p>
             {% endif %}
-        </div>
-    </div>
+        </blockquote>
+        {% else %}
+        {{ content | improve }}
+        {% endif %}
+    </section>
+
+    {% include c_post_footer.html post=post content=content %}
 </div>

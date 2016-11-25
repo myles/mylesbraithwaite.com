@@ -36,7 +36,19 @@
 
         {% include c_footer.html %}
 
+        {% raw %}
+        <script id="js-alert-template" type="text/x-handlebars-template">
+            <p class="c-alert{{#if level}} c-alert--{{level}}{{/if}}">
+                {{#if title}}<strong class="c-alert__title">{{title}}</strong>{{/if}}
+                <span class="c-alert__copy">{{copy}}</span>
+                {{#if link}}<a class="c-alert__link" href="{{link}}">{{#if link_title}}{{link_tilte}}{{#else}}Close{{/if}}</a>{{/if}}
+            </p>
+        </script>
+        {% endraw %}
+
+        <script src="{{ site.baseurl | prepend: site.url }}{% asset_path handlebars/handlebars.min.js %}"></script>
         <script src="{{ site.baseurl | prepend: site.url }}{% asset_path jquery/dist/jquery.min.js %}"></script>
+        <script src="{{ site.baseurl | prepend: site.url }}{% asset_path moment/min/moment.min.js %}"></script>
 
         {% if page.javascript_libs contains 'jquery_validate' %}
         <script src="{{ site.baseurl | prepend: site.url }}{% asset_path jquery-validation/dist/jquery.validate.min.js %}"></script>

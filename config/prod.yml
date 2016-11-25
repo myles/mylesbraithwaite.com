@@ -1,0 +1,15 @@
+---
+
+# URL Settings
+url: https://mylesbraithwaite.com
+baseurl: ""
+upload_url: https://mylesbraithwaite.com/uploads
+permalink: /:year/:y_day/:title/
+
+# Contact Form
+raven_key: TODO
+recaptcha_sitekey: TODO
+
+# Jekyll-Assets Settings
+assets:
+  baseurl: https://mylesbraithwaite.com/assets/

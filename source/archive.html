@@ -6,10 +6,10 @@ title: Archive
 <div class="archive">
     {% for post in site.posts %}
         {% capture this %}{{ post.date | date: "%Y" }}{% endcapture %}
-        {% capture this_link %}{{ post.date | date: "/archive/%Y/" }}{% endcapture %}
+        {% capture this_link %}{{ post.date | date: "/%Y/" }}{% endcapture %}
 
         {% capture next %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
-        {% capture next_link %}{{ post.previous.date | date: "/archive/%Y/" }}{% endcapture %}
+        {% capture next_link %}{{ post.previous.date | date: "/%Y/" }}{% endcapture %}
 
         {% if forloop.first %}
         <div class="archive__group">

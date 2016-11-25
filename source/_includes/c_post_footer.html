@@ -1,0 +1,12 @@
+<footer class="post__footer">
+    {% if include.post.via %}
+    <p class="post__meta post__meta--via">
+        <a href="{{ page.via.url }}">
+            {{ include.post.via.author | improve }}
+            {% if include.post.via.publication %}
+            in {{ include.post.via.publication | improve }}
+            {% endif %}
+        </a>
+    </p>
+    {% endif %}
+</footer>

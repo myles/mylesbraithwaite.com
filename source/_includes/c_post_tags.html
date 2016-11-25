@@ -1,23 +1,21 @@
-{% for tag_id in include.tags %}
-    {% assign tag = site.data.tags[tag_id] %}
+{% assign tag = site.data.tags[tag_id] %}
 
-    {% if tag %}
-        <a href="/tag/{{ tag_id }}/" rel="tag" class="post__meta--tag-link">
-            {% if tag.abbr %}
-            <abbr title="{{ tag.name }}">
-                {{ tag.abbr | improve }}
-            </abbr>
-            {% elsif tag.title %}
-            <span title="{{ tag.title }}">
-                {{ tag.name | improve }}
-            </span>
-            {% else %}
-                {{ tag.name | improve }}
-            {% endif %}
-        </a>
+<a href="/tag/{{ include.tag_id | uri_escape }}/" class="tag__link" rel="tag">
+    {% if tag.abbr %}
+    <abbr title="{{ tag.name }}" class="tag__name">
+        {{ tag.abbr | improve }}
+    </abbr>
+    {% elsif tag.title %}
+    <span title="{{ tag.title }}" class="tag__name">
+        {{ tag.name | improve }}
+    </span>
+    {% elsif tag.name %}
+    <span class="tag__name">
+        {{ tag.name | improve }}
+    </span>
     {% else %}
-        <a href="/tag/{{ tag_id | uri_escape }}/" rel="tag">
-            {{ tag_id | improve }}
-        </a>
+    <span class="tag__name">
+        {{ include.tag_id | improve }}
+    </span>
     {% endif %}
-{% endfor %}
+</a>

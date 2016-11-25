@@ -1,26 +1,59 @@
-.header {
-  @at-root #{&}__wrapper {
-    @include clearfix;
+$header-imprint-colour: #fff;
+$header-imprint-background-colour: desaturate(darken($colour-primary, 20%), 30%);
 
-    position: relative;
+.header {
+  margin-bottom: 1em;
+  text-align: center;
+
+  @at-root #{&}__imprint {
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+
+    background-color: $header-imprint-background-colour;
+    color: $header-imprint-colour;
+    padding: 1em 0;
+
+    @at-root #{&}--bg-image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 50vh;
+    }
   }
 
-  @at-root #{&}__logo {
-    float: left;
+  @at-root #{&}__title {
+    font-weight: 100;
+    margin: 0;
+  }
 
-    @include media($medium-screen) {
-      display: block;
-      float: none;
+  @at-root #{&}__title-link {
+    color: $header-imprint-colour;
+    text-decoration: none;
+
+    &:hover {
+      color: desaturate(darken($header-imprint-colour, 20%), 30%);
+      text-decoration: none;
+    }
+  }
+
+  @at-root #{&}__navigation {
+    margin: .5em 0;
+
+    .navigation {
+      padding-top: 0;
+      width: 100%;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .navigation__list {
+      margin: 0 auto;
+    }
+
+    .navigation__item {
+      margin: .5em 2em;
       text-align: center;
     }
-
-    @include media($large-screen) {
-      float: left;
-    }
-  }
-
-  @at-root #{&}__image {
-    max-height: 2em;
-    padding-right: 1em;
+    // scss-lint:enable SelectorFormat
   }
 }

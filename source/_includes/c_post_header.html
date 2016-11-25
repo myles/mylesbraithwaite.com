@@ -1,4 +1,4 @@
-<div class="post__header {% if include.post.feature_image %}post__header--feature-image{% endif %}">
+<header class="post__header {% if include.post.feature_image %}post__header--feature-image{% endif %}">
     {% if include.post.feature_image %}
     <div class="post__feature-image" style="background-image: url('{{ include.post.feature_image | prepend: include.post.url | prepend: site.upload_url }}')"></div>
     {% endif %}
@@ -23,5 +23,22 @@
         {% if include.post.abstract %}
             <h2 class="post__abstract">{{ include.post.abstract | improve }}</h2>
         {% endif %}
+
+        <p class="post__meta">
+            Published on
+            <time class="post__published-date" datetime="{{ include.post.date | date_to_xmlschema }}">
+                {{ include.post.date | date: '%d %B, %Y' | improve }}
+            </time>
+            <span class="separator">|</span>
+            Tagged with
+            <span class="post__tags">
+            {% for tag_id in include.post.tags %}
+                {% if forloop.first == false %}
+                <span class="separator">/</span>
+                {% endif %}
+                {% include c_post_tags.html tag_id=tag_id %}
+            {% endfor %}
+            </span>
+        </p>
     </div>
-</div>
+</header>

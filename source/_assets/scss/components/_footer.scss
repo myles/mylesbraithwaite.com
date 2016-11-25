@@ -1,5 +1,5 @@
 $footer-colour: #fff;
-$footer-logo-height: 3rem;
+$footer-logo-width: 10rem;
 $footer-background-colour: desaturate(darken($colour-primary, 20%), 30%);
 $footer-link-colour: transparentize($footer-colour, .6);
 $footer-disclaimer-colour: transparentize($footer-colour, .6);
@@ -11,13 +11,19 @@ $footer-disclaimer-colour: transparentize($footer-colour, .6);
   width: 100%;
 
   @at-root #{&}__logo {
+    @include radial-gradient(rgba(0, 0, 0, .2), transparent);
+
     display: block;
-    margin-bottom: $spacer-x * 2;
+    height: $footer-logo-width + 5rem;
+    margin: 0 auto ($spacer-x * 2);
+    overflow: hidden;
     text-align: center;
+    width: $footer-logo-width + 5rem;
   }
 
   @at-root #{&}__image {
-    height: $footer-logo-height;
+    margin-top: 1rem;
+    width: $footer-logo-width;
   }
 
   @at-root #{&}__sections {

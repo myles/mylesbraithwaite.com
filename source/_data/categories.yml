@@ -6,5 +6,11 @@
 - name: Bookmarks
   url: /bookmark/
 
+- name: Lists
+  url: /list/
+
+- name: Quotes
+  url: /quote/
+
 - name: Simple
   url: /simple/

@@ -1,21 +1,18 @@
 <div class="header">
-    <div class="header__wrapper">
-        <a href="/" class="header__logo">
-            <img src="{% asset_path avatar.svg %}" class="header__image" alt="{{ site.title }}">
-        </a>
+    <div class="header__imprint {% if page.header_image %}header__imprint--bg-image{% endif %}" {% if page.header_image %}style="background-image:url('{{ page.header_image }}')"{% endif %}>
+        <h1 class="header__title">
+            <a href="/" class="header__title-link">
+                {{ site.title }}
+            </a>
+        </h1>
+    </div>
 
-        <a href="javascript:void(0)" class="navigation__menu-button" id="js-navigation-menu-button">MENU</a>
-
-        <nav class="header__navigation navigation">
+    <div class="header__navigation">
+        <nav class="navigation">
             <ul class="navigation__list navigation__list--show" id="js-navigation-list">
-                <li class="navigation__item">
-                    <a href="/" class="navigation__link">
-                        {{ site.title }}
-                    </a>
-                </li>
                 {% for link in site.data.navigation %}
-                <li class="navigation__item {% if link.subitems %}navigation__item--more{% endif %}">
-                    <a href="{{ link.url }}" class="navigation__link">
+                <li class="navigation__item {% if link.url == page.url %}navigation__item--active{% endif %}">
+                    <a href="{{ link.url }}" class="navigation__link {% if link.url == page.url %}navigation__link--active{% endif %}">
                         {{ link.name }}
                     </a>
                 </li>

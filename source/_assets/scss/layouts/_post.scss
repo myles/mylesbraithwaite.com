@@ -1,29 +1,8 @@
 .post {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-
-  @at-root #{&}__wrapper {
-    @include outer-container;
-
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+  margin: 1rem 2rem;
 
   @at-root #{&}__header {
-    @include span-columns(12);
-    @include omega();
-
     margin-bottom: .5rem;
-
-    @include media(map-get($grid-breakpoints, sm)) {
-      @include span-columns(10);
-      @include shift(2);
-    }
-
-    @at-root #{&}--feature-image {
-      @include span-columns(12);
-      @include shift(0);
-    }
   }
 
   @at-root #{&}__feature-image {
@@ -82,25 +61,5 @@
     }
   }
 
-  @at-root #{&}__body {
-    @include span-columns(12);
-    @include omega();
-
-    @include media(map-get($grid-breakpoints, sm)) {
-      @include span-columns(10);
-    }
-  }
-
-  @at-root #{&}__aside {
-    @include span-columns(12);
-
-    @include media(map-get($grid-breakpoints, sm)) {
-      @include span-columns(2);
-    }
-  }
-
-  @at-root #{&}__meta-list {
-    list-style: none;
-    padding-left: 0;
-  }
+  @at-root #{&}__content {}
 }

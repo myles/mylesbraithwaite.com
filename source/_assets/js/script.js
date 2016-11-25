@@ -1,4 +1,26 @@
 $(document).ready(function () {
+    if ($('#js-content-expiry-alert').length) {
+        var el = $('#js-content-expiry-alert');
+
+        var datePublished = el.data('published'),
+            dateUpdated = el.data('updated'),
+            refreshPostURL = el.data('refresh'),
+            content;
+
+        if (dateUpdated.length) {
+            content = "This post was published " + moment(datePublished).fromNow() + " and was last updated <strong>" + moment(dateUpdated).fromNow() + "</strong>.";
+        } else if (refreshPostURL.length) {
+            alert(refreshPostURL);
+        } else {
+            content = "This post was published <strong>" + moment(datePublished).fromNow() + "</strong>.";
+        }
+
+        var source = $('#js-alert-template').html();
+        var template = Handlebars.compile(source);
+
+        el.html(template({copy: content}));
+    }
+
     var menuToggle = $('#js-navigation-menu-button').unbind();
     $('#js-navigation-list').removeClass('navigation__list--show');
 

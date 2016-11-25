@@ -1,4 +1,8 @@
 ---
+art:
+  name: Art
+video:
+  name: Video
 adam-savage:
   name: Adam Savage
 apple:

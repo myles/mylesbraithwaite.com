@@ -51,8 +51,12 @@
     }
   }
 
-  @at-root #{&}___link {
+  @at-root #{&}__link {
     display: inline-block;
+
+    @at-root #{&}--active {
+      color: desaturate(darken($colour-primary, 20%), 30%);
+    }
 
     @include media($large-screen) {
       padding-right: 1em;

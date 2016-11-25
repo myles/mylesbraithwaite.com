@@ -1,13 +1,9 @@
-<div class="post post--quote">
-    <div class="post__wrapper">
-        {% include c_post_header.html post=post %}
-    </div>
+<article class="post post--quote">
+    {% include c_post_header.html post=post %}
 
-    <div class="post__wrapper">
-        {% include c_post_aside.html post=post content=post.content %}
+    <section class="post__content">
+        {{ post.content }}
+    </section>
 
-        <div class="post__body">
-            {{ post.excerpt | markdownify | improve }}
-        </div>
-    </div>
-</div>
+    {% include c_post_footer.html post=post content=post.content %}
+</article>

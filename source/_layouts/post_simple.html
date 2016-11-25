@@ -3,15 +3,11 @@ layout: post
 ---
 
 <div class="post post--simple">
-    <div class="post__wrapper">
-        {% include c_post_header.html post=page %}
-    </div>
+    {% include c_post_header.html post=page %}
 
-    <div class="post__wrapper">
-        {% include c_post_aside.html post=page content=content %}
+    <section class="post__content">
+        {{ content | improve }}
+    </section>
 
-        <div class="post__body">
-            {{ content | improve }}
-        </div>
-    </div>
+    {% include c_post_footer.html post=post content=content %}
 </div>
