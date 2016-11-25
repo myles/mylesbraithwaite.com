@@ -8,7 +8,7 @@ Hi! This is the source code for [my blog](https://mylesbraithwaite.com/). It use
 
 ## Development Environment Setup
 
-You can run `./scripts/bootstrap` in the project path to setup your environment.
+You can run `./script/bootstrap` in the project path to setup your environment.
 
 The following is a step by step guide for developing [my blog](https://mylesbraithwaite.com/).
 
@@ -23,7 +23,7 @@ The following is a step by step guide for developing [my blog](https://mylesbrai
   * [awesome-slugify](https://pypi.python.org/pypi/awesome-slugify) - `sudo pip3 install awesome-slugify`
   * [python-frontmatter](https://pypi.python.org/pypi/python-frontmatter) - `sudo pip3 install python-frontmatter`
   * [PyYAML](https://pypi.python.org/pypi/PyYAML) - `sudo pip3 install PyYAML`
-  
+
 ### Clone the Repository
 
 ```bash
@@ -56,12 +56,12 @@ mylesbraithwaite.com $ bower install
 
 #### Build the Web site
 
-`grunt build` or `./scripts/build`
+`grunt build` or `./script/build`
 
 ### Run a Development Server
 
-`grunt develop` or `./scripts/server`
+`grunt develop` or `./script/server`
 
 ### Deploy the Web site
 
-`grunt deploy` or `./scripts/deploy`
+`grunt deploy` or `./script/deploy`

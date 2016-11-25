@@ -1,0 +1,25 @@
+#!/bin/sh
+
+if ! [ -f `which bundle` ];
+then
+  echo 'bundler is required';
+fi
+
+if ! [ -f `which yarn` ];
+then
+  echo 'yarn is required';
+fi
+
+if ! [ -f `which bower` ];
+then
+  echo 'bower is required';
+fi
+
+if ! [ -f `which grunt` ];
+then
+  echo 'grunt-cli is required';
+fi
+
+bundle install
+yarn install
+bower install
