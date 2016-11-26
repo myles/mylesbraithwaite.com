@@ -5,5 +5,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', ['jekyll:build']);
 
+    grunt.registerTask('deploy', ['env:stag', 'jekyll:stag', 'rsync:stag']);
+    grunt.registerTask('deploy:prod', ['env:prod', 'jekyll:prod',
+                                       'rsync:prod']);
+
     grunt.registerTask('default', ['develop']);
 };

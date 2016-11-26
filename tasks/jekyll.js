@@ -11,6 +11,18 @@ module.exports = function (grunt) {
                 build: true
             }
         },
+        stag: {
+            options: {
+                build: true,
+                config: 'config/base.yml,config/stag.yml'
+            }
+        },
+        prod: {
+            options: {
+                build: true,
+                config: 'config/base.yml,config/prod.yml'
+            }
+        },
         serve: {
             options: {
                 serve: true,

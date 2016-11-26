@@ -4,7 +4,6 @@
 url: https://mylesbraithwaite.com
 baseurl: ""
 upload_url: https://mylesbraithwaite.com/uploads
-permalink: /:year/:y_day/:title/
 
 # Contact Form
 raven_key: TODO
@@ -13,3 +12,16 @@ recaptcha_sitekey: TODO
 # Jekyll-Assets Settings
 assets:
   baseurl: https://mylesbraithwaite.com/assets/
+
+# Piwik Settings
+piwik_base_url: piwik.mylesb.ca
+piwik_site_id: 18
+piwik_set_domains: '*.mylesbraithwaite.com'
+
+# Google Analytics Settings
+google_analytics_tacking_code: UA-1642439-2
+
+# Grunt-Rsync Settings
+rsync:
+  dest: /srv/www/mylesbraithwaite.com/www/html/
+  host: myles@bear.mylesbraithwaite.com

@@ -1,8 +1,16 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="cleartype" content="on">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
@@ -17,12 +25,22 @@
 
         <link rel="alternate" type="application/atom+xml" title="{{ site.title }} | Feed" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
+        {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
+        {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
+        {% if site.alexa_verify %}<meta name="alexaVerifyID" content="{{ site.alexa_verify }}">{% endif %}
+        {% if site.yandex_verify %}<meta name="yandex-verification" content="{{ site.yandex_verify }}">{% endif %}
+
+        {% if site.data.author.social.googleplus.url %}<link rel="author" href="{{ site.data.author.social.googleplus.url }}?rel=author">{% endif %}
+
         {% if page.recaptcha %}
         <script src='https://www.google.com/recaptcha/api.js'></script>
         {% endif %}
 
         {% include c_favicons.html %}
         {% include c_metadata.html page=page %}
+
+        {% include c_google_analytics.html %}
+        {% include c_piwik.html %}
     </head>
 
     <body class="mylesbraithwaite_com-www {% if page.body_css_class %}mylesbraithwaite_com-www--{{ page.body_css_class | slugify }}{% endif %}">
@@ -46,13 +64,21 @@
         </script>
         {% endraw %}
 
-        <script src="{{ site.baseurl | prepend: site.url }}{% asset_path handlebars/handlebars.min.js %}"></script>
-        <script src="{{ site.baseurl | prepend: site.url }}{% asset_path jquery/dist/jquery.min.js %}"></script>
-        <script src="{{ site.baseurl | prepend: site.url }}{% asset_path moment/min/moment.min.js %}"></script>
-
-        {% if page.javascript_libs contains 'jquery_validate' %}
-        <script src="{{ site.baseurl | prepend: site.url }}{% asset_path jquery-validation/dist/jquery.validate.min.js %}"></script>
-        {% endif %}
+        <script type="text/javascript">
+            window.MylesBlogPageDetails = {
+                {% if page.id %}id: {{ page.id | jsonify }},{% endif %}
+                {% if page.title %}title: {{ page.title | jsonify }},{% endif %}
+                {% if page.date %}date: {{ page.date | jsonify }},{% endif %}
+                {% if page.tags %}tags: {{ page.tags | jsonify }},{% endif %}
+                {% if page.path %}path: "source/{{ page.path }}",{% endif %}
+                {% if page.layout %}layout: {{ page.layout | jsonify }},{% endif %}
+                {% if page.category %}
+                {% assign category_data = site.data.categories | where:"slug", page.category %}
+                category: {{ category_data | jsonify }},
+                {% endif %}
+                url: "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+            }
+        </script>
 
         {% if page.javascript_libs contains 'twitter' %}
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>

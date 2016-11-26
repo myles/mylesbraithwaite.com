@@ -2,6 +2,8 @@
   "name": "mylesbraithwaite.com-www",
   "dependencies": {
     "grunt": "^1.0.1",
-    "grunt-jekyll": "^0.4.4"
+    "grunt-env": "^0.4.4",
+    "grunt-jekyll": "^0.4.4",
+    "grunt-rsync": "^2.0.1"
   }
 }

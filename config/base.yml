@@ -47,6 +47,63 @@ collections:
     output: true
     permalink: /:path/
 
+# Defaults
+# See: <https://jekyllrb.com/docs/configuration/#front-matter-defaults>
+defaults:
+
+  # Artices
+  - scope:
+      path: _posts/article
+      type: posts
+    values:
+      layout: post_article
+      category: article
+
+  # Bookmarks
+  - scope:
+      path: _posts/bookmark
+      type: posts
+    values:
+      layout: post_bookmark
+      category: bookmark
+
+  # Lists
+  - scope:
+      path: _posts/list
+      type: posts
+    values:
+      layout: post_list
+      category: list
+
+  # Quote
+  - scope:
+      path: _posts/quote
+      type: posts
+    values:
+      layout: post_qutoe
+      category: quote
+
+  # Simple
+  - scope:
+      path: _posts/simple
+      type: posts
+    values:
+      layout: post_simple
+      category: simple
+
+  # Pages
+  - scope:
+      path: _pages
+      type: pages
+    values:
+      layout: page
+
+# HTML Compression
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
 # Contact Form
 raven_key: TODO
 recaptcha_sitekey: TODO

@@ -18,18 +18,26 @@ location:
   country: Canada
 
 social:
-  - name: Twitter
+  twitter:
+    name: Twitter
     slug: twitter
     url: https://twitter.com/mylesb
-  - name: GitHub
+  github:
+    name: GitHub
     slug: github
     url: https://github.com/myles
-  - name: Pinterest
+  pinterest:
+    name: Pinterest
     slug: pinterest
     url: https://pinterest.com/mylesb/
-  - name: Instagram
+  instagram:
+    name: Instagram
     slug: instagram
     url: https://instagram.com/myles
+  googleplus:
+    name: Google+
+    slug: googleplus
+    url: https://plus.google.com/+MylesBraithwaite
 
 elsewhere:
   - name: I Love Myles

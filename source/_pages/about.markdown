@@ -17,7 +17,7 @@ I was born on {{ author.born.date | date: '%d %B %Y' }} in {{ author.born.locali
 
 ## Contact Myles
 
-You can email me at [{{ author.email }}](mailto:{{ author.email }}) and find me on {% for s in author.social %}{% if forloop.first == false %}, {% endif %} {% if forloop.last == true %}and{% endif %} [{{ s.name }}]({{ s.url }}){% endfor %}.
+You can email me at [{{ author.email }}](mailto:{{ author.email }}) and find me on {% for s in author.social %}{% if forloop.first == false %}, {% endif %} {% if forloop.last == true %}and{% endif %} [{{ s[1].name }}]({{ s[1].url }}){% endfor %}.
 
 ## Colophon
 
