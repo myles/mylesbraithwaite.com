@@ -1,0 +1,17 @@
+---
+title: PyThor
+date: 2016-01-10 04:12:20 Z
+categories:
+- source
+- bookmark
+tags:
+- r
+- python
+layout: post_bookmark
+public: true
+bookmark:
+  url: http://nipunbatra.github.io/2016/01/pythor/
+  title: Pythor-Python meets R
+---
+
+A good introduction to using R packages in Python.

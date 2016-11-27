@@ -1,7 +1,8 @@
 ---
-layout: null
-sitemap: false
 permalink: twtxt.txt
+layout: 
+sitemap: false
 ---
+
 {% for post in site.posts limit:site.paginate %}{{ post.date | date_to_xmlschema }}	{{ post.title }} {% if post.shorturl %}{{ post.shorturl }}{% else %}{{ post.url | prepend: site.baseurl | prepend: site.url }}{% endif %}
 {% endfor %}

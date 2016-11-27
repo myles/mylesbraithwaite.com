@@ -1,0 +1,18 @@
+---
+title: Perfect.org
+date: 2015-11-24 09:18:00 Z
+categories:
+- source
+- bookmark
+tags:
+- swift
+- apple
+layout: post_bookmark
+bookmark:
+  url: https://www.perfect.org/
+  title: Perfect.org
+---
+
+A toolkit for writing server-side applications in Apple's Swift programming
+language (which can only run on Mac OS X because Apple still hasn't
+released Swift open source).

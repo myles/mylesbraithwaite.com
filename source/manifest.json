@@ -1,6 +1,7 @@
 ---
-layout: null
+layout: 
 ---
+
 {
   "name": {{ site.title | jsonify }},
   "start_url": {{ site.url | jsonify }},
