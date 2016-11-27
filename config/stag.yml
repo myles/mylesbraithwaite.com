@@ -1,0 +1,19 @@
+---
+
+# URL Settings
+url: https://staging.mylesbraithwaite.com
+baseurl: ""
+upload_url: https://staging.mylesbraithwaite.com/uploads
+
+# Contact Form
+raven_key: TODO
+recaptcha_sitekey: TODO
+
+# Jekyll-Assets Settings
+assets:
+  baseurl: https://staging.mylesbraithwaite.com/assets/
+
+# Grunt-Rsync Settings
+rsync:
+  dest: /srv/www/mylesbraithwaite.com/staging/html/
+  host: myles@bear.mylesbraithwaite.com

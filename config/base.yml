@@ -10,6 +10,7 @@ gems:
   - jekyll-archives
   - jekyll-paginate
   - jekyll-typogrify
+  - jekyll-picture-tag
   - jekyll-time-to-read
 
 # URL Settings

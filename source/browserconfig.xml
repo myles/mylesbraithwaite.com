@@ -1,0 +1,15 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+  <msapplication>
+    <tile>
+      <square70x70logo src="{% asset_path favicon70x70.png %}"/>
+      <square150x150logo src="{% asset_path favicon150x150.png %}"/>
+      <square310x310logo src="{% asset_path favicon310x310.png %}"/>
+      <wide310x150logo src="{% asset_path favicon310x150.png %}"/>
+      <TileColor>#24a5d4</TileColor>
+    </tile>
+  </msapplication>
+</browserconfig>
