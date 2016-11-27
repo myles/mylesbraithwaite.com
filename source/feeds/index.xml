@@ -1,7 +1,6 @@
 ---
 layout: feed
 ---
-
 {% for post in site.posts limit:site.paginate %}
 <item>
   {% if post.category == 'article' %}
