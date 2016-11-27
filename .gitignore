@@ -1,5 +1,6 @@
 /.bundle/
 /build/
+/.sass-cache/
 /node_modules/
 /source/.asset-cache/
 /source/_assets/bower/

@@ -10,3 +10,5 @@ tags:
 {% capture image %}{{ site.upload_url }}{% post_url /simple/2016-01-05-chip %}chip.jpg{% endcapture %}
 
 {% include c_responsive_image.html src=image alt="CHIP" caption="Got my CHIP today!" %}
+
+{% picture 2016/005/chip/chip.jpg %}

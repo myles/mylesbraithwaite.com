@@ -84,7 +84,7 @@ albums:
     cover: https://placekitten.com/500/500
 ---
 
-{% for album in page.albums %}
+{# for album in page.albums #}
 <div class="card-list">
   <div class="card-list__item card">
     <img class="card__image card__image--top" src="{{ album.cover }}" alt="{{ album.name }}">
@@ -96,4 +96,4 @@ albums:
     </div>
   </div>
 </div>
-{% endfor %}
+{# endfor #}

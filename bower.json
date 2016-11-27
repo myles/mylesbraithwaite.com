@@ -1,10 +1,11 @@
 {
   "name": "mylesbraithwaite.com-www",
   "dependencies": {
-    "handlebars": "^4.0.5",
-    "jquery": "^3.1.1",
-    "jquery-validation": "^1.15.1",
-    "moment": "^2.17.0",
-    "old-fashioned": "https://github.com/myles/old-fashioned.git"
+    "handlebars": "latest",
+    "jquery": "latest",
+    "jquery-validation": "latest",
+    "moment": "latest",
+    "old-fashioned": "https://github.com/myles/old-fashioned.git",
+    "picturefill": "latest"
   }
 }
