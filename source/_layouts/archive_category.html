@@ -1,0 +1,18 @@
+---
+layout: archive
+---
+
+<div class="archive archive--category">
+    <div class="archive__header">
+        <h1 class="archive__title">Archive of posts from <strong>{{ page.title | titlecase }}</strong></h1>
+    </div>
+
+    <div class="archive__group">
+        {% for post in page.posts %}
+        <a class="archive__item archive__link" href="{{ post.url }}">
+            <p class="archive__item-meta">{{ post.date | date: site.datetime_short_format }}</p>
+            <h3 class="archive__item-title">{{ post.title | improve }}</h3>
+        </a>
+        {% endfor %}
+    </div>
+</div>

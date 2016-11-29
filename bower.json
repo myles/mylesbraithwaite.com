@@ -6,6 +6,7 @@
     "jquery-validation": "latest",
     "moment": "latest",
     "old-fashioned": "https://github.com/myles/old-fashioned.git",
-    "picturefill": "latest"
+    "picturefill": "latest",
+    "html5shiv": "^3.7.3"
   }
 }

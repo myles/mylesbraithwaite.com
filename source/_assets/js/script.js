@@ -1,6 +1,6 @@
+//= require moment/min/moment.min.js
 //= require jquery/dist/jquery.min.js
 //= require handlebars/handlebars.min.js
-//= require moment/min/moment.min.js
 //= require jquery-validation/dist/jquery.validate.min.js
 
 $(document).ready(function () {

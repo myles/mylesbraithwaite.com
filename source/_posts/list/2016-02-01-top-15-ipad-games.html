@@ -40,22 +40,14 @@ items:
     url: https://itunes.apple.com/ca/app/papers-please/id935216956?mt=8
 ---
 
-<div class="l-row">
-  <div class="l-column l-column--6">
-    <ul>
-      {% for item in post.items %}
-      <li>
-        {% if item.url %}
-        <a href="{{ item.url }}">{{ item.name }}</a>
-        {% else %}
-        {{ item.name }}
-        {% endif %}
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-
-  <div class="l-column l-column--6">
-    {% include c_responsive_image.html src=ipad-games-folder.png %}
-  </div>
-</div>
+<ul>
+  {% for item in post.items %}
+  <li>
+    {% if item.url %}
+    <a href="{{ item.url }}">{{ item.name }}</a>
+    {% else %}
+    {{ item.name }}
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>

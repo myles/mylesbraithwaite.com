@@ -1,0 +1,33 @@
+---
+layout: archive
+---
+
+{% assign tag = site.data.tags[page.title] %}
+
+<div class="archive archive--category">
+    <div class="archive__header">
+        <h1 class="archive__title">
+            Archive of posts from
+            <strong>
+                {% if tag.abbr %}
+                <abbr title="{{ tag.name }}">{{ tag.abbr | improve }}</abbr>
+            {% elsif tag.title %}
+                <span title="{{ tag.title }}">{{ tag.name | improve }}</span>
+            {% elsif tag.name %}
+                {{ tag.name | improve }}
+            {% else %}
+                {{ page.title | titlecase }}
+            {% endif %}
+            </strong>
+        </h1>
+    </div>
+
+    <div class="archive__group">
+        {% for post in page.posts %}
+        <a class="archive__item archive__link" href="{{ post.url }}">
+            <p class="archive__item-meta">{{ post.date | date: site.datetime_short_format }}</p>
+            <h3 class="archive__item-title">{{ post.title | improve }}</h3>
+        </a>
+        {% endfor %}
+    </div>
+</div>

@@ -1,6 +1,6 @@
 <figure class="responsive-image">
     <div class="responsive-image__wrapper">
-        <img class="responsive-image__image" src="{{ include.src }}" {% if include.alt %}alt="{{ include.alt }}"{% endif %}>
+        {% picture {{ include.src }} alt={{ include.alt }} class="responsive-image__image" %}
 
         {% if include.caption %}
         <figcaption class="responsive-image__caption">{{ include.caption }}</figcaption>

@@ -19,9 +19,9 @@ layout: compress
         <meta name="author" content="{{ site.data.author.name }} ({{ site.data.author.email }})">
 
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-        <link rel="onion" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: "https://tdm76lx3jweaozkd.onion" }}">
+        <link rel="onion" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.onion_url }}">
 
-        <link rel="stylesheet" href="{{ site.baseurl | prepend: site.url }}{% asset_path style.scss %}">
+        {% stylesheet style %}
 
         <link rel="alternate" type="application/atom+xml" title="{{ site.title }} | Feed" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
@@ -41,6 +41,16 @@ layout: compress
 
         {% include c_google_analytics.html %}
         {% include c_piwik.html %}
+
+        <!--[if lt IE 9]>
+        {% javascript html5shiv/dist/html5shiv.js %}
+        <![endif]-->
+
+        <script>
+        document.createElement('picture');
+        </script>
+
+        {% javascript picturefill/dist/picturefill %}
     </head>
 
     <body class="mylesbraithwaite_com-www {% if page.body_css_class %}mylesbraithwaite_com-www--{{ page.body_css_class | slugify }}{% endif %}">
@@ -84,6 +94,6 @@ layout: compress
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         {% endif %}
 
-        <script src="{{ site.baseurl | prepend: site.url }}{% asset_path script.js %}"></script>
+        {% javascript script %}
     </body>
 </html>

@@ -17,6 +17,7 @@ url: http://127.0.0.1:4000
 baseurl: ""
 upload_url: http://127.0.0.1:4000/uploads
 permalink: /:year/:y_day/:title/
+onion_url: ""
 
 # Site Meta Data
 title: Myles Braithwaite
@@ -34,7 +35,9 @@ datetime_short_format: '%d/%b/%Y'
 # Build Settings
 markdown: redcarpet
 redcarpet:
-  extensions: []
+  extensions:
+    - tables
+    - footnotes
 
 # Pagination Settings
 paginate: 10
@@ -46,6 +49,10 @@ collections:
   pages:
     output: true
     permalink: /:path/
+
+  wiki:
+    output: true
+    permalink: /wiki/:path/
 
 # Defaults
 # See: <https://jekyllrb.com/docs/configuration/#front-matter-defaults>
@@ -97,6 +104,12 @@ defaults:
       type: pages
     values:
       layout: page
+
+  - scope:
+      path: _wiki
+      type: wiki
+    values:
+      layout: wiki
 
 # HTML Compression
 compress_html:

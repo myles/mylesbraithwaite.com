@@ -9,32 +9,41 @@ permalink: /tag/
 {% assign tag_words = site_tags | split:',' | sort %}
 
 <div class="archive archive--tag-cloud">
-    <ul class="tag-cloud">
-    {% for tag_info in site.tags %}
-        {% capture tag_id %}{{ tag_info | first }}{% endcapture %}
-        {% assign tag = site.data.tags[tag_id] %}
+    <div class="archive__header">
+        <h1 class="archive__title">Tags</h1>
+    </div>
 
-        <li class="tag-cloud__item">
-            <a href="/tag/{{ tag_id |cgi_escape }}/" rel="tag" class="tag-cloud__link">
+    <div class="archive__group">
+    <ul class="tag-cloud">
+        {% assign tag_list = site.tags %}
+        {% for tag_info in tag_list %}
+            {% assign tag_id = tag_info | first %}
+            {% assign tag = site.data.tags[tag_id] %}
+            {% assign tag_post_count = tag_info | last | size %}
+            {% assign tag_font_size = tag_info | last | size | times: 10 | plus: 90 %}
+
+            <li class="tag-cloud__item" data-post-count="{{ tag_post_count }}" {% if tag.name %}data-name="{{ tag.name }}"{% endif %} {% if tag.abbr %}data-abbr="{{ tag.abbr }}"{% endif %} {% if tag.title %}data-title="{{ tag.title }}"{% endif %} style="font-size:{{ tag_font_size }}%">
+                <a href="/tag/{{ tag_id |cgi_escape }}/" rel="tag" class="tag-cloud__link">
                 {% if tag.abbr %}
-                <abbr title="{{ tag.name }}" class="tag-cloud__name tag-cloud__name--abbr">
-                    {{ tag.abbr | improve }}
-                </abbr>
+                    <abbr title="{{ tag.name }}" class="tag-cloud__name tag-cloud__name--abbr">
+                        {{ tag.abbr | improve }}
+                    </abbr>
                 {% elsif tag.title %}
-                <span title="{{ tag.title }}" class="tag-cloud__name tag-cloud__name--title">
-                    {{ tag.name | improve }}
-                </span>
+                    <span title="{{ tag.title }}" class="tag-cloud__name tag-cloud__name--title">
+                        {{ tag.name | improve }}
+                    </span>
                 {% elsif tag.name %}
-                <span class="tag-cloud__name">
-                    {{ tag.name | improve }}
-                </span>
+                    <span class="tag-cloud__name">
+                        {{ tag.name | improve }}
+                    </span>
                 {% else %}
-                <span class="tag-cloud__name">
-                    {{ tag_id | improve }}
-                </span>
+                    <span class="tag-cloud__name">
+                        {{ tag_id | improve }}
+                    </span>
                 {% endif %}
-            </a>
-        </li>
-    {% endfor %}
-    </ul>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
 </div>
