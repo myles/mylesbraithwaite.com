@@ -1,0 +1,13 @@
+---
+layout: post_bookmark
+category: bookmark
+date: 2014-01-01T20:12:21
+title: "1pass"
+tags: [python, 1password, command-line]
+bookmark:
+  url: https://pypi.python.org/pypi/1pass
+---
+
+1pass is a Python library and command line interface for [1Password](https://agilebits.com/onepassword "1Password by Agile Bits") (a Windows and Mac OS X application for storing your passwords). I have already configured it in my OfflineIMAP and ESMTP configurations.
+
+You can checkout the [source code to 1pass on GitHub](https://github.com/georgebrock/1pass "1pass").
