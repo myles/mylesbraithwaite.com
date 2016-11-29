@@ -1,0 +1,18 @@
+---
+layout: post_bookmark
+category: bookmark
+date: 2010-12-12T00:00:00
+title: "How can I make VIM play typewriter sound when I write a letter?"
+tags: [linux, mac-os-x, vim, typewriter]
+bookmark:
+  url: http://stackoverflow.com/questions/4418364/how-can-i-make-vim-play-typewriter-sound-when-i-write-a-letter/4418605#4418605
+---
+
+<p>The best things about StackOverflow are these kind of questions that actually receive an answer and not a "I would like that information to".</p>
+
+```vim
+function! PlaySound()
+	silent! exec '!afpaly ~/.vim/support/my_typewriter_sound.aiff &'
+endfunction
+autocmd CursorMovedI * call PlaySound()
+```
