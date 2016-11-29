@@ -136,7 +136,7 @@ assets:
 # Jekyll-Picture-Tag Settings
 picture:
   source: uploads
-  output: generated
+  output: uploads
   markup: picture
   presets:
 
@@ -146,12 +146,18 @@ picture:
       attr:
         class: blog-full
         itemprop: image
+      source_xxlrg:
+        media: "(min-width: 1500px)"
+        width: 1500
+      source_xlrg:
+        media: "(min-width: 1000px)"
+        width: 1000
       source_lrg:
-        media: "(min-width: 40em)"
-        width: 700
+        media: "(min-width: 50em)"
+        width: 800
       source_med:
         media: "(min-width: 30em)"
-        width: 450
+        width: 480
       source_default:
         width: 350
         height: 200

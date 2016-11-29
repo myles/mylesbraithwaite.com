@@ -62,6 +62,18 @@ mylesbraithwaite.com $ bower install
 
 `grunt develop` or `./script/server`
 
+<http://127.0.0.1:4000/>
+
 ### Deploy the Web site
 
+#### Staging
+
 `grunt deploy` or `./script/deploy`
+
+<https://staging.mylesbraithwaite.com>
+
+#### Production
+
+`grunt deploy:prod`
+
+<https://mylesbraithwaite.com/>

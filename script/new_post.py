@@ -12,7 +12,7 @@ Create a new post.
 """
 
 from datetime import datetime
-from urlparse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs
 from os.path import dirname, realpath, join
 
 import click
@@ -21,7 +21,7 @@ from frontmatter import Post, dump
 
 slugify = Slugify(to_lower=True)
 
-TEMP_FILEPATH = './source/_posts/{type}/{date}-{slug}.markdown'
+TEMP_FILEPATH = '../source/_posts/{type}/{date}-{slug}.markdown'
 
 
 @click.group()
@@ -75,7 +75,7 @@ def bookmark(ctx, url):
     post = Post(ctx.obj['CONTENT'], title=ctx.obj['TITLE'],
                 layout='post_bookmark', category='bookmark',
                 date=ctx.obj['NOW'].isoformat(), tags=ctx.obj.get('TAGS'),
-                url={'url': url})
+                bookmark={'url': url})
 
     write_post('bookmark', ctx.obj['NOW'], ctx.obj['SLUG'], post)
 

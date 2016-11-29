@@ -32,7 +32,10 @@
 }
 
 .responsive-image {
-  @at-root #{&}__wrapper {}
+  @at-root #{&}__wrapper {
+    margin: 0 auto;
+    text-align: center;
+  }
 
   @at-root #{&}__image {
     height: auto;

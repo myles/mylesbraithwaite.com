@@ -191,3 +191,7 @@ xmpp:
   abbr: XMPP
   name: Extensible Messaging and Presence Protocol
   wikipedia: https://en.wikipedia.org/wiki/XMPP
+internet:
+  name: Internet
+blogging:
+  name: Blogging
