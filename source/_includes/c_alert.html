@@ -1,0 +1,5 @@
+<p class="c-alert {% if include.modifier %}c-alert--{{ include.modifier }}{% endif %}">
+    {% if include.title %}<strong class="c-alert__title">{{ include.title }}</strong>{% endif %}
+    {% if include.copy %}<span class="c-alert__copy">{{ include.copy }}</span>{% endif %}
+    {% if include.link and include.link_name %}<a href="{{ include.link }}" title="{{ include.link_title }}" class="c-alert__link">{{ include.link_copy }}</a>{% endif %}
+</p>

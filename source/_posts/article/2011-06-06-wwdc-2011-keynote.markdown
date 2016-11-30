@@ -1,0 +1,37 @@
+---
+layout: post_article
+category: article
+date: 2011-06-06T16:34:00
+title: "WWDC 2011 Keynote"
+tags: [wwdc, iphone, android, apple, steve-jobs, ios, ipad]
+---
+
+If you aren't [following me on Twitter](https://twitter.com/mylesb "Follow Myles Braithwaite on Twitter") than you might not know that I -watched- followed (Apple doesn't provider a live stream so you have to follow live blogs) Apple's Developer Conference this afternoon.
+
+### Mac OS X Lion
+
+Lion is the seventh iteration of the Mac OS X operating system (which was released on the 24 March, 2001). To say Mac OS X is getting long in the tooth, would be an understatement, especial up against Windows 8's Metro U.I. (Metro is Microsoft answer to WebOS with a card layout system (if you had a beer or coffee with me in the past year or so and we were talking about U.I. design I would have brought up how awesome I think it is)).
+
+One interesting feature of Lion is the full-screen API. It's nice to see a company finally get that humans can't multitask (no you can't (I know you think you can but you can't ([it's scientifically proven](http://www.npr.org/templates/story/story.php?storyId=95256794 "Think You're Multitasking? Think Again")))). Right now I am actually writing this journal entry in a full-screen text editor called [iA Writer](http://www.iawriter.com/mac).
+
+Launchpad and Mission Control look cool but I have to use them to see if they are actually going to be useful.
+
+### iOS 5
+
+Apple has now copied ever great feature from BlackBerry and Android and put them into iOS 5.
+
+#### Notifications
+
+Notifications were one of the weakest points in iOS. They are similar to Twitter tweets where you will only get information out of them when you are actually looking at your phone. The new notification system is pretty much a clone of Android (they actually got something right the first time).
+
+#### iMessage
+
+iMessage is a clone of BlackBerry Messenger which is a private, securer, and proprietary chat client. It is heavily used by suites and like Facebook if you aren't on it **you have no social life** (I am a little bitter about this). I will never use iMessage because out of everyone I know (clients, colleagues, friends, enemies) **I am the only one who uses an iPhone** (I am also a little bitter about this).
+
+### iCloud
+
+Like the idea of a Dropbox clone more integrated to the Operating System but I am a little scared of something I am not playing for.
+
+### Conclusion
+
+I will probably buy the upgrade.

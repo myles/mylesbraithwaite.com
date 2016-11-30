@@ -1,0 +1,11 @@
+---
+layout: post_article
+category: article
+date: 2009-12-23T00:00:00
+title: "Project52"
+tags: [writing, project52]
+---
+
+I have signed up for [Project 52](http://project52.info/) a personal challenge geared toward getting fresh content on my website. Which means I will be writing a blog post a week. I am currently coming up with some interesting topic to write about, but if you have any [suggestions please suggest them to me](http://spreadsheets.google.com/viewform?formkey=dEI1MkF4UDJTY0ppOUw4ZF9zanpYa0E6MA "Blog Post Idea Form").
+
+You can follow my progress by [subscribing to the feed](http://feeds.feedburner.com/Myles/Blog/P52 "Feed for Project52 category"), [subscribe to the newsletter](http://feedburner.google.com/fb/a/mailverify?uri=Myles/Blog/P52&loc=en_US), or [follow the dedicated twitter account](http://twitter.com/mylesb_p52 "mylesb_p52 Twitter profile").

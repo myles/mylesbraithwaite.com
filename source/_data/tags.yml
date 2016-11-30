@@ -1,4 +1,20 @@
 ---
+bash:
+  name: Bash
+snippet:
+  name: Snippet
+code:
+  name: Code
+website:
+  name: Website
+speaker-notes:
+  name: Speaker Notes
+xcode:
+  name: Xcode
+mac-app-store:
+  name: Mac App Store
+  related:
+  - app-store
 open-source:
   name: Open Source
 iphone:

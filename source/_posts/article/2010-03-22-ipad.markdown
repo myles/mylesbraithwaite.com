@@ -1,0 +1,20 @@
+---
+layout: post_article
+category: article
+date: 2010-03-22T00:00:00
+title: "Some Thoughts on the iPad"
+tags: [ipad, apple, netbook, tablet]
+javascript_libs:
+- twitter
+---
+
+{% include c_alert.html copy='This is a blog post I wrote the a few weeks after iPad was shown to the world and never got around to publishing it on this blog. It was on an internal company blog though. Sorry for bring up such an old news item.' %}
+
+A lot has been said the last two months about how Apple's [iPad](http://en.wikipedia.org/wiki/IPad "iPad") will kill the [Kindle](http://en.wikipedia.org/wiki/Kindle "Kindle") and how the [iPhone](http://en.wikipedia.org/wiki/IPhone "iPhone")/[iPod Touch](http://en.wikipedia.org/wiki/IPod_Touch "iPod Touch") has already killed Sony's [PSP](http://en.wikipedia.org/wiki/PSP "Playstation Portable") and Nintendo's [DSi](http://en.wikipedia.org/wiki/DSi "Nintendo DSi") (because the iPad will be able to play games it will some how destroy a extremely large industry). Personally I never like the idea of a device that did it all, [Multi-Function Printers](http://en.wikipedia.org/wiki/Multifunction_printer "Multifunction Printer") always gave me a bad feeling why combine the three most complicated systems in an office Printer, Fax, and Copier? Yes I will be buying an iPad when it comes out (not sure if Wi-Fi or 3G) but I will not be replacing my Kindle that has a better screen for reading and it will not be replacing any of my portable video game systems. I will use the iPad for the purpose I believe is servers: a netbook.
+
+<blockquote class="blockquote blockquote--tweet twitter-tweet">
+    <p>@<a href="http://twitter.com/mylesb">mylesb</a> I hear they have the revolutionary feature of only allowing the user to run one application at a time.</p>
+    <p class="blockquote__footer">Chris Browne (@cbbrowne) <a href="http://twitter.com/cbbrowne/status/8295800525">27 January 2010 at 1:46pm</a></p>
+</blockquote>
+
+Yes the iPad can only run one application at a time. But if I need to run more than one application at the same time I can easily take out my laptop. I see the iPad as more of a internet device than a computer.

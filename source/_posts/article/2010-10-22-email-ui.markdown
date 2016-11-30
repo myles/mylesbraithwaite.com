@@ -1,0 +1,19 @@
+---
+layout: post_article
+category: article
+date: 2010-10-22T00:00:00
+title: "An Email and a Strange UI"
+tags: [screenshot, user-interface, email]
+---
+
+### An Email from Panic
+
+I signed up for [Transmit's Beta](http://www.panic.com/blog/2009/12/transmit-beta-signup/) and it looks like they had a lot of people signed up and now the Beta program is full. So they sent me an email informing me:
+
+{% include c_image.html src='2010/294/email-ui/automatied-eamil.png' alt="Sorry: the Transmit 4 beta group is full." %}
+
+### Lighthouse strange UI
+
+I started using [Lighthouse](http://lighthouseapp.com/) (a ticket tracker) a few days ago for [Asgard](http://asgardproject.org/ "Asgard Project"), [iDelicious](http://i-del-icio-us.appspot.com/%20"An%20iPhone%20interface%20for%20Delicious), and a few other personal projects (while I wait for a new server to run [Jira](http://www.atlassian.com/software/jira/)). Initial thoughts are it a really good, simple, easy to use ticket track. But as you can see from the screenshot below I always forget where the _Add new Ticket_ button is located. I look left under the bar that has a bunch of _New_ actions but I start freaking out because I don't see _New ticket_, then I remember to look right where their is a prominent button that say _Create new ticket_.
+
+{% include c_image.html src='2010/294/email-ui/lighthouse-how-add-ticket.png' alt='Where do I add a new Ticket in Lighthouse' %}

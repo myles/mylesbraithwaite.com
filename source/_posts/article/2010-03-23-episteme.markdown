@@ -1,0 +1,45 @@
+---
+layout: post_article
+category: article
+date: 2010-03-23T00:00:00
+title: "Episteme"
+tags: [episteme, hatta, python, wiki]
+---
+
+Back in February I tweeted "Starting work on #Episteme today."[#](http://twitter.com/mylesb/status/8635677939 "Tweet on 4th Feb 2010 at 10:17 AM"). A few hours latter I got the following query in an email:
+
+> From: Ivan Avery Frey
+> To: Myles Braithwaite
+> Date: Thu, Feb 4, 2010 at 3:24 PM
+> Subject: What's Episteme???
+>
+> Self-explanatory.
+
+**Episteme** is a wiki engine (more of a wiki library) I am currently working on (I have actually been working on it for the last two years). It was originally a fork of [Yaki](http://code.google.com/p/yaki/) (which powers [The Tao of Mac](http://the.taoofmac.com/)), then was powered by [CouchDB](http://couchdb.apache.org/), and now is a fork of [Hatta](http://hatta.sheep.art.pl/) (not so much as a fork because I am still going to be using Hatta's `WikiStorage` module).
+
+So why am I working on yet-another-wiki-engine?
+
+*   I like flat files (easy to backup using rsync).
+*   I think that [Relation databases](http://en.wikipedia.org/wiki/Relational_database_management_system) (like MySQL and PostgreSQL) were not design for wiki documents.
+*   I like storing the documents in a Revision Control System so I can edit them in a text editor.
+*   I like being able to search.
+*   I don't ware the same cloths every day why should I have to use the same markup language.
+
+This is an example of a wiki document:
+
+```
+Title: Python
+Tags: python, programming
+Content-Type: text/x-wiki
+
+**Python** is a dynamic programming language.
+
+== Resources
+
+* [[http://www.enricozini.org/2009/debian/using-python-datetime/|Tips on using python's datetime module]]
+* [[http://diveintopython.org/|Dive into Python]]
+```
+
+I am using [RFC822](http://www.w3.org/Protocols/rfc822/) (similar to an email) for meta information (title, tags, markup, date, author, etc).
+
+Episteme will always be a work in progress and many never be released.

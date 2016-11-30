@@ -19,11 +19,7 @@ layout: feed
   <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url | xml_escape }}</guid>
   {% for tag_id in post.tags %}
 	{% assign tag = site.data.tags[tag_id] %}
-	{% if tag %}
-	<category>{{ tag.name | xml_escape }}</category>
-	{% else %}
-	<category>{{ tag_id | xml_escape }}</category>
-	{% endif %}
+	<category>{% if tag.name %}{{ tag.name | xml_escape }}{% else %}{{ tag_id | xml_escape }}{% endif %}</category>
 	{% endfor %}
 </item>
 {% endfor %}
