@@ -1,0 +1,2 @@
+- Write a `include` to a Gallery component.
+- Remove the 'responsive' from the includes `c_responsive_image.html` and `c_responsive_video.html`.
