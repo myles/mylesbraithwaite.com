@@ -1,4 +1,5 @@
 - Write a `include` to a Gallery component.
-- Remove the 'responsive' from the includes `c_responsive_image.html` and `c_responsive_video.html`.
+- Remove the 'responsive' from the includes `c_responsive_image` and `c_responsive_video`. @done(2016-11-30)
 - Convert all the HTML articles to Markdown.
 - Make sure all media files are properly formated.
+- Make a new include component for blockquotes.

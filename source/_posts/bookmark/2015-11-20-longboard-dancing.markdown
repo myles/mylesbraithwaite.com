@@ -12,4 +12,4 @@ bookmark:
   url: https://vimeo.com/146088661
 ---
 
-{% include c_responsive_video.html iframe_url='https://player.vimeo.com/video/146088661' %}
+{% include c_video.html iframe_url='https://player.vimeo.com/video/146088661' %}

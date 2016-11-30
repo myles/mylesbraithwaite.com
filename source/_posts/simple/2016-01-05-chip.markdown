@@ -7,4 +7,4 @@ tags:
   - chip
 ---
 
-{% include c_responsive_image.html src='2016/005/chip/chip.jpg' alt="CHIP" caption="Got my CHIP today!" %}
+{% include c_image.html src='2016/005/chip/chip.jpg' alt="CHIP" caption="Got my CHIP today!" %}

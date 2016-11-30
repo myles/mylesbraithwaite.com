@@ -11,9 +11,10 @@ Create a new post.
 * python-frontmatter
 """
 
+from os import makedirs
 from datetime import datetime
 from urllib.parse import urlparse, parse_qs
-from os.path import dirname, realpath, join
+from os.path import dirname, realpath, join, exists
 
 import click
 from slugify import Slugify
@@ -21,7 +22,8 @@ from frontmatter import Post, dump
 
 slugify = Slugify(to_lower=True)
 
-TEMP_FILEPATH = '../source/_posts/{type}/{date}-{slug}.markdown'
+TEMP_FILE_PATH = '../source/_posts/{type}/{date}-{slug}.markdown'
+TEMP_UPLOAD_PATH = '../source/uploads/{date}/{slug}'
 
 
 @click.group()
@@ -44,11 +46,16 @@ def cli(ctx, title, tags, slug):
 
 
 def write_post(post_type, date, slug, post):
-    filepath = TEMP_FILEPATH.format(date=date.strftime('%Y-%m-%d'),
-                                    type=post_type, slug=slug)
+    file_path = TEMP_FILE_PATH.format(date=date.strftime('%Y-%m-%d'),
+                                      type=post_type, slug=slug)
+    upload_path = TEMP_UPLOAD_PATH.format(date=date.strftime('%Y/%j'),
+                                          slug=slug)
 
-    with open(join(dirname(realpath(__file__)), filepath), 'w') as fobj:
+    with open(join(dirname(realpath(__file__)), file_path), 'w') as fobj:
         dump(post, fobj)
+
+    if not exists(upload_path):
+        makedirs(upload_path)
 
 
 @cli.command()

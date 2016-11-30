@@ -13,4 +13,4 @@ via:
 
 I personal didn't find [Inception](http://www.imdb.com/title/tt1375666/) all that thought provoking (or that hard to follow), I just love this kind of stuff.
 
-{% include c_responsive_image.html src='2010/365/inception-flowchart/inceptionpic-big.gif' %}
+{% include c_image.html src='2010/365/inception-flowchart/inceptionpic-big.gif' %}

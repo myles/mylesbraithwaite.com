@@ -6,7 +6,7 @@ title: Adam Savage's Colossal Failures
 tags: [failure, adam-savage]
 ---
 
-{% include c_responsive_video.html iframe_url='https://www.youtube-nocookie.com/embed/i5sbUi3_w3w' %}
+{% include c_video.html iframe_url='https://www.youtube-nocookie.com/embed/i5sbUi3_w3w' %}
 
 ![Ryugyong Hotel in Sojang-dong](http://farm1.static.flickr.com/39/124606654_514edf5f4e_o.jpg)
 
