@@ -1,0 +1,13 @@
+<div class="l-grid gallery" data-gallery-title="{{ include.gallery.title }}">
+    {% for images in include.gallery.images %}
+    {% assign image_count = images | size %}
+    {% capture column_width %}l-column--{% if image_count == 12 %}1{% elsif image_count == 6 %}2{% elsif image_count == 4 %}3{% elsif image_count == 3 %}4{% elsif image_count == 2 %}6{% elsif image_count == 1 %}12{% endif %}{% endcapture %}
+    <div class="l-row gallery__row" data-image-count="{{ image_count }}">
+        {% for image in images %}
+        <div class="l-column {{ column_width }} gallery__column">
+            {% include c_image.html src=image.src alt=image.alt caption=image.caption %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endfor %}
+</div>
