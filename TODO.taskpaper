@@ -1,2 +1,4 @@
 - Write a `include` to a Gallery component.
 - Remove the 'responsive' from the includes `c_responsive_image.html` and `c_responsive_video.html`.
+- Convert all the HTML articles to Markdown.
+- Make sure all media files are properly formated.

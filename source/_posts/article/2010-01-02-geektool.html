@@ -1,16 +1,22 @@
 ---
-layout: post
-category: journal
-date: 2010-01-02 00:00:00
+layout: post_article
+category: article
+date: 2010-01-02T00:00:00
 title: "Geektool Setup"
-author: myles
 tags: [mac-os-x, apple, geektool, desktop]
 ---
 
+<!-- TODO: Clean up this post layout. -->
+<!-- TODO: Download all the media files. -->
+
 <p>I recently installed <a href="http://projects.tynsoe.org/en/geektool/">Geektool</a> on my MacBook Pro. I used so many sources to set it up that I thought it would be a good idea that I write a blog post about some of the more complicated configurations.</p>
+
 <p><a href="http://www.flickr.com/photos/mylesbraithwaite/4237928127/"><img alt="My Geektool Setup" src="http://farm5.static.flickr.com/4051/4237928127_d2e13648c1_m.jpg"></a></p>
+
 <h3 id="sunrise-sunset">Sunrise &amp; Sunset</h3>
+
 <p><img alt="Sunrise &amp; Sunset" src="//media.mylesbraithwaite.com/attachments/blog_post/15/01-sunrise-and-sunset.png"></p>
+
 <p>I am getting the sunrise &amp; sunset data from <a href="http://wund.com/">weather underground</a> <a href="http://m.wund.com">mobile website</a>.</p>
 <h4 id="sunrise">Sunrise</h4>
 <div class="codehilite"><pre><span class="n">curl</span> <span class="o">--</span><span class="n">silent</span> <span class="n">http</span><span class="o">:</span><span class="c1">//m.wund.com/global/stations/71265.html | grep &#39;Sunrise&#39; | sed -e :a -e &#39;s/]*&amp;gt;//g;/&amp;lt;/N;//ba&#39; | sed -e &#39;s/Sunrise/Sunrise: /g&#39; | sed -e &#39;s/EST//g&#39;</span>

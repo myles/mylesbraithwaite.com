@@ -1,57 +1,33 @@
 ---
-layout: post
-category: journal
-date: 2009-09-30 00:00:00
+layout: post_article
+category: article
+date: 2009-09-30T00:00:00
 title: "Google Chrome Frame"
-author: myles
 tags: [google-chrome-frame, microsoft, internet-explore]
 ---
 
-<p>This week two <a href="http://mozilla.org/">Mozilla Foundation</a> executives, Chairperson
-<a href="http://lizardwrangler.com/">Mitchell Baker</a> and <a href="http://shaver.off.net/">Mike Shaver</a>
-Vice President Engineering criticised Google for their
-<a href="http://code.google.com/chrome/chromeframe/">Chrome Frame</a>, an Internet Explorer add-on
-that allows the use of the Google Chrome's layout engine instead of using Microsoft's
-<a href="http://en.wikipedia.org/wiki/Trident_%28layout_engine%29">Trident</a> layout engine. </p>
+<p>This week two <a href="http://mozilla.org/">Mozilla Foundation</a> executives, Chairperson <a href="http://lizardwrangler.com/">Mitchell Baker</a> and <a href="http://shaver.off.net/">Mike Shaver</a> Vice President Engineering criticised Google for their <a href="http://code.google.com/chrome/chromeframe/">Chrome Frame</a>, an Internet Explorer add-on that allows the use of the Google Chrome's layout engine instead of using Microsoft's <a href="http://en.wikipedia.org/wiki/Trident_%28layout_engine%29">Trident</a> layout engine. </p>
+
 <p><a href="http://shaver.off.net/diary/2009/09/28/thoughts-on-chrome-frame/">Mike Shaver</a> is criticising Chrome Frame for loss of security controls and features.</p>
-<blockquote>
-<p>Running Chrome Frame within IE makes many of the browser applications
-features non-functional, or less effective. These include private
-browsing mode or their other security controls, features like
-accelerators or add-ons that operate on the content area, or even
-accessibility support.</p>
+
+<blockquote class="blockquote">
+    <p>Running Chrome Frame within IE makes many of the browser applications features non-functional, or less effective. These include private browsing mode or their other security controls, features like accelerators or add-ons that operate on the content area, or even accessibility support.</p>
 </blockquote>
+
 <p>And <a href="http://blog.lizardwrangler.com/2009/09/28/browser-soup-and-chrome-frame/">Mitchell Baker</a> is criticising Chrome Frame for the loss of control from the users perceptive.</p>
-<blockquote>
-<p>What rendering engine do you end up using? That depends on the
-website now, not on you. And if you end up at a website that makes
-use of the Chrome Frame, the treatment of your passwords, security
-settings, personalization all the other things one sets in a browser
-is suddenly unknown. Will sites you tag or bookmark while browsing
-with one rendering engine show up in the other? Because the various
-parts of the browser are no longer connected, actions that have one
-result in the browser you think youre using wont have the same
-result in the Chrome browser-within-a-browser.</p>
+
+<blockquote class="blockquote">
+    <p>What rendering engine do you end up using? That depends on the website now, not on you. And if you end up at a website that makes use of the Chrome Frame, the treatment of your passwords, security settings, personalization all the other things one sets in a browser is suddenly unknown. Will sites you tag or bookmark while browsing with one rendering engine show up in the other? Because the various parts of the browser are no longer connected, actions that have one result in the browser you think youre using wont have the same result in the Chrome browser-within-a-browser.</p>
 </blockquote>
-<p>I agree that the issue of security of Chrome Frame is a big one. But from the perspective
-of a web developer this is the greatest thing that Google has released in a long time.
-One issue that I run into writing web applications is cross-browser support because most
-business management web software (CRMs, ERPs, Accounting, etc.) have be design to work with
-IE 6 (and don't work with a modern web browser) it is difficult to tell someone you will
-have to open Mozilla Firefox or Google Chrome to visit the web page. So I have to spend
-almost half my time writing IE support.</p>
-<p>One way around this issue is the Firefox add-on <a href="http://ietab.mozdev.org/">IE Tab</a>
-(which allows the user to render a web page using the Trident layout engine instead of the Mozilla's <a href="http://en.wikipedia.org/wiki/Gecko_%28layout_engine%29">Gecko</a> layout engine).
-This plugin had a major design flaw it was targeted to the Power User which meant it was
-extremely hard to train non-technical people to use the plugin.</p>
-<p>Google Chrome Frame has taken the need for the user to switch the Layout Engine and has put
-that power into the hands of web developers (which I admit is a bad thing). All I have to
-do is add a simple meta tag to the <code>&lt;head&gt;</code> of the base template:</p>
+
+<p>I agree that the issue of security of Chrome Frame is a big one. But from the perspective of a web developer this is the greatest thing that Google has released in a long time. One issue that I run into writing web applications is cross-browser support because most business management web software (CRMs, ERPs, Accounting, etc.) have be design to work with IE 6 (and don't work with a modern web browser) it is difficult to tell someone you will have to open Mozilla Firefox or Google Chrome to visit the web page. So I have to spend almost half my time writing IE support.</p>
+
+<p>One way around this issue is the Firefox add-on <a href="http://ietab.mozdev.org/">IE Tab</a> (which allows the user to render a web page using the Trident layout engine instead of the Mozilla's <a href="http://en.wikipedia.org/wiki/Gecko_%28layout_engine%29">Gecko</a> layout engine). This plugin had a major design flaw it was targeted to the Power User which meant it was extremely hard to train non-technical people to use the plugin.</p>
+
+<p>Google Chrome Frame has taken the need for the user to switch the Layout Engine and has put that power into the hands of web developers (which I admit is a bad thing). All I have to do is add a simple meta tag to the <code>&lt;head&gt;</code> of the base template:</p>
 
 ```html
 <meta http-equiv="X-UA-Compatible" content="chrome=1"></p>
 ```
 
-<p>I don't think Google Chrome Frame is an elegant or technically sound solution but it is a
-step in the right direction and hopefully it just might make Microsoft and more importantly
-business management web software think that maybe they should start support the modern web.</p>
+<p>I don't think Google Chrome Frame is an elegant or technically sound solution but it is a step in the right direction and hopefully it just might make Microsoft and more importantly business management web software think that maybe they should start support the modern web.</p>
