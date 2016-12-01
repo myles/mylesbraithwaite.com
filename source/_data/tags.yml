@@ -1,70 +1,28 @@
 ---
 1password:
   name: 1Password
-raspberry-pi:
-  name: Raspberry Pi
-btsync:
-  name: BtSync
-macos:
-  name: macOS
-isp:
-  addr: I.S.P.
-  name: Internet Service Providers
-fcc:
-  addr: F.C.C.
-  name: Federal Communications Commission
-ddos:
-  addr: DDoS
-  name: Distributed Denial of Service
-wes-anderson:
-  name: Wes Anderson
-the-witch:
-  name: The Witch
-parody:
-  name: Pardoy
-film:
-  name: Film
-aws:
-  addr: AWS
-  name: Amazon Web Services
-ec2:
-  addr: EC2
-  name: Amazon Elastic Compute Cloud
-bash:
-  name: Bash
-snippet:
-  name: Snippet
-code:
-  name: Code
-website:
-  name: Website
-speaker-notes:
-  name: Speaker Notes
-xcode:
-  name: Xcode
-mac-app-store:
-  name: Mac App Store
-  related:
-  - app-store
-open-source:
-  name: Open Source
-iphone:
-  name: iPhone
-art:
-  name: Art
-video:
-  name: Video
 adam-savage:
   name: Adam Savage
 apple:
   name: Apple
+art:
+  name: Art
+aws:
+  addr: AWS
+  name: Amazon Web Services
 barenaked-ladies:
   name: Barenaked Ladies
+bash:
+  name: Bash
 beastie-boys:
   name: Beastie Boys
+blogging:
+  name: Blogging
 brutal-design:
   name: Brutal Design
   wikipedia: https://en.wikipedia.org/wiki/Brutalist_architecture
+btsync:
+  name: BtSync
 canada:
   name: Canada
 casl:
@@ -74,6 +32,8 @@ chip:
   name: C.H.I.P.
 cleopatras-pool:
   name: Cleopatra's Pool
+code:
+  name: Code
 community:
   name: Community
 complicated:
@@ -89,6 +49,9 @@ dancing:
   name: Dancing
 database:
   name: Database
+ddos:
+  addr: DDoS
+  name: Distributed Denial of Service
 death-cab-for-cutie:
   name: Death Cab for Cutie
   wikipedia: https://en.wikipedia.org/wiki/Death_Cab_for_Cutie
@@ -107,10 +70,18 @@ django-quiz:
   name: Django Quiz
 docker:
   name: Docker
+ec2:
+  addr: EC2
+  name: Amazon Elastic Compute Cloud
 failure:
   name: Failure
+fcc:
+  addr: F.C.C.
+  name: Federal Communications Commission
 feed:
   name: Feed
+film:
+  name: Film
 fingerprints:
   name: Fingerprints
 google-app-engine:
@@ -134,12 +105,19 @@ iaas:
 infosec:
   name: InfoSec
   title: Information security
+internet:
+  name: Internet
 ios:
   name: iOS
 ipad:
   name: iPad
+iphone:
+  name: iPhone
 ipod:
   name: iPod
+isp:
+  addr: I.S.P.
+  name: Internet Service Providers
 jabber:
   name: Jabber
   related:
@@ -152,6 +130,12 @@ longboard:
   name: Longboard
 lorem-ipsum:
   name: Lorem Ipsum
+mac-app-store:
+  name: Mac App Store
+  related:
+  - app-store
+macos:
+  name: macOS
 minecraft:
   name: Minecraft
 music:
@@ -166,9 +150,13 @@ ontario:
   name: Ontario
   parent: canada
   title: Ontario, Canada
+open-source:
+  name: Open Source
 paas:
   name: PaaS
   title: Platform as a Service
+parody:
+  name: Pardoy
 password:
   name: Password
 photography:
@@ -196,6 +184,8 @@ python:
 r:
   name: R
   title: R (programming language)
+raspberry-pi:
+  name: Raspberry Pi
 remix:
   name: Remix
 saas:
@@ -203,16 +193,22 @@ saas:
   title: Software as a Service
 skateboarding:
   name: Skateboarding
+snippet:
+  name: Snippet
 snippets:
   name: Snippets
 snowboarding:
   name: Snowboarding
+speaker-notes:
+  name: Speaker Notes
 steve-jobs:
   name: Steve Jobs
 swift:
   name: Swift
 talk:
   name: Talk
+the-witch:
+  name: The Witch
 toronto:
   location:
     lat: 43.7
@@ -230,6 +226,8 @@ ui:
 ux:
   abbr: UX
   name: User experience
+video:
+  name: Video
 video-games:
   name: Video Games
 wakeboarding:
@@ -238,11 +236,13 @@ wakesakting:
   name: Wakesakting
 web-design:
   name: Web Design
+website:
+  name: Website
+wes-anderson:
+  name: Wes Anderson
+xcode:
+  name: Xcode
 xmpp:
   abbr: XMPP
   name: Extensible Messaging and Presence Protocol
   wikipedia: https://en.wikipedia.org/wiki/XMPP
-internet:
-  name: Internet
-blogging:
-  name: Blogging
