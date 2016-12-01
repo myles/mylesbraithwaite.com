@@ -1,15 +1,4 @@
 #!/usr/bin/env python3
-"""
-# New Post
-
-Create a new post.
-
-## Requires
-
-* click
-* awesome-slugify
-* python-frontmatter
-"""
 
 from os import makedirs
 from datetime import datetime

@@ -1,13 +1,4 @@
 #!/usr/bin/env python3
-"""
-# Sort YAML
-
-Sort the contents of some YAML files.
-
-## Requires
-
-* pyyaml
-"""
 
 from collections import OrderedDict
 from os.path import dirname, realpath, join
