@@ -11,8 +11,4 @@ bookmark:
   title: Wakeboarding With a Massive Harbor Crane as a Tow Cable
 ---
 
-<div class="responsive-video">
-    <div class="responsive-video__wrapper">
-        <iframe src="https://www.youtube-nocookie.com/embed/jhVx9qeOsMY?rel=0" class="responsive-video__video" frameborder="0" allowfullscreen></iframe>
-    </div>
-</div>
+{% include c_video.html iframe_url='https://www.youtube-nocookie.com/embed/jhVx9qeOsMY' %}

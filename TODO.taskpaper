@@ -1,7 +1,8 @@
-- Write a `include` to a Gallery component.
+- Style the gallery component.
+- Write a `include` to a gallery component. @done(2016-12-01)
 - Remove the 'responsive' from the includes `c_responsive_image` and `c_responsive_video`. @done(2016-11-30)
 - Convert all the HTML articles to Markdown.
-- Make sure all media files are properly formated.
-- Make a new include component for blockquotes.
+- All media files are properly formated.
+- Include component for blockquotes.
 - This post needs to be cleaned up: `./source/_posts/article/2010-01-02-geektool.html`.
 - This post needs to be cleaned up: `2011-02-15-why-its-a-good-think-that-the-arcade-fire-won-best.html`.

@@ -1,6 +1,6 @@
 ---
-layout: post_article
-category: article
+layout: post_list
+category: list
 date: 2011-04-04T09:14:00
 title: "Things I Found While Searching for My Art Kit"
 tags: [me, cleaning-up, spring-cleaning]
