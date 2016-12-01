@@ -13,4 +13,4 @@ bookmark:
   published: 2016-05-19T00:00:00
 ---
 
-{% c_image.html src='2016/110/devops/decipher-me-or-devops-you.png' caption="DevOps Everything! (Internet of Things Yay!)" %}
+{% include c_image.html src='2016/110/devops/decipher-me-or-devops-you.png' caption="DevOps Everything! (Internet of Things Yay!)" %}
