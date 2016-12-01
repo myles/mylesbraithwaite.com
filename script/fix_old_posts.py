@@ -26,7 +26,7 @@ for post_filename in post_filenames:
     if date_match:
         date_obj = dateutil_parse("{0} {1}".format(date_match.group('date'), date_match.group('time')))
 
-        content = content.replace(date_match.group(), 'date: {:%Y-%m-%d}T{:%H:%M:%S}'.format(date_obj))
+        content = content.replace(date_match.group(), 'date: {:%Y-%m-%d}T{:%H:%M:%S}'.format(date_obj, date_obj))
 
     if layout_match.group('layout') == 'post':
         content = content.replace(layout_match.group(), 'layout: post_{}'.format(category_match.group('category')))
