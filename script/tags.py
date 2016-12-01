@@ -59,7 +59,8 @@ def tag_list():
 
 @cli.command('get')
 @click.argument('name', metavar='<name>')
-def tag_get(name):
+@click.option('--edit', is_flag=True)
+def tag_get(name, edit):
     """Get information about a tag."""
 
     tag_info = tag_meta(name)
@@ -73,6 +74,10 @@ def tag_get(name):
 
     for post in tag_info['posts']:
         click.echo('{title} - {file_path}'.format(**post))
+
+    if edit:
+        for post in tag_info['posts']:
+            click.edit(filename=post['file_path'])
 
 
 if __name__ == '__main__':

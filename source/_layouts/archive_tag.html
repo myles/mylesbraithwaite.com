@@ -5,7 +5,7 @@ layout: archive
 {% assign tag = site.data.tags[page.title] %}
 
 <div class="archive archive--category">
-    <div class="archive__header">
+    <div class="page__header archive__header">
         <h1 class="archive__title">
             Archive of posts from
             <strong>
@@ -22,7 +22,7 @@ layout: archive
         </h1>
     </div>
 
-    <div class="archive__group">
+    <div class="page__content archive__group">
         {% for post in page.posts %}
         <a class="archive__item archive__link" href="{{ post.url }}">
             <p class="archive__item-meta">{{ post.date | date: site.datetime_short_format }}</p>

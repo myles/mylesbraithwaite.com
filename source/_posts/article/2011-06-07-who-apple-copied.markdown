@@ -3,7 +3,7 @@ layout: post_article
 category: article
 date: 2011-06-07T10:32:00
 title: "Who Apple Copied"
-tags: [mac-os-x, apple, microsoft, rim, dropbox, google, remember-the-milk, readablity, instapaper, icloud, mac-os-x-lion, tech]
+tags: [macos, apple, microsoft, rim, dropbox, google, remember-the-milk, readablity, instapaper, icloud, macos-lion, tech]
 ---
 
 People on Twitter keep posting that Apple essential copied everything from Android in their new iOS 5. While they went further than that:

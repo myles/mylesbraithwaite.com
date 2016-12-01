@@ -14,7 +14,5 @@
     }
   }
 
-  @at-root #{&}__title {
-    @extend %display-one;
-  }
+  @at-root #{&}__title {}
 }

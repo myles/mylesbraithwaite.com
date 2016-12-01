@@ -3,7 +3,7 @@ layout: archive
 title: Archive
 ---
 
-<div class="archive">
+<div class="archive page__content page__content--archive">
     {% for post in site.posts %}
         {% capture this %}{{ post.date | date: "%Y" }}{% endcapture %}
         {% capture this_link %}{{ post.date | date: "/%Y/" }}{% endcapture %}

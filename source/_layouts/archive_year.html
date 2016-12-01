@@ -3,10 +3,11 @@ layout: archive
 ---
 
 <div class="archive">
-    <div class="archive__header">
+    <div class="page__header archive__header">
         <h1 class="archive__title">Archive of posts from&nbsp;{{ page.date | date: "%Y" }}</h1>
     </div>
 
+    <div class="page__content">
     {% for post in page.posts %}
         {% capture this %}{{ post.date | date: "%Y-%m" }}{% endcapture %}
         {% capture this_link %}{{ post.date | date: "/archive/%Y/%m/" }}{% endcapture %}
@@ -44,4 +45,5 @@ layout: archive
         {% endif %}
         {% endif %}
     {% endfor %}
+    </div>
 </div>

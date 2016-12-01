@@ -1,4 +1,35 @@
 ---
+1password:
+  name: 1Password
+raspberry-pi:
+  name: Raspberry Pi
+btsync:
+  name: BtSync
+macos:
+  name: macOS
+isp:
+  addr: I.S.P.
+  name: Internet Service Providers
+fcc:
+  addr: F.C.C.
+  name: Federal Communications Commission
+ddos:
+  addr: DDoS
+  name: Distributed Denial of Service
+wes-anderson:
+  name: Wes Anderson
+the-witch:
+  name: The Witch
+parody:
+  name: Pardoy
+film:
+  name: Film
+aws:
+  addr: AWS
+  name: Amazon Web Services
+ec2:
+  addr: EC2
+  name: Amazon Elastic Compute Cloud
 bash:
   name: Bash
 snippet:

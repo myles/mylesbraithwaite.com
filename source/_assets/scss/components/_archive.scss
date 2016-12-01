@@ -1,19 +1,7 @@
 .archive {
-  @at-root #{&}__header,
-           #{&}__group {
-    @include media(min-width $large-screen) {
-      @include span-columns(8);
-      @include shift(2);
-    }
-  }
+  @at-root #{&}__title {}
 
-  @at-root #{&}__title {
-    @extend %display-one;
-  }
-
-  @at-root #{&}__group-title {
-    @extend %display-two;
-  }
+  @at-root #{&}__group-title {}
 
   @at-root #{&}__link {
     display: block;
@@ -39,13 +27,13 @@
     }
 
     @at-root #{&}-meta {
-      @include span-columns(2 of 8);
+      @include span-columns(2);
       text-align: right;
     }
 
     @at-root #{&}-title {
       @extend %heading-three;
-      @include span-columns(6 of 8);
+      @include span-columns(10);
     }
 
     @at-root #{&}-icon {
