@@ -3,7 +3,7 @@ layout: post_article
 category: article
 date: 2014-01-30T15:32:26
 title: "Captain America: The Winter Soldier"
-tags: [captain-america-the-winter-soldier, captain-america, film, poster, comic-books, films]
+tags: [captain-america-the-winter-soldier, captain-america, film, poster, comic-books, film]
 gallery:
   images:
     - - src: 2014/030/captain-america-winter-soldier/captian-america.jpg

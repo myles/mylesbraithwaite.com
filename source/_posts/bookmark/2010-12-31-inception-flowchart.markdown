@@ -3,7 +3,7 @@ layout: post_bookmark
 category: bookmark
 date: 2010-12-31T16:42:00
 title: "Inception Flowchart"
-tags: [inception, flowchart, films]
+tags: [inception, flowchart, film]
 bookmark:
   url: http://incontention.com/2010/12/07/christopher-nolans-interview-with-brother-jonathan-in-the-inception-shooting-script/
 via:
