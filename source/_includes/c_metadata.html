@@ -42,12 +42,12 @@
         "dateModified": {{ page.updated | date_to_xmlschema | jsonify }},{% endif %}
         "keywords": {{ page.tags | jsonify }}{% endif %},
         {% if page.category == 'bookmark' or page.via %}"isBasedOn": [
-            {% if page.category == 'bookmark' %}{{ page.bookmark.url | jsonify }}{% endif %}{% if page.category == 'bookmark' or page.via %},{% endif %}
-            {% if page.via %}{{ page.via.url | jsonify }}{% endif %}
+            {% if page.category == 'bookmark' %}{{ page.bookmark.url | jsonify }}{% endif %}{% if page.via.url %},{{ page.via.url | jsonify }}{% endif %}
         ],{% endif %}
         "publisher": {
             "@type": "Organization",
-            "name": {{ site.title | jsonify }}
+            "name": {{ site.title | jsonify }},
+            "logo": "{{ site.upload_url }}{% asset_path favicon310x310.png %}"
         }
     }
 </script>
