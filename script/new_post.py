@@ -75,9 +75,9 @@ def bookmark(ctx, url):
     if 'youtube.com' in url:
         youtube_id = parse_qs(urlparse(url).query)['v'][0]
 
-        ctx.obj['CONTENT'] = '{% c_responsive_video iframe_url=https://www.youtube-nocookie.com/embed/{} %}'.format(youtube_id)
+        ctx.obj['CONTENT'] = 'c_video.html iframe_url=https://www.youtube-nocookie.com/embed/{0}'.format(youtube_id)
     elif 'vimeo.com' in url:
-        ctx.obj['CONTENT'] = '{% c_responsive_vidoe iframe_url=https://player.vimeo.com/video/TODO %}'
+        ctx.obj['CONTENT'] = '{% c_video.html iframe_url=https://player.vimeo.com/video/TODO %}'
 
     post = Post(ctx.obj['CONTENT'], title=ctx.obj['TITLE'],
                 layout='post_bookmark', category='bookmark',

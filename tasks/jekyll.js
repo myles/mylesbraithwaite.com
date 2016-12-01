@@ -11,6 +11,13 @@ module.exports = function (grunt) {
                 build: true
             }
         },
+        local: {
+            options: {
+                build: true,
+                config: 'config/base.yml,config/local.yml',
+                dest: '~/Sites/sites/mylesbraithwaite-com/html/'
+            }
+        },
         stag: {
             options: {
                 build: true,
@@ -28,7 +35,9 @@ module.exports = function (grunt) {
                 serve: true,
                 auto: true,
                 future: true,
-                unpublished: true
+                unpublished: true,
+                limit_posts: 100,
+                incremental: true
             }
         }
     };

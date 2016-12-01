@@ -7,6 +7,6 @@
     "moment": "latest",
     "old-fashioned": "https://github.com/myles/old-fashioned.git",
     "picturefill": "latest",
-    "html5shiv": "^3.7.3"
+    "html5shiv": "latest"
   }
 }
