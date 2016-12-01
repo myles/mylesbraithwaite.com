@@ -1,0 +1,17 @@
+---
+bookmark:
+  url: https://vimeo.com/192590516
+  title: Everything is in Your Hands
+  author: Gioacchino Petronicce
+category: bookmark
+date: '2016-12-01T15:57:06.507600'
+layout: post_bookmark
+tags:
+- hands
+title: Everything is in Your Hands
+via:
+  url: http://uncrate.com/video/everything-is-in-your-hands/
+  title: Everything is in Your Hands
+---
+
+{% c_video.html iframe_url="https://player.vimeo.com/video/192590516" %}
