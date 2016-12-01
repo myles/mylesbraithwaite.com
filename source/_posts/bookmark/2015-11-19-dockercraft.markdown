@@ -7,7 +7,7 @@ feature-image: dockercraft.png
 tags:
   - minecraft
   - docker
-link:
+bookmark:
   title: docker/dockercraft
   url: https://github.com/docker/dockercraft
 ---
