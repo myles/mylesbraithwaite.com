@@ -3,7 +3,7 @@ layout: post_bookmark
 category: bookmark
 date: 2014-01-01T20:12:21
 title: "1pass"
-tags: [python, 1password, command-line]
+tags: [python, 1password, cli]
 bookmark:
   url: https://pypi.python.org/pypi/1pass
 ---
