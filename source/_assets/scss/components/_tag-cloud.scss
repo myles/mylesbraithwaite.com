@@ -1,7 +1,12 @@
 .tag-cloud {
   @include list-unstyled;
 
+  margin-top: 1em;
   text-align: center;
+
+  @at-root #{&}__search {
+    width: 100%;
+  }
 
   @at-root #{&}__item {
     display: inline-block;

@@ -3,7 +3,7 @@
 {% capture description %}
 {% if page.quote %}
 <blockquote class="blockquote" cite="{{ page.bookmark.url }}">
-  {{ content | improve }}
+  {{ post.content | improve }}
 
   {% if page.bookmark.title and page.bookmark.author %}
   <p class="blockquote__footer">
@@ -23,7 +23,7 @@
   {% endif %}
 </blockquote>
 {% else %}
-  {{ content | improve }}
+  {{ post.content | improve }}
 {% endif %}
 {% endcapture %}
 

@@ -1,0 +1,25 @@
+---
+bookmark:
+  url: https://medium.com/@Alir3z4/its-python-not-python-2-not-python-3-7caeef5adb29#.p0tczjoa8
+  author: Alireza Savand
+  published: 2016-12-01
+  title: It’s Python, Not Python 2, Not Python 3!
+category: bookmark
+date: '2016-12-02T15:11:49.229369'
+layout: post_bookmark
+tags:
+- python
+title: It's Python, Not Python 2, Not Python 3!
+quote: true
+via:
+  url: https://news.ycombinator.com/item?id=13091102
+  title: It's Python, Not Python 2, Not Python 3
+  publisher: HackerNews
+  published: 2016-12-02
+---
+
+This whole debate makes newcomers to run away, it's confusing, nonsense and more importantly a bubble, fairy dust, it doesn't exist and it shouldn't be there, It's only the Python and that's it.
+
+If you're on the older version (_Python 2_ as you say), you're a decade behind, you should have upgraded at 2008.
+
+You wanna say `Unicode` or `print` statement or `2to3`, or tiny stuff that are deprecated? If you forget to upgrade you hit those too, no surprise.

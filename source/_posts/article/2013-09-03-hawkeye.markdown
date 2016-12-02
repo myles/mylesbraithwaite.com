@@ -3,7 +3,7 @@ layout: post_article
 category: article
 date: 2013-09-03T11:12:02
 title: "Hawkeye (2012)"
-tags: [hawkeye, marvel-comics, reading, comic-books]
+tags: [hawkeye, marvel-comics, reading, comics]
 ---
 
 Last week I had a chance to read the current **Hawkeye** written by *Matt Fraction*. It's pretty awesome.

@@ -1,44 +1,42 @@
+//= require list.js/dist/list.min.js
 //= require moment/min/moment.min.js
 //= require jquery/dist/jquery.min.js
 //= require handlebars/handlebars.min.js
 //= require jquery-validation/dist/jquery.validate.min.js
 
-$(document).ready(function () {
-    if ($('#js-content-expiry-alert').length) {
-        var el = $('#js-content-expiry-alert');
+function contentExpiryAlert() {
+    var el = $('#js-content-expiry-alert');
 
-        var datePublished = el.data('published'),
-            dateUpdated = el.data('updated'),
-            refreshPostURL = el.data('refresh'),
-            content;
+    var datePublished = el.data('published'),
+        dateUpdated = el.data('updated'),
+        refreshPostURL = el.data('refresh'),
+        content;
 
-        if (dateUpdated.length) {
-            content = "This post was published " + moment(datePublished).fromNow() + " and was last updated <strong>" + moment(dateUpdated).fromNow() + "</strong>.";
-        } else if (refreshPostURL.length) {
-            alert(refreshPostURL);
-        } else {
-            content = "This post was published <strong>" + moment(datePublished).fromNow() + "</strong>.";
-        }
-
-        var source = $('#js-alert-template').html();
-        var template = Handlebars.compile(source);
-
-        el.html(template({copy: content}));
+    if (dateUpdated.length) {
+        content = "This post was published " + moment(datePublished).fromNow() + " and was last updated <strong>" + moment(dateUpdated).fromNow() + "</strong>.";
+    } else if (refreshPostURL.length) {
+        alert(refreshPostURL);
+    } else {
+        content = "This post was published <strong>" + moment(datePublished).fromNow() + "</strong>.";
     }
 
-    var menuToggle = $('#js-navigation-menu-button').unbind();
-    $('#js-navigation-list').removeClass('navigation__list--show');
+    var source = $('#js-alert-template').html();
+    var template = Handlebars.compile(source);
 
-    menuToggle.on('click', function (e) {
-        e.preventDefault();
+    el.html(template({copy: content}));
+}
 
-        $('#js-navigation-list').slideToggle(function () {
-            if ($('#js-navigation-list').is(':hidden')) {
-                $('#js-navigation-list').removeAttr('style');
-            }
-        });
-    });
+function tagListSearch() {
+    var tagListOptions = {
+        valueNames: ['tag-cloud__name'],
+        listClass: 'tag-cloud',
+        searchClass: 'tag-cloud__search'
+    };
 
+    var tagList = new List('js-tag-cloud', tagListOptions);
+}
+
+function contactForm() {
     var subjectSelectField = $('#js-subject select');
 
     subjectSelectField.on('change', function () {
@@ -97,4 +95,31 @@ $(document).ready(function () {
             });
         }
     })
+}
+
+$(document).ready(function () {
+    if ($('#js-content-expiry-alert').length) {
+        contentExpiryAlert();
+    }
+
+    if ($('#js-tag-cloud').length) {
+        tagListSearch();
+    }
+
+    if ($('#js-contact-form').length) {
+        contactForm();
+    }
+
+    var menuToggle = $('#js-navigation-menu-button').unbind();
+    $('#js-navigation-list').removeClass('navigation__list--show');
+
+    menuToggle.on('click', function (e) {
+        e.preventDefault();
+
+        $('#js-navigation-list').slideToggle(function () {
+            if ($('#js-navigation-list').is(':hidden')) {
+                $('#js-navigation-list').removeAttr('style');
+            }
+        });
+    });
 });

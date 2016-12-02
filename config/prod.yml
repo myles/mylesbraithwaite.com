@@ -7,8 +7,8 @@ upload_url: https://mylesbraithwaite.com/uploads
 onion_url: http://tdm76lx3jweaozkd.onion
 
 # Contact Form
-raven_key: TODO
-recaptcha_sitekey: TODO
+raven_key: 902c9b4a-b8d0-11e6-8826-34363bd0c9bc
+recaptcha_sitekey: 6Lf8-ygTAAAAAKWdLY5sYOgduRZo7mjTPHwhAVp3
 
 # Jekyll-Assets Settings
 assets:

@@ -14,4 +14,4 @@ via:
   title: Everything is in Your Hands
 ---
 
-{% c_video.html iframe_url="https://player.vimeo.com/video/192590516" %}
+{% include c_video.html iframe_url="https://player.vimeo.com/video/192590516" %}

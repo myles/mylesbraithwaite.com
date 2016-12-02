@@ -90,6 +90,10 @@ layout: compress
         <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
         {% endif %}
 
+        {% if page.javascript_libs contains 'listjs' %}
+        {% javascript list.js/dist/list.min.js %}
+        {% endif %}
+
         {% javascript script %}
     </body>
 </html>

@@ -6,8 +6,8 @@ baseurl: ""
 upload_url: https://staging.mylesbraithwaite.com/uploads
 
 # Contact Form
-raven_key: TODO
-recaptcha_sitekey: TODO
+raven_key: 902c9b4a-b8d0-11e6-8826-34363bd0c9bc
+recaptcha_sitekey: 6Lf8-ygTAAAAAKWdLY5sYOgduRZo7mjTPHwhAVp3
 
 # Jekyll-Assets Settings
 assets:

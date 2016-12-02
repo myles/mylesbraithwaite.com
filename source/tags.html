@@ -2,6 +2,7 @@
 layout: archive
 title: Tags
 permalink: /tag/
+javascript_libs: listjs
 ---
 
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
@@ -13,7 +14,9 @@ permalink: /tag/
         <h1 class="archive__title">Tags</h1>
     </div>
 
-    <div class="page__content archive__group">
+    <div class="page__content archive__group" id="js-tag-cloud">
+        <input class="tag-cloud__search form-input form-input--search" type="search" placeholder="Search">
+
         <ul class="tag-cloud">
         {% assign tag_list = site.tags %}
         {% for tag_info in tag_list %}

@@ -8,3 +8,9 @@
 
 - name: Contact
   url: /contact/
+
+- name: Archive
+  url: /archive/
+
+- name: Tags
+  url: /tag/
