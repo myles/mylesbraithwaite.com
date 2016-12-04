@@ -1,0 +1,27 @@
+<form method="post" action="https://api.staticman.net/v2/entry/myles/mylesbraithwaite.com/master/comments">
+    <div class="form-field">
+        <label for="id_name" class="form-label">Name</label>
+        <input name="fields[name]" id="id_name" class="form-input form-input--text" type="text">
+    </div>
+
+    <div class="form-field">
+        <label for="id_email" class="form-label">Email</label>
+        <input name="fields[email]" id="id_email" class="form-input form-input--email" type="email">
+    </div>
+
+    <div class="form-field">
+        <label for="id_url" class="form-label">URL</label>
+        <input name="fields[url]" id="id_url" class="form-input form-input--url" type="url">
+    </div>
+
+    <div class="form-field">
+        <label for="id_comment" class="form-label">Comment</label>
+        <textarea name="fields[message]" id="id_comment" class="form-textarea"></textarea>
+    </div>
+
+  <input name="options[slug]" type="hidden" value="{{ page.id }}">
+  <input name="options[redirect]" type="hidden" value="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <input name="options[origin]" type="hidden" value="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <button class="c-button" type="submit">Go!</button>
+</form>
