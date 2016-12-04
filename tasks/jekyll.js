@@ -37,7 +37,7 @@ module.exports = function (grunt) {
                 future: true,
                 unpublished: true,
                 limit_posts: 50,
-                incremental: true
+                incremental: false
             }
         }
     };

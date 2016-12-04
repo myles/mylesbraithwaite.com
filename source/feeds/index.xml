@@ -1,5 +1,6 @@
 ---
 layout: feed
+skip_index: true
 ---
 {% for post in site.posts limit:site.paginate %}
 <item>

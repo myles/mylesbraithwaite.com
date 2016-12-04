@@ -13,6 +13,7 @@ GEM
     ffi (1.9.14)
     forwardable-extended (2.6.0)
     hike (1.2.3)
+    htmlentities (4.3.4)
     jekyll (3.3.1)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -45,6 +46,9 @@ GEM
       typogruby
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
+    jekyll_pages_api (0.1.6)
+      htmlentities (~> 4.3)
+      jekyll (>= 2.0, < 4.0)
     kramdown (1.13.1)
     liquid (3.0.6)
     listen (3.0.8)
@@ -55,6 +59,7 @@ GEM
       subexec (~> 0.2.1)
     mini_portile2 (2.1.0)
     multi_json (1.12.1)
+    netrc (0.11.0)
     nokogiri (1.6.8.1)
       mini_portile2 (~> 2.1.0)
     pathutil (0.14.0)
@@ -99,7 +104,9 @@ DEPENDENCIES
   jekyll-sitemap
   jekyll-typogrify
   jekyll-watch
+  jekyll_pages_api
   mini_magick
+  netrc
   nokogiri
   redcarpet
   sass

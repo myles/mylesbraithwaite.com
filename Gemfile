@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'sass'
+gem 'netrc'
 gem 'uglifier'
 gem 'nokogiri'
 gem 'redcarpet'
@@ -20,5 +21,6 @@ group :jekyll_plugins do
   gem 'jekyll-archives'
   gem 'jekyll-paginate'
   gem 'jekyll-typogrify'
+  gem 'jekyll_pages_api'
   gem 'jekyll-picture-tag', '~> 0.3.0'
 end
