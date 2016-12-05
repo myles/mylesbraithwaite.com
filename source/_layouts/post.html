@@ -5,10 +5,6 @@ layout: base
 <div class="post-detail">
     {{ content }}
 
-    <div class="post-detail__comments">
-        {% include c_comment_form.html %}
-    </div>
-
     <div class="post-detail__footer">
         <div class="post-detail__pagination pagination">
             {% if page.previous.url %}

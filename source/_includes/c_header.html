@@ -1,5 +1,5 @@
 <div class="header">
-    <div class="header__imprint {% if page.header_image %}header__imprint--bg-image{% endif %}" {% if page.header_image %}style="background-image:url('{{ page.header_image }}')"{% endif %}>
+    <div class="header__imprint {% if page.header_image %}header__imprint--bg-image{% endif %}" {% if page.header_image %}style="background-image:url('{{ site.upload_url }}/{{ page.header_image }}')"{% endif %}>
         <h1 class="header__title">
             <a href="/" class="header__title-link">
                 {{ site.title }}

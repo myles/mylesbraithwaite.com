@@ -24,12 +24,19 @@ for post_filename in post_filenames:
     category_match = category_regex.search(content)
 
     if date_match:
-        date_obj = dateutil_parse("{0} {1}".format(date_match.group('date'), date_match.group('time')))
+        date_obj = dateutil_parse("{0} {1}".format(date_match.group('date'),
+                                                   date_match.group('time')))
 
-        content = content.replace(date_match.group(), 'date: {:%Y-%m-%d}T{:%H:%M:%S}'.format(date_obj, date_obj))
+        date_tpl = 'date: {:%Y-%m-%d}T{:%H:%M:%S}'
+
+        content = content.replace(date_match.group(),
+                                  date_tpl.format(date_obj, date_obj))
 
     if layout_match.group('layout') == 'post':
-        content = content.replace(layout_match.group(), 'layout: post_{}'.format(category_match.group('category')))
+        layout_tpl = 'layout: post_{}'
+        category = category_match.group('category')
+        content = content.replace(layout_match.group(),
+                                  layout_tpl.format(category))
 
     with open(post_filename, 'w') as fobj:
         fobj.write(content)

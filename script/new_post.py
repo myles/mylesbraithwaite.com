@@ -2,11 +2,12 @@
 
 from os import makedirs
 from datetime import datetime
-from urllib.parse import urlparse, parse_qs
 from os.path import dirname, realpath, join, exists
 
 import click
+import micawber
 from slugify import Slugify
+from bs4 import BeautifulSoup
 from frontmatter import Post, dump
 
 slugify = Slugify(to_lower=True)
@@ -61,19 +62,63 @@ def article(ctx):
 @click.option('--url', prompt=True)
 @click.pass_context
 def bookmark(ctx, url):
-    if 'youtube.com' in url:
-        youtube_id = parse_qs(urlparse(url).query)['v'][0]
+    providers = micawber.bootstrap_basic()
 
-        ctx.obj['CONTENT'] = 'c_video.html iframe_url=https://www.youtube-nocookie.com/embed/{0}'.format(youtube_id)
-    elif 'vimeo.com' in url:
-        ctx.obj['CONTENT'] = '{% c_video.html iframe_url=https://player.vimeo.com/video/TODO %}'
+    bookmark = {
+        'url': url
+    }
 
-    post = Post(ctx.obj['CONTENT'], title=ctx.obj['TITLE'],
-                layout='post_bookmark', category='bookmark',
-                date=ctx.obj['NOW'].isoformat(), tags=ctx.obj.get('TAGS'),
-                bookmark={'url': url})
+    try:
+        oembed = providers.request(url)
+        soup = BeautifulSoup(oembed['html'], 'html.parser')
+    except:
+        oembed = {}
+
+    if oembed.get('type') == 'video':
+        iframe_src = soup.iframe.get('src')
+        content = ' include c_video.html iframe_url="{0}" '.format(iframe_src)
+        bookmark = oembed
+
+    if oembed.get('type') == 'photo':
+        oembed['image_src'] = soup.img.get('src')
+        content = (' include c_image.html src="{image_src}" '
+                   'alt="{title}" ')
+
+    post = Post(content, title=ctx.obj['TITLE'], layout='post_bookmark',
+                category='bookmark', date=ctx.obj['NOW'].isoformat(),
+                tags=ctx.obj.get('TAGS'), bookmark=bookmark)
 
     write_post('bookmark', ctx.obj['NOW'], ctx.obj['SLUG'], post)
+
+
+@cli.command()
+@click.pass_context
+def list(ctx):
+    post = Post(ctx.obj['CONTENT'], title=ctx.obj['TITLE'],
+                layout='post_list', category='list',
+                date=ctx.obj['NOW'].isoformat(), tags=ctx.obj.get('TAGS'))
+
+    write_post('list', ctx.obj['NOW'], ctx.obj['SLUG'], post)
+
+
+@cli.command()
+@click.pass_context
+def quote(ctx):
+    post = Post(ctx.obj['CONTENT'], title=ctx.obj['TITLE'],
+                layout='post_quote', category='quote',
+                date=ctx.obj['NOW'].isoformat(), tags=ctx.obj.get('TAGS'))
+
+    write_post('quote', ctx.obj['NOW'], ctx.obj['SLUG'], post)
+
+
+@cli.command()
+@click.pass_context
+def simple(ctx):
+    post = Post(ctx.obj['CONTENT'], title=ctx.obj['TITLE'],
+                layout='post_simple', category='simple',
+                date=ctx.obj['NOW'].isoformat(), tags=ctx.obj.get('TAGS'))
+
+    write_post('simple', ctx.obj['NOW'], ctx.obj['SLUG'], post)
 
 
 if __name__ == '__main__':

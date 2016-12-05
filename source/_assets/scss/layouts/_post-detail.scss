@@ -1,4 +1,8 @@
 .post-detail {
+  @at-root #{&}__comments {
+    margin: 1rem 2rem;
+  }
+
   @at-root #{&}__footer {
     @include outer-container;
   }
