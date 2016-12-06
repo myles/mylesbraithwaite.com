@@ -2,12 +2,12 @@
   "name": "mylesbraithwaite.com-www",
   "dependencies": {
     "handlebars": "latest",
+    "html5shiv": "latest",
     "jquery": "latest",
     "jquery-validation": "latest",
+    "list.js": "^1.3.0",
     "moment": "latest",
     "old-fashioned": "https://github.com/myles/old-fashioned.git",
-    "picturefill": "latest",
-    "html5shiv": "latest",
-    "list.js": "^1.3.0"
+    "picturefill": "latest"
   }
 }

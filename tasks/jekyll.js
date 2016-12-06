@@ -6,30 +6,40 @@ module.exports = function (grunt) {
             bundleExec: true,
             config: 'config/base.yml,config/local.yml'
         },
+
         build: {
             options: {
                 build: true
             }
         },
+
         local: {
             options: {
                 build: true,
+                watch: true,
                 config: 'config/base.yml,config/local.yml',
                 dest: '~/Sites/sites/mylesbraithwaite-com/html/'
             }
         },
+
         stag: {
             options: {
                 build: true,
-                config: 'config/base.yml,config/stag.yml'
+                config: 'config/base.yml,config/stag.yml',
+                dest: '.cache/stag',
+                quiet: true
             }
         },
+
         prod: {
             options: {
                 build: true,
-                config: 'config/base.yml,config/prod.yml'
+                config: 'config/base.yml,config/prod.yml',
+                dest: '.cache/prod',
+                quiet: true
             }
         },
+
         serve: {
             options: {
                 serve: true,
