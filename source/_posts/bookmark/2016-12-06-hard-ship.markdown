@@ -3,13 +3,6 @@ via:
   url: http://uncrate.com/video/hard-ship/
   title: Hard Ship
 bookmark:
-  description: |
-    Three paralyzed men take up one of sailing's most grueling challenges -
-    750 mile race to Alaska through some of the most treacherous and remote
-    waters on the planet. With no motors allowed and many miles from any help,
-    the competition can be too dangerous for the world's most fearless
-    sailors.  This team is out to prove they have what it takes to finish. A
-    film by Great Big Films.
   title: Hard Ship
   type: video
   published: 2016-12-01T16:05:33
@@ -22,8 +15,7 @@ tags:
 title: Hard Ship
 ---
 
-The story of three paralzed sailors who competed in a 750 mil race to Alaska
-through some of the most treacherous and remote waters.
+The story of three paralyzed sailors competing in the Race to Alaska, a 750
+mile race through some of the most treacherous and remote waters.
 
 {% include c_video.html iframe_url="https://player.vimeo.com/video/193946979" %}
-
