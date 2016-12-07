@@ -1,0 +1,24 @@
+.footnotes {
+  @at-root #{&}__list {}
+
+  @at-root #{&}__item {}
+
+  @at-root #{&}__back-link {
+    font-family: serif;
+  }
+}
+
+.footnote {
+  @at-root #{&}__link {
+    border-bottom: 0;
+    line-height: 0;
+
+    &::before {
+      content: '[';
+    }
+
+    &::after {
+      content: ']';
+    }
+  }
+}

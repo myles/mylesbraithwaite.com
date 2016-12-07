@@ -10,14 +10,14 @@ module.exports = function (grunt) {
         },
         prod: {
             options: {
-                src: '.cache/prod',
+                src: '.cache/prod/',
                 dest: grunt.config.get('prod.rsync.dest'),
                 host: grunt.config.get('prod.rsync.host')
             }
         },
         stag: {
             options: {
-                src: '.cache/prod',
+                src: '.cache/stag/',
                 dest: grunt.config.get('stag.rsync.dest'),
                 host: grunt.config.get('stag.rsync.host')
             }

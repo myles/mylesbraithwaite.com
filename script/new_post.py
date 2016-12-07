@@ -18,7 +18,7 @@ TEMP_UPLOAD_PATH = '../source/uploads/{date}/{slug}'
 
 @click.group()
 @click.option('--title', prompt=True)
-@click.option('--tags')
+@click.option('--tags', prompt=True)
 @click.option('--slug')
 @click.pass_context
 def cli(ctx, title, tags, slug):
@@ -73,6 +73,7 @@ def bookmark(ctx, url):
         soup = BeautifulSoup(oembed['html'], 'html.parser')
     except:
         oembed = {}
+        content = '<!-- TODO Write something here. -->'
 
     if oembed.get('type') == 'video':
         iframe_src = soup.iframe.get('src')

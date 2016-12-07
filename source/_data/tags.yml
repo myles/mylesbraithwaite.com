@@ -1,4 +1,8 @@
 ---
+graphql:
+  name: GraphQL
+nodejs:
+  name: Node.js
 internet-health:
   name: Internet Health
 dotnet:
