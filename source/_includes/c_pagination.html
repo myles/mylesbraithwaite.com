@@ -1,0 +1,57 @@
+{% if include.p.total_pages > 1 %}
+<div class="post-list__pagination pagination" data-total-pages="{{ include.p.total_pages }}" data-current-page="{{ include.p.page}}" data-previous-page="{% if include.p.previous_page %}true{% else %}false{% endif %}" data-next-page="{% if include.p.next_page %}true{% else %}false{% endif %}">
+
+    {% if include.p.previous_page %}
+        <a class="c-button c-button--colour-primary pagination__previous pagination__previous--active" href="{{ include.p.previous_page_path }}">&larr; Prev</a>
+    {% else %}
+        <span class="c-button pagination__previous pagination__previous--passive">&larr; Prev</span>
+    {% endif %}
+
+    {% if include.p.page == 1 %}
+        <span class="c-button pagination__page pagination__page--current">{{ include.p.page }}</span>
+    {% else %}
+        <a class="c-button pagination__page" href="{{ site.baseurl | prepend: site.url }}">1</a>
+    {% endif %}
+
+    {% assign page_start = 2 %}
+    {% if include.p.page > 4 %}
+        {% assign page_start = include.p.page | minus: 2 %}
+        <span class="c-button pagination__ellipsis">...</span>
+    {% endif %}
+
+    {% assign page_end = include.p.total_pages | minus: 1 %}
+    {% assign pages_to_end = include.p.total_pages | minus: include.p.page %}
+    {% if pages_to_end > 4 %}
+        {% assign page_end = include.p.page | plus: 2 %}
+    {% endif %}
+
+    {% for page in (page_start..page_end) %}
+        {% if page == include.p.page %}
+            <span class="c-button pagination__page pagination__page--current">{{ page }}</span>
+        {% else %}
+            {% assign dist = paginator.page | minus: page %}
+            {% if dist < 0 %}
+                {% assign dist = 0 | minus: dist %}
+            {% endif %}
+
+            <a class="c-button pagination__page" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if pages_to_end > 3 %}
+        <span class="c-button pagination__ellipsis">...</span>
+    {% endif %}
+
+    {% if include.p.page == include.p.total_pages %}
+        <span class="c-button pagination__page pagination__page--current">{{ include.p.page }}</span>
+    {% else %}
+        <a class="c-button pagination__page" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', include.p.total_pages }}">{{ include.p.total_pages }}</a>
+    {% endif %}
+
+    {% if include.p.next_page %}
+        <a class="c-button c-button--colour-primary pagination__next pagination__next--active" href="{{ include.p.next_page_path }}">Next &rarr;</a>
+    {% else %}
+        <span class="c-button pagination__next pagination__next--passive">Next &rarr;</span>
+    {% endif %}
+</div>
+{% endif %}
