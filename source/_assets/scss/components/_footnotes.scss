@@ -1,4 +1,12 @@
 .footnotes {
+  font-size: $font-size-sm;
+  margin: 1em auto;
+  padding: 0 2em;
+
+  @at-root #{&}__seperator {
+    width: 25%;
+  }
+
   @at-root #{&}__list {}
 
   @at-root #{&}__item {}

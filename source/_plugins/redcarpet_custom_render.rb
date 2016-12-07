@@ -8,13 +8,13 @@ class RedcarpetExtender < Redcarpet::Render::HTML
   end
 
   def footnotes(text)
-    %(<div class="footnotes"><ol class="footnotes__list">#{text}</ol></div>)
+    %(<div class="footnotes"><hr class="footnotes__seperator"/><ol class="footnotes__list">#{text}</ol></div>)
   end
 
   def footnote_def(text, number)
     doc = Nokogiri::HTML.fragment(text)
 
-    doc.css('p').last.add_next_sibling %(<a href="#footnote-ref-#{number}" class="footnotes__back-link" rev="footnote">&#8617;</a>)
+    doc.css('p').last.add_child %(<a href="#footnote-ref-#{number}" class="footnotes__back-link" rev="footnote">&#8617;</a>)
 
     %(<li class="footnotes__item" id="footnote-#{number}">#{doc.to_html}</li>)
   end
