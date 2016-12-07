@@ -6,8 +6,6 @@ title: "New Website Design"
 tags: [css, design, website, meta]
 ---
 
-<!-- TODO: Convert to markdown. -->
-
 Ever since I read [Responsive Web Design](http://www.alistapart.com/articles/responsive-web-design/) by Ethan Marcotte I wanted to make my website work on browser sizes between 1000 to 300 pixel. I had something which was essentially a hack up for a long time but that was pretty much rubbish. I started using the [Less Framework 4](http://lessframework.com/) (a CSS framework for creating responsive websites) for [Frigga](http://mylesbraithwaite.com/journal/2011/04/what-the-frigga/ "What The Frigga").
 
 Less Framework provides four different layouts: Default, Tablet, Mobile, and Wide Mobile (see examples at the bottom of this post). This is great because about 10% of my traffic comes from people who are using tablets or mobile phones.

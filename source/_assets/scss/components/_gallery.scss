@@ -1,0 +1,7 @@
+.gallery {
+  @at-root #{&}__row {}
+
+  @at-root #{&}__column {}
+
+  @at-root #{&}__image-link {}
+}

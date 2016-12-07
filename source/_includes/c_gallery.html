@@ -5,7 +5,7 @@
     <div class="l-row gallery__row" data-image-count="{{ image_count }}">
         {% for image in images %}
         <div class="l-column {{ column_width }} gallery__column">
-            <a href="{{ image.src }}" title="{{ image.alt }}" class="gallery__image-link">
+            <a href="{{ image.src | prepend: '/' | prepend: site.upload_url }}" title="{{ image.alt }}" class="gallery__image-link" data-lightbox="gallery">
                 {% include c_image.html src=image.src alt=image.alt caption=image.caption %}
             </a>
         </div>
