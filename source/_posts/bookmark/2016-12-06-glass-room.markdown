@@ -7,6 +7,7 @@ tags:
 bookmark:
   url: https://medium.com/@baratunde/go-to-the-glass-room-if-black-mirror-had-a-showroom-this-would-be-it-7e7adac4fb01#.olsn8hgb8
   author: Baratunde
+feature-image: 2016/341/glass-room/forgot-your-password-by-aram-bartholl.jpg
 gallery:
   images:
     - - src: 2016/341/glass-room/forgot-your-password-by-aram-bartholl.jpg

@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         options: {
             accessKeyId: grunt.config.get('aws.login'),
             secretAccessKey: grunt.config.get('aws.password'),
-            bucket: 'uploads.mylesbraithwaite.com',
+            bucket: 'assets.mylesbraithwaite.com',
             differential: true
         },
 

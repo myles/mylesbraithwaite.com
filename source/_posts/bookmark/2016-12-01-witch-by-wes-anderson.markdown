@@ -13,6 +13,7 @@ tags:
 - parody
 - film
 title: The Witch as a Wes Anderson Film
+feature-image: 2016/336/witch-by-wes-anderson/the-witch.jpg
 ---
 
 {% include c_video.html iframe_url='https://www.youtube-nocookie.com/embed/3PbqIxvEgWE' %}
