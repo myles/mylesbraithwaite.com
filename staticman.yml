@@ -20,7 +20,7 @@ comments:
   allowedOrigins:
     - '127.0.0.1'
     - 'mylesbraithwaite.com'
-    - 'stating.mylesbraithaite.com'
+    - 'staging.mylesbraithaite.com'
 
   # (*) REQUIRED
   #
