@@ -19,9 +19,8 @@ comments:
   # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
   allowedOrigins:
     - 'localhost'
-    - '127.0.0.1:4000'
     - 'mylesbraithwaite.com'
-    - 'staging.mylesbraithaite.com'
+    - 'staging.mylesbraithwaite.com'
 
   # (*) REQUIRED
   #
@@ -32,7 +31,7 @@ comments:
   # (*) REQUIRED
   #
   # Destination path (filename) for the data files. Accepts placeholders.
-  filename: "comment-{@timestamp}"
+  filename: "{@timestamp}"
 
   # The format of the generated data files. Accepted values are "json", "yaml"
   # or "frontmatter"
