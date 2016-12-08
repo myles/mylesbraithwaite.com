@@ -5,6 +5,12 @@ layout: base
 <div class="post-detail">
     {{ content }}
 
+    <div class="post-detail__comments">
+        <div class="post-detail__comment-form">
+            {% include c_comment_form.html %}
+        </div>
+    </div>
+
     <div class="post-detail__footer">
         <div class="post-detail__read-next read-next {% if page.previous.url and page.next.url %}read-next--two{% else %}read-next--one{% endif %}">
             {% if page.previous.url %}

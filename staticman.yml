@@ -18,7 +18,7 @@ comments:
   # listed will be accepted. The origin is sent as part as the `options` object
   # (e.g. <input name="options[origin]" value="http://yourdomain.com/post1")
   allowedOrigins:
-    - '127.0.0.1'
+    - '127.0.0.1:4000'
     - 'mylesbraithwaite.com'
     - 'staging.mylesbraithaite.com'
 
