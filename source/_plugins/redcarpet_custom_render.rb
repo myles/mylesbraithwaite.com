@@ -7,10 +7,10 @@ class Jekyll::Converters::Markdown::CustomRedcarpetParser
     def add_code_tags(code, lang)
       code = code.to_s
       code = code.sub(
-        %r!<pre>!,
+        /<pre>/,
         "<pre><code class=\"language-#{lang}\" data-lang=\"#{lang}\">"
       )
-      code = code.sub(%r!</pre>!, "</code></pre>")
+      code = code.sub(%r{</pre>}, '</code></pre>')
       code
     end
 
@@ -38,15 +38,13 @@ class Jekyll::Converters::Markdown::CustomRedcarpetParser
   module WithPygments
     include CommonMethods
     def block_code(code, lang)
-      Jekyll::External.require_with_graceful_fail("pygments")
-      lang = lang && lang.split.first || "text"
+      Jekyll::External.require_with_graceful_fail('pygments')
+      lang = lang && lang.split.first || 'text'
       add_code_tags(
         Pygments.highlight(
           code,
-          {
-            :lexer   => lang,
-            :options => { :encoding => "utf-8" }
-          }
+          lexer: lang,
+          options: { encoding: 'utf-8' }
         ),
         lang
       )
@@ -54,7 +52,7 @@ class Jekyll::Converters::Markdown::CustomRedcarpetParser
   end
 
   module WithoutHighlighting
-    require "cgi"
+    require 'cgi'
 
     include CommonMethods
 
@@ -63,7 +61,7 @@ class Jekyll::Converters::Markdown::CustomRedcarpetParser
     end
 
     def block_code(code, lang)
-      lang = lang && lang.split.first || "text"
+      lang = lang && lang.split.first || 'text'
       add_code_tags(code_wrap(code), lang)
     end
   end
@@ -72,40 +70,41 @@ class Jekyll::Converters::Markdown::CustomRedcarpetParser
     def block_code(code, lang)
       code = "<pre>#{super}</pre>"
 
-      output = "<div class=\"highlight\">"
+      output = '<div class="highlight">'
       output << add_code_tags(code, lang)
-      output << "</div>"
+      output << '</div>'
     end
 
     protected
+
     def rouge_formatter(_lexer)
-      Rouge::Formatters::HTML.new(:wrap => false)
+      Rouge::Formatters::HTML.new(wrap: false)
     end
   end
 
   def initialize(config)
-    Jekyll::External.require_with_graceful_fail("redcarpet")
+    Jekyll::External.require_with_graceful_fail('redcarpet')
     @config = config
     @redcarpet_extensions = {}
-    @config["redcarpet"]["extensions"].each do |e|
+    @config['redcarpet']['extensions'].each do |e|
       @redcarpet_extensions[e.to_sym] = true
     end
 
-    @renderer ||= class_with_proper_highlighter(@config["highlighter"])
+    @renderer ||= class_with_proper_highlighter(@config['highlighter'])
   end
 
   def class_with_proper_highlighter(highlighter)
     Class.new(Redcarpet::Render::HTML) do
       case highlighter
-      when "pygments"
+      when 'pygments'
         include WithPygments
-      when "rouge"
+      when 'rouge'
         Jekyll::External.require_with_graceful_fail(%w(
-          rouge rouge/plugins/redcarpet
-        ))
+                                                      rouge rouge/plugins/redcarpet
+                                                    ))
 
-        unless Gem::Version.new(Rouge.version) > Gem::Version.new("1.3.0")
-          abort "Please install Rouge 1.3.0 or greater and try running Jekyll again."
+        unless Gem::Version.new(Rouge.version) > Gem::Version.new('1.3.0')
+          abort 'Please install Rouge 1.3.0 or greater and try running Jekyll again.'
         end
 
         include Rouge::Plugins::Redcarpet
