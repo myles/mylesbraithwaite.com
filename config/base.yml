@@ -33,7 +33,7 @@ datetime_format: '%d %B, %Y %I:%M %p'
 datetime_short_format: '%d/%b/%Y'
 
 # Build Settings
-markdown: RedcarpetExt
+markdown: CustomRedcarpetParser
 redcarpet:
   extensions:
     - tables
