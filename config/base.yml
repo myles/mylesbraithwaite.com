@@ -208,3 +208,6 @@ jekyll-archives:
     day: archive_day
     tag: archive_tag
     category: archive_category
+
+# Staticman Config
+staticman_comment_url: https://api.staticman.net/v2/entry/myles/mylesbraithwaite.com/master/comments

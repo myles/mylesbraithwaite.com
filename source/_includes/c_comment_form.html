@@ -1,27 +1,50 @@
-<form method="post" action="https://api.staticman.net/v2/entry/myles/mylesbraithwaite.com/master/comments" class="form">
-    <div class="form-field">
-        <label for="id_name" class="form-label">Name</label>
-        <input name="fields[name]" id="id_name" class="form-input form-input--text" type="text">
+<form method="post" action="{{ site.staticman_comment_url }}" class="form">
+    <input name="options[slug]" type="hidden" value="{{ post_slug }}">
+    <input name="options[parent]" type="hidden" value="{{ post_slug }}">
+    <input name="options[redirect]" type="hidden" value="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <input name="options[origin]" type="hidden" value="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <div class="l-grid">
+        <div class="l-row">
+            <div class="l-column l-column--12 l-column--omega form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <label for="id_name" class="form-label form-label--absolute">Your Name</label>
+                    <input type="text" name="fields[name]" value="" class="form-control form-input form-input--text" id="id_name" autocomplete="name" placeholder="River Tam">
+                </div>
+            </div> <!-- .l-row (name) -->
+        </div>
+
+        <div class="l-row">
+            <div class="l-column l-column--6 l-column--omega form__group form__group--top-border form__group--right-border">
+                <div class="form__group-wrapper">
+                    <label for="id_email" class="form-label form-label--absolute">Email</label>
+                    <input type="email" name="fields[email]" value="" class="form-control form-input form-input--email" id="id_email" autocomplete="email" placeholder="river.tam@serenity.cortex" required>
+                </div>
+            </div>
+
+            <div class="l-column l-column--6 form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <label for="id_url" class="form-label form-label--absolute">Website</label>
+                    <input type="url" name="fields[url]" value="" id="id_url" placeholder="https://river.tam.serenity.cortex" class="form-control form-input form-input--url">
+                </div>
+            </div>
+        </div> <!-- .l-row (email and url) -->
+
+        <div class="l-row">
+            <div class="l-column l-column--12 l-column--omega form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <label for="id_comment" class="form-label">Comment</label>
+                    <textarea name="fields[message]" id="id_comment" rows="3" placeholder="Type your wonderful comment here" class="form-control form-textarea" required></textarea>
+                </div>
+            </div>
+        </div> <!-- .l-row (message) -->
+
+        <div class="l-row">
+            <div class="l-column l-column--12 l-column--omega form__group form__group--top-border">
+                <div class="form__group-wrapper">
+                    <button name="submit" type="submit" class="form-buttom c-button c-button--colour-primary">Go!</button>
+                </div>
+            </div>
+        </div> <!-- .l-row (button) -->
     </div>
-
-    <div class="form-field">
-        <label for="id_email" class="form-label">Email</label>
-        <input name="fields[email]" id="id_email" class="form-input form-input--email" type="email">
-    </div>
-
-    <div class="form-field">
-        <label for="id_url" class="form-label">URL</label>
-        <input name="fields[url]" id="id_url" class="form-input form-input--url" type="url">
-    </div>
-
-    <div class="form-field">
-        <label for="id_comment" class="form-label">Comment</label>
-        <textarea name="fields[message]" id="id_comment" class="form-textarea"></textarea>
-    </div>
-
-  <input name="options[slug]" type="hidden" value="{{ page.id }}">
-  <input name="options[redirect]" type="hidden" value="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <input name="options[origin]" type="hidden" value="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-  <button class="c-button" type="submit">Go!</button>
 </form>
