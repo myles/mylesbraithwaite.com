@@ -1,11 +1,4 @@
----
-layout: base
----
-
-<div class="post-detail">
-    {{ content }}
-
-    <div class="post-detail__footer">
+<div class="post-detail__footer">
     <div class="post-detail__read-next read-next {% if page.previous.url and page.next.url %}read-next--two{% else %}read-next--one{% endif %}">
         {% if page.previous.url %}
         <a href="{{ page.previous.url }}" class="read-next__story read-next__story--previous" {% if page.previous.feature-image %}style="background-image: url({{ page.previous.feature-image | prepend: '/' | prepend: site.upload_url }})"{% endif %}>
@@ -31,5 +24,4 @@ layout: base
         </a>
         {% endif %}
     </div>
-</div>
 </div>
