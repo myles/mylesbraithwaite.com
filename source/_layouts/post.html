@@ -5,31 +5,5 @@ layout: base
 <div class="post-detail">
     {{ content }}
 
-    <div class="post-detail__footer">
-    <div class="post-detail__read-next read-next {% if page.previous.url and page.next.url %}read-next--two{% else %}read-next--one{% endif %}">
-        {% if page.previous.url %}
-        <a href="{{ page.previous.url }}" class="read-next__story read-next__story--previous" {% if page.previous.feature-image %}style="background-image: url({{ page.previous.feature-image | prepend: '/' | prepend: site.upload_url }})"{% endif %}>
-            <div class="read-next__story-wrapper">
-                <span class="c-button read-next__button">Read this next</span>
-
-                <h2 class="read-next__title">{{ page.previous.title | improve }}</h2>
-
-                <p class="read-next__excerpt">{{ page.previous.excerpt | strip_html | truncatewords: 10 }}</p>
-            </div>
-        </a>
-        {% endif %}
-
-        {% if page.next.url %}
-        <a href="{{ page.next.url }}" class="read-next__story read-next__story--next" {% if page.next.feature-image %}style="background-image: url({{ page.next.feature-image | prepend: '/' | prepend: site.upload_url }})"{% endif %}>
-            <div class="read-next__story-wrapper">
-                <span class="c-button read-next__button">You might enjoy</span>
-
-                <h2 class="read-next__title">{{ page.next.title | improve }}</h2>
-
-                <p class="read-next__excerpt">{{ page.next.excerpt | strip_html | truncatewords: 10 }}</p>
-            </div>
-        </a>
-        {% endif %}
-    </div>
-</div>
+    {% include c_post_detail_footer.html %}
 </div>
