@@ -7,19 +7,13 @@ author: myles
 tags: [comics, xkcd, heartbleed]
 bookmark:
   url: http://xkcd.com/1354/
+feature-image: 2014/101/heartbleed-explanation/heartbleed-explanation.png
 ---
 
-<div class="row">
-    <div class="col-sm-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-4">
-        <div class="thumbnail">
-            <a href="//media.mylesbraithwaite.com/attachments/bookmarks_bookmark/294/heartbleed_explanation.png" title="Heartbleed Explanation">
-                <img src="//media.mylesbraithwaite.com/attachments/bookmarks_bookmark/294/heartbleed_explanation.png" alt="Heartbleed Explanation">
-            </a>
-            <div class="caption">
-                <h3>Heartbleed Explanation</h3>
-                <p><blockquote> Are you still there, server? It&#39;s me, Margaret.</blockquote></p>
-                <p>By <a href="http://xkcd.com/1354/" title="Heartbleed Explanation">xkcd</a>.</p>
-            </div>
-        </div>
-    </div>
-</div>
+{% capture caption %}
+<h3>Heartbleed Explantion</h3>
+<blockquote><p>Are you still there, server? It's me, Margaret.</p></blockquote>
+<p>By <a href="http://xkcd.com/1354/" title="Heartbleed Explanation">xkcd</a>.</p>
+{% endcapture %}
+
+{% include c_image.html src='2014/101/heartbleed-explanation/heartbleed-explanation.png' alt='Heartbleed Explanation' caption=caption %}

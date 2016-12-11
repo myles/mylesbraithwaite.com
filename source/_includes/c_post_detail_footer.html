@@ -5,7 +5,7 @@
             <div class="read-next__story-wrapper">
                 <span class="c-button read-next__button">Read this next</span>
 
-                <h2 class="read-next__title">{{ page.previous.title | improve }}</h2>
+                <h2 class="read-next__title">{{ page.previous.title | truncatewords: 5 | improve }}</h2>
 
                 <p class="read-next__excerpt">{{ page.previous.excerpt | strip_html | truncatewords: 10 }}</p>
             </div>

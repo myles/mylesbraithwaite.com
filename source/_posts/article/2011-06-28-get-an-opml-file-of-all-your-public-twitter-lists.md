@@ -6,7 +6,7 @@ title: Get an OPML File of All Your Public Twitter Lists
 tags: [twitter, feed, python, programming]
 ---
 
-I made this simple python script today to get an OPML file (to be imported into Google Reader) of all my Twitter lists.
+I made this simple python script today to get an OPML file so I can import all my Twitter lists.
 
 ```python
 #!/usr/bin/env python
@@ -68,4 +68,4 @@ if __name__ == "__main__":
     main(username)
 ```
 
-You can download the Python script, [twitter_list_to_opml.py.gz](http://cdn.mylesbraithwaite.com/media/uploads/journal/2011-06-28-get-an-opml-file-of-all-your-public-twitter-lists/twitter_list_to_opml.py.gz).
+You can download the Python script, [twitter_list_to_opml.py.gz]({{ '/2011/179/get-an-opml-file-of-all-your-public-twitter-lists/twitter_list_to_opml.py.gz' | prepend: upload_url }}).
