@@ -1,0 +1,154 @@
+---
+title: Favorite Albums of 2016
+layout: post_list
+category: list
+tags: [music, bestof2016, bestof]
+albums:
+  - name: Morning Report
+    artist: Arkells
+    spotify_id: album/2WJ3wW5Uy58NOWkIzzK4a4
+    itunes_link: https://itunes.apple.com/ca/album/morning-report/id1109533861
+    artwork: 2016/366/favorite-albums/arkells-morning-report.jpg
+    favorite_track:
+      name: Private School
+      youtube_id: E7V30rKiikA
+      spotify_id: track/3LsvNEwFMCDf4nXsYEHmex
+    lyrics: |
+        [Verse 1]
+        Private school girls, private school boys:
+        Playing games, expensive toys
+        Private school girls, private school boys:
+        Don DeLillo wrote White Noise
+        I tried so hard to find an in but you weren't giving me anything
+        Come on now throw me a line...it's a sign
+
+        [Chorus]
+        Ah, fuck off: don't say I'd do the same
+        Getting off without an ounce of shame
+        And you know, I just want to love you...but it's so hard
+        Just want to love you...but it's so hard
+
+        [Verse 2]
+        Private school boys, private school girls:
+        The nicest skin, the nicest curls
+        Private boys boys, private school girls:
+        Gimme a chance, gimme a whirl
+        You walked in, my jaw hit the floor
+        You act like this is such a chore
+        Around you i feel like swine:
+        You're divine
+
+        [Chorus]
+        Ah, fuck off: don't say I'd do the same
+        Getting off without an ounce of shame
+        And you know, I just want to love you...but it's so hard
+        Just want to love you...but it's so hard
+
+        [Bridge]
+        I want to go to the party!
+        I want to drink the bacardi!
+        Who's bringing the molly?
+        Let's get a bit naughty...
+
+        I want to go to the party!
+        I want to drink the bacardi!
+        Who's bringing the molly?
+        Who's gonna stop me...
+
+        [Chorus]
+        Ah, fuck off: don't say I'd do the same
+        Getting off without an ounce of shame
+        And you know, I just want to love you...but it's so hard
+        Just want to love you...but it's so hard
+
+        [Outro]
+        Private school kids, life is so simple
+        Born on third base, thought they hit a triple
+
+  - name: All My Demons Greeting Me as aFriend
+    artist: AURORA
+
+  - name: Wildflower
+    artist: The Avalanches
+
+  - name: Good Advice
+    artist: Basia Bulat
+
+  - name: Lemonade
+    artist: Beyoncé
+
+  - name: case/lang/veirs
+    artist: case/lang/veirs
+
+  - name: Moth
+    artist: Chairlift
+
+  - name: Coloring Book
+    artist: Chance the Rapper
+
+  - name: “Awaken, My Love!”
+    artist: Childish Gambino
+
+  - name: Centerfold
+    artist: The Darcys
+
+  - name: PersonA
+    artist: Edward Sharpe & The Magnetic Zeros
+
+  - name: 4 Your Eyez Only
+    artist: J. Cole
+
+  - name: Touch
+    artist: July Talk
+
+  - name: Bobby Tarantion
+    artist: Logic
+
+  - name: Away
+    artist: Okkervil River
+
+  - name: The Dream is Over
+    artist: PUP
+
+  - name: Young in All the Wrong Ways
+    artist: Sara Watkins
+
+  - name: A Sailor’s Guide to Earth
+    artist: Sturgill Simpson
+
+  - name: Lady Wood
+    artist: Tove Lo
+
+  - name: We are the Halluci Nation
+    artist: A Tribe Called Red
+
+  - name: Starboy
+    artist: The Weeknd
+
+  - name: Swooner
+    artist: The Zolas
+---
+
+<p>2016 was a great year for music here is a list of my favorite albums of 2016.</p>
+
+<div class="l-grid">
+    {% for album in page.albums %}
+    {% if album.artwork %}
+    <div class="l-row">
+        <div class="l-column l-column--4">
+            {% include c_image.html src=album.artwork %}
+        </div>
+
+        <div class="l-column l-column--8">
+            <h3>{{ album.name | improve }} / <strong>{{ album.artist | improve }}</strong></h3>
+
+            <ul>
+                <li>Favorite Track: {{ album.favorite_track.name }}</li>
+                <li>Stream: </li>
+                <li>Buy: </li>
+            </ul>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
