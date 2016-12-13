@@ -30,6 +30,21 @@ class Jekyll::Converters::Markdown::CustomRedcarpetParser
       %(<li class="footnotes__item" id="footnote-#{number}">#{doc.to_html}</li>)
     end
 
+    def header(text, header_level)
+      header_id = Jekyll::Utils.slugify(text)
+
+      header_levels = {
+        1 => 'heading-one',
+        2 => 'heading-two',
+        3 => 'heading-three',
+        4 => 'heading-four',
+        5 => 'heading-five',
+        6 => 'heading-six'
+      }
+
+      %(<h#{header_level} class="#{header_levels[header_level]}" id="heading-#{header_id}">#{text}</h#{header_level}>)
+    end
+
     def footnote_ref(number)
       %(<sup id="footnote-ref-#{number}" class="footnote"><a href="#footnote-#{number}" class="footnote__link" rel="footnote">#{number}</a></sup>)
     end
