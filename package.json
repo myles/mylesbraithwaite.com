@@ -8,9 +8,7 @@
     "grunt-rsync": "^2.0.1",
     "netrc": "^0.1.4"
   },
-  {
-    "scripts": {
-      "postinstall": "bower install"
-    }
+  "scripts": {
+    "postinstall": "bower install"
   }
 }
