@@ -5,6 +5,7 @@ title: CHIP Arrived
 date: 2016-01-05T13:25
 tags:
   - chip
+feature-image: 2016/005/chip/chip.jpg
 ---
 
 {% include c_image.html src='2016/005/chip/chip.jpg' alt="CHIP" caption="Got my CHIP today!" %}

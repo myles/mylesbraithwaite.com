@@ -17,10 +17,8 @@ group :jekyll_plugins do
   gem 'jekyll-watch'
   gem 'jekyll-assets'
   gem 'jekyll-sitemap'
-  gem 'jekyll-seo-tag'
   gem 'jekyll-archives'
   gem 'jekyll-paginate'
   gem 'jekyll-typogrify'
-  gem 'jekyll_pages_api'
   gem 'jekyll-picture-tag', '~> 0.3.0'
 end

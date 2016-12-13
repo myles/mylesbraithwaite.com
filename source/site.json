@@ -1,5 +1,6 @@
 ---
 layout: null
+permalink: /api/v1/site.json
 ---
 {
   "url": {{ site.baseurl | prepend: url | jsonify }},

@@ -6,7 +6,6 @@ gems:
   - jekyll-watch
   - jekyll-assets
   - jekyll-sitemap
-  - jekyll-seo-tag
   - jekyll-archives
   - jekyll-paginate
   - jekyll-typogrify

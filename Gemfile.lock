@@ -13,7 +13,6 @@ GEM
     ffi (1.9.14)
     forwardable-extended (2.6.0)
     hike (1.2.3)
-    htmlentities (4.3.4)
     jekyll (3.3.1)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -37,8 +36,6 @@ GEM
       mini_magick (~> 3.8.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
-    jekyll-seo-tag (2.1.0)
-      jekyll (~> 3.3)
     jekyll-sitemap (0.12.0)
       jekyll (~> 3.3)
     jekyll-typogrify (0.3.2)
@@ -46,9 +43,6 @@ GEM
       typogruby
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
-    jekyll_pages_api (0.1.6)
-      htmlentities (~> 4.3)
-      jekyll (>= 2.0, < 4.0)
     kramdown (1.13.1)
     liquid (3.0.6)
     listen (3.0.8)
@@ -100,11 +94,9 @@ DEPENDENCIES
   jekyll-assets
   jekyll-paginate
   jekyll-picture-tag (~> 0.3.0)
-  jekyll-seo-tag
   jekyll-sitemap
   jekyll-typogrify
   jekyll-watch
-  jekyll_pages_api
   mini_magick
   netrc
   nokogiri
