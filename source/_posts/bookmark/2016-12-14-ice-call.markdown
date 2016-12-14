@@ -1,0 +1,20 @@
+---
+bookmark:
+  author: PVS COMPANY
+  author_url: https://vimeo.com/pvscompany
+  published: '2016-12-13 05:11:01'
+  url: https://vimeo.com/195433452
+category: bookmark
+date: '2016-12-14T13:27:36.128932'
+layout: post_bookmark
+tags:
+- skiing
+- mer-de-glace
+- mount-blanc
+- france
+title: Ice Call
+---
+
+Skiing _Mer de Glace_ in the heart of Mount Blanc, France.
+
+{% include c_video.html iframe_url="https://player.vimeo.com/video/195433452" %}
