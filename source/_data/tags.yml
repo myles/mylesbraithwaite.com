@@ -1,8 +1,4 @@
 ---
-bestof:
-  name: Best Of
-bestof2016:
-  name: Best of 2016
 1password:
   name: 1Password
 adam-savage:
@@ -22,6 +18,10 @@ bash:
   name: Bash
 beastie-boys:
   name: Beastie Boys
+bestof:
+  name: Best Of
+bestof2016:
+  name: Best of 2016
 blogging:
   name: Blogging
 brutal-design:
@@ -46,6 +46,8 @@ complicated:
   name: Complicated
 couchdb:
   name: Apache CouchDB
+csharp:
+  name: C#
 css:
   abbr: CSS
   name: Cascading Style Sheets
