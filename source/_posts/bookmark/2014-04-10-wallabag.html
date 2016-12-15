@@ -7,28 +7,18 @@ author: myles
 tags: [instapaper, php, read-it-later, readability, wallabag]
 bookmark:
   url: https://www.wallabag.org/
+gallery:
+  images:
+    - - src: 2014/100/wallabag/login.jpeg
+        alt: "wallabag: Login Page"
+    - - src: 2014/100/wallabag/homepage_grid.jpeg
+        alt: "wallabag: Homepage"
+    - - src: 2014/100/wallabag/article.jpeg
+        alt: "wallabag: Article View"
+    - - src: 2014/100/wallabag/article_smartphone.jpeg
+        alt: wallabag: Article Mobile View
 ---
 
 <p>A self hosted PHP web application for saving web pages to read later (basically an open source clone of <em>Instapaper</em> and <em>Readability</em>).</p>
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <a href="//media.mylesbraithwaite.com/attachments/bookmarks_bookmark/293/login.jpeg" class="thumbnail" data-toggle="lightbox">
-      <img src="//media.mylesbraithwaite.com/attachments/bookmarks_bookmark/293/login.jpeg" alt="wallabag: Login Page" geometry="250">
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-3">
-    <a href="//media.mylesbraithwaite.com/attachments/bookmarks_bookmark/293/homepage_grid.jpeg" class="thumbnail" data-toggle="lightbox">
-      <img src="//media.mylesbraithwaite.com/attachments/bookmarks_bookmark/293/homepage_grid.jpeg" alt="wallabag: Homepage" geometry="250">
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-3">
-    <a href="//media.mylesbraithwaite.com/attachments/bookmarks_bookmark/293/article.jpeg" class="thumbnail" data-toggle="lightbox">
-      <img src="//media.mylesbraithwaite.com/attachments/bookmarks_bookmark/293/article.jpeg" alt="wallabag: Article View" geometry="250">
-    </a>
-  </div>
-  <div class="col-xs-6 col-md-3">
-    <a href="//media.mylesbraithwaite.com/attachments/bookmarks_bookmark/293/article_smartphone.png" class="thumbnail" data-toggle="lightbox">
-      <img src="//media.mylesbraithwaite.com/attachments/bookmarks_bookmark/293/article_smartphone.png" alt="wallabag: Article Mobile View" geometry="x119">
-    </a>
-  </div>
-</div>
+
+{% include c_gallery.html gallery=page.gallery %}
