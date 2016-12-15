@@ -9,7 +9,7 @@ bookmark:
   url: http://www.onebigfluke.com/2013/08/lets-remove-verbs-from-http-20.html
 ---
 
-<blockquote>
+<blockquote class="blockquote">
 <p>Practically speaking there are only two <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" title="Hypertext Transfer Protocol: Request Methods">HTTP verbs</a>: read and write, GET and POST. The semantics of the others (put, head, options, delete, trace, connect) are most commonly expressed in headers, URL parameters, and request bodies, not request methods. The unused verbs are a clear product of <a href="http://c2.com/cgi/wiki?BikeShed%20&quot;Bike%20Shedding">bike-shedding</a>, an activity that specification writers love.</p>
 </blockquote>
 <p>I like to use most of the <code>HTTP</code> verbs (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>CREATE</code>, <code>COPY</code>, and <code>MOVE</code>) but most developers hate them so I usually also express them in endpoints (/get/$, /update/$, /attach/$, /add/$) and the rest with <code>POST</code> data.</p>
