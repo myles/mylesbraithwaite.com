@@ -31,8 +31,7 @@ def cli(name):
 
     full_upload_path = join(dirname(realpath(__file__)), upload_path)
 
-    if not exists(full_upload_path):
-        makedirs(full_upload_path)
+    makedirs(full_upload_path, exist_ok=True)
 
     click.echo(upload_path)
 
