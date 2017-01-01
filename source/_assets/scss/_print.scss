@@ -1,0 +1,219 @@
+// scss-lint:disable NestingDepth, SelectorDepth, DuplicateProperty, ColorVariable
+
+%hide {
+  display: none;
+}
+
+.header {
+  @at-root #{&}__imprint {
+    background-color: $body-background;
+  }
+
+  @at-root #{&}__title-link {
+    color: $body-colour;
+  }
+
+  @at-root #{&}__navigation { @extend %hide; }
+}
+
+.page {
+  min-height: 0;
+}
+
+.post {
+  @at-root #{&}__content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre,
+    code,
+    blockquote,
+    em,
+    strong,
+    code {
+      color: $body-colour;
+      font-family: $font-family-monospace;
+      font-size: $font-size-base;
+      font-style: normal;
+      font-weight: normal;
+      line-height: $line-height-base;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre,
+    code,
+    blockquote,
+    ol,
+    ul,
+    li,
+    p {
+      float: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1,
+    p,
+    ul,
+    ol,
+    pre,
+    blockquote {
+      margin-bottom: 1em;
+      margin-top: 1em;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 1em;
+      position: relative;
+
+      &::before {
+        content: '# ';
+        display: inline;
+      }
+    }
+
+    h2::before {
+      content: '## ';
+    }
+
+    h3::before {
+      content: '### ';
+    }
+
+    h4::before {
+      content: '#### ';
+    }
+
+    h5::before {
+      content: '##### ';
+    }
+
+    h6::before {
+      content: '###### ';
+    }
+
+    li {
+      display: block;
+      padding-left: 34px;
+      padding-left: 4ch;
+      position: relative;
+
+      &::after {
+        left: 0;
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    ul > li::after {
+      content: '*';
+    }
+
+    ol {
+      counter-reset: ol;
+
+      > li::after {
+        content: counter(ol) '.';
+        counter-increment: ol;
+      }
+    }
+
+    blockquote {
+      border: 0;
+      overflow: hidden;
+      padding-left: 17px;
+      padding-left: 2ch;
+      position: relative;
+
+      &::after {
+        content: '>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>';
+        font-size: 1em;
+        left: 0;
+        line-height: 20px;
+        position: absolute;
+        top: 0;
+        white-space: pre;
+      }
+    }
+
+    strong::before,
+    strong::after {
+      content: '**';
+      display: inline;
+    }
+
+    em::before,
+    em::after {
+      content: '_';
+      display: inline;
+    }
+
+    a {
+      text-decoration: none;
+
+      &::before {
+        color: #333;
+        content: '[';
+        display: inline;
+      }
+
+      &::after {
+        color: #333;
+        content: '](' attr(href) ')';
+        display: inline;
+      }
+    }
+
+    code {
+      font-weight: 100;
+
+      &::before,
+      &::after {
+        content: '`';
+        display: inline;
+      }
+    }
+
+    pre {
+      margin-left: 34px;
+      padding-left: 4ch;
+
+      code {
+        &::before,
+        &::after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
+.post-detail {
+  @at-root #{&}__footer { @extend %hide; }
+}
+
+.footer {
+  background-color: $body-background;
+  color: $body-colour;
+
+  @at-root #{&}__disclaimer {
+    color: $body-colour;
+  }
+
+  @at-root #{&}__logo,
+           #{&}__sections,
+           #{&}__separator { @extend %hide; }
+}

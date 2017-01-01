@@ -28,3 +28,8 @@ $large-screen: 50rem;
 @import 'layouts/post-detail';
 @import 'layouts/post-list';
 @import 'layouts/post';
+
+
+@media print {
+  @import 'print';
+}
