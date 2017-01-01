@@ -1,0 +1,22 @@
+---
+bookmark:
+  url: http://weijr-note.blogspot.ca/2017/01/2017-is-not-just-another-prime-number.html
+  author: TJ Wei
+category: bookmark
+date: '2017-01-01T17:11:58.393444'
+layout: post_bookmark
+tags:
+- math
+- '2017'
+title: 2017 is not just another prime number
+---
+
+TJ Wei on why 2017 is not just any prime number:
+
+> 2017π (rounds to nearest integer) is a prime.
+>
+> 2017e (rounds to nearest integer ) is a prime.
+>
+> The sum of all odd primes up to 2017 is a prime number, i.e. 3+5+7+11+...+2017 is a prime number.
+>
+> The sum of the cube of gap of primes up to 2017 is a prime number. That is (3-2)^3 + (5-3)^3 + (7-5)^3 + (11-7)^3 + ... + (2017-2011)^3 is a prime number.
