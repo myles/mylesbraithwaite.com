@@ -23,7 +23,7 @@ def cli(name):
                                                     day=m.group('day')),
                                  '%Y-%m-%d')
 
-    upload_path_tpl = './source/uploads/{year}/{day}/{slug}'
+    upload_path_tpl = '../source/uploads/{year}/{day}/{slug}'
 
     upload_path = upload_path_tpl.format(year=m.group('year'),
                                          day=date_obj.strftime('%j'),
