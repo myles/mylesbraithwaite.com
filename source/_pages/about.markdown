@@ -23,4 +23,4 @@ You can email me at [{{ author.email }}](mailto:{{ author.email }}) and find me 
 
 {% assign colophon = site.data.colophon %}
 
-{{ site.title }} runs on [{{ colophon.runs_on.name }}]({{ colophon.runs_on.url }}) and is powered by [{{ colophon.powered_by.name }}]({{ colophon.powered_by.url }}) (you can view the source code on [GitHub](https://github.com/{{ site.repository.repositoryurl }})).
+{{ site.title }} runs on [{{ colophon.runs_on.name }}]({{ colophon.runs_on.url }}) and is powered by [{{ colophon.powered_by.name }}]({{ colophon.powered_by.url }}) (you can view the source code on [GitHub](https://github.com/{{ site.repository }})).

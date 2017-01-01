@@ -21,8 +21,7 @@ onion_url: ""
 # Site Meta Data
 title: Myles Braithwaite
 subtitle: "Hoping for the Best, Imagining the Worst."
-copy: >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus auctor orci at dui suscipit commodo. Sed sit amet magna ut neque tincidunt tincidunt sed vitae ante. Sed vehicula, massa vitae sollicitudin lobortis, eros nunc venenatis odio, eget tristique mi massa non odio. Aliquam erat volutpat. Vivamus posuere nulla tellus, id cursus tellus euismod et. Sed molestie libero at ligula gravida rutrum. Fusce non ornare magna. In at imperdiet ante, sit amet dapibus quam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin dictum condimentum fermentum. Etiam ac tellus in nibh vestibulum porta eu at urna.
+copy: TODO
 repository: myles/mylesbraithwaite.com
 
 # Date Time Format
