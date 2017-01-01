@@ -1,28 +1,29 @@
 ---
 
 # URL Settings
-url: https://mylesbraithwaite.com
-baseurl: ""
-upload_url: https://mylesbraithwaite.com/uploads
-onion_url: http://tdm76lx3jweaozkd.onion
+url: 'https://mylesbraithwaite.com'
+baseurl: ''
+upload_url: 'https://mylesbraithwaite.com/uploads'
+onion_url: 'http://tdm76lx3jweaozkd.onion'
 
 # Contact Form
-raven_key: 902c9b4a-b8d0-11e6-8826-34363bd0c9bc
-recaptcha_sitekey: 6Lf8-ygTAAAAAKWdLY5sYOgduRZo7mjTPHwhAVp3
+raven_key: '902c9b4a-b8d0-11e6-8826-34363bd0c9bc'
+recaptcha_sitekey: '6Lf8-ygTAAAAAKWdLY5sYOgduRZo7mjTPHwhAVp3'
 
 # Jekyll-Assets Settings
 assets:
-  baseurl: https://mylesbraithwaite.com/assets/
+  baseurl: 'https://mylesbraithwaite.com/assets/'
 
 # Piwik Settings
-piwik_base_url: piwik.mylesb.ca
-piwik_site_id: 18
-piwik_set_domains: '*.mylesbraithwaite.com'
+piwik:
+  baseurl: 'piwik.mylesb.ca'
+  site_id: '18'
+  set_domains: '*.mylesbraithwaite.com'
 
 # Google Analytics Settings
-google_analytics_tacking_code: UA-1642439-2
+google_analytics_tacking_code: 'UA-1642439-2'
 
 # Grunt-Rsync Settings
 rsync:
-  dest: /srv/www/mylesbraithwaite.com/www/html/
-  host: myles@bear.mylesbraithwaite.com
+  dest: '/srv/www/mylesbraithwaite.com/www/html/'
+  host: 'myles@bear.mylesbraithwaite.com'

@@ -1,7 +1,6 @@
 ---
 layout: compress
 ---
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -19,7 +18,7 @@ layout: compress
         <meta name="author" content="{{ site.data.author.name }} ({{ site.data.author.email }})">
 
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-        <link rel="onion" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.onion_url }}">
+        {% if site.onion_url %}<link rel="onion" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.onion_url }}">{% endif %}
 
         {% stylesheet style %}
 
