@@ -97,6 +97,8 @@ fingerprints:
 fptp:
   name: First-past-the-post voting
   wikipedia: https://en.wikipedia.org/wiki/First-past-the-post_voting
+go:
+  name: Go
 google-app-engine:
   name: Google App Engine
 graphql:

@@ -1,0 +1,14 @@
+---
+bookmark:
+  url: https://opensource.googleblog.com/2017/01/grumpy-go-running-python.html
+category: bookmark
+date: '2017-01-04T15:23:49.104602'
+layout: post_bookmark
+tags:
+- go
+- python
+title: Grumpy
+quote: true
+---
+
+[Grumpy](http://grump.io/) is an experimental Python runtime for Go. It translates Python code into Go programs, and those transpiled programs run seamlessly within the Go runtime. We needed to support a large existing Python codebase, so it was important to have a high degree of compatibility with CPython (quirks and all). The goal is for Grumpy to be a drop-in replacement runtime for any pure-Python project.
