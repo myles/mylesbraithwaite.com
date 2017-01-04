@@ -94,6 +94,9 @@ film:
   name: Film
 fingerprints:
   name: Fingerprints
+fptp:
+  name: First-past-the-post voting
+  wikipedia: https://en.wikipedia.org/wiki/First-past-the-post_voting
 google-app-engine:
   name: Google App Engine
 graphql:
@@ -129,6 +132,9 @@ iphone:
   name: iPhone
 ipod:
   name: iPod
+irv:
+  name: Instant-runoff voting
+  wikipedia: https://en.wikipedia.org/wiki/Instant-runoff_voting
 isp:
   addr: I.S.P.
   name: Internet Service Providers
