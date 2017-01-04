@@ -12,6 +12,10 @@ art:
 aws:
   addr: AWS
   name: Amazon Web Services
+ballots:
+  name: Ballots
+bank-notes:
+  name: Bank Notes
 barenaked-ladies:
   name: Barenaked Ladies
 bash:
@@ -83,6 +87,8 @@ dotnet:
 ec2:
   addr: EC2
   name: Amazon Elastic Compute Cloud
+election:
+  name: Election
 failure:
   name: Failure
 fcc:
@@ -97,6 +103,8 @@ fingerprints:
 fptp:
   name: First-past-the-post voting
   wikipedia: https://en.wikipedia.org/wiki/First-past-the-post_voting
+france:
+  name: France
 go:
   name: Go
 google-app-engine:
@@ -106,6 +114,10 @@ graphql:
 gtalug:
   name: GTALUG
   title: Greater Toronto Area Linux User Group
+hands:
+  name: Hands
+hannah-georgas:
+  name: Hannah Georgas
 hierapolis:
   location:
     lat: 37.925
@@ -158,10 +170,24 @@ mac-app-store:
   - app-store
 macos:
   name: macOS
+math:
+  name: Math
+mer-de-glace:
+  location:
+    lat: 45.916111
+    lon: 6.937222
+  name: Mer de Glace
+  wikipedia: https://en.wikipedia.org/wiki/Mer_de_Glace
 minecraft:
   name: Minecraft
 mobile-development:
   name: Mobile Development
+mont-blanc:
+  location:
+    lat: 45.833611
+    lon: 6.865
+  name: Mont Blanc
+  wikipedia: https://en.wikipedia.org/wiki/Mont_Blanchttps://en.wikipedia.org/wiki/Mont_Blanc
 music:
   name: Music
 music-video:
@@ -217,8 +243,12 @@ remix:
 saas:
   name: SaaS
   title: Software as a Service
+sailing:
+  name: Sailing
 skateboarding:
   name: Skateboarding
+skiing:
+  name: Skiing
 snippet:
   name: Snippet
 snippets:
@@ -256,6 +286,8 @@ video:
   name: Video
 video-games:
   name: Video Games
+voting:
+  name: Voting
 wakeboarding:
   name: Wakeboarding
 wakesakting:
