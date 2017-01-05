@@ -22,7 +22,7 @@ layout: compress
 
         {% stylesheet style %}
 
-        <link rel="alternate" type="application/atom+xml" title="{{ site.title }} | Feed" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+        <link rel="alternate" type="application/atom+xml" title="{{ site.title }} | Feed" href="{{ "/feeds/" | prepend: site.baseurl | prepend: site.url }}">
 
         {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
         {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
