@@ -1,0 +1,17 @@
+---
+layout: page
+title: 404 Page Not Found
+page_title: Where am I?
+subtitle: Probably not where you want to be
+sitemap: false
+---
+
+You're in a room. It's dark. Silent. As your eyes become accustomed to the gloom you notice something on the wall opposite. Squinting, you read:
+
+**404 Page Not Found**
+
+It might be written in blood or something. I don't know. This story's gone on too long already.
+
+What I'm trying to say is the page you're looking for, <script>document.write(window.location.href.toString().split(window.location.host)[1])</script>, can't be found. Sorry.
+
+You're probably looking for the most recent post called {% for post in site.posts limit:1 %}[{{ post.title }}]({{ post.url }}){% endfor %}; but if you're completely lost, try the [home page](/). If you think I've made some kind of mistake (as unlikely as that sounds) you should [get in touch](mailto:me@mylesbraithwaite.com).</p>
