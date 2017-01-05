@@ -1,4 +1,9 @@
 ---
+facebook:
+  name: Facebook
+computer-vision:
+  name: Computer Vision
+  wikipedia: https://en.wikipedia.org/wiki/Computer_vision
 1password:
   name: 1Password
 adam-savage:
