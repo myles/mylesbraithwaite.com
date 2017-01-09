@@ -33,8 +33,8 @@ I am going to be [talking about HTML5 at the next GTALUG meeting](http://gtalug.
 >
 > **Schedule**
 >
-> * 6:00 pm - There is a get together of GTALUGers at Pho 88 <a href="http://pho88.ca/">http://pho88.ca/</a> restaurant 270 Spadina Ave (South of Dundas) for food and socializing.
+> * 6:00 pm - There is a get together of GTALUGers at [Pho 88](http://pho88.ca/) restaurant 270 Spadina Ave (South of Dundas) for food and socializing.
 > * 7:30 pm - Meeting and presentation.
 > * 9:00 pm - After each meeting (at 9:00 pm) a group of GTALUGers move to the GSU Pub for beer and more socializing.
 >
-> <cite>Retrieved from <a href="http://gtalug.org/wiki/Meetings:2010-07">http://gtalug.org/wiki/Meetings:2010-07</a></cite>
+> <cite>Retrieved from <http://gtalug.org/wiki/Meetings:2010-07>.</cite>
