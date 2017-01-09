@@ -1,5 +1,7 @@
 ---
 
+destination: ./.cache/prod/
+
 # URL Settings
 url: 'https://mylesbraithwaite.com'
 baseurl: ''
@@ -23,7 +25,5 @@ piwik:
 # Google Analytics Settings
 google_analytics_tacking_code: 'UA-1642439-2'
 
-# Grunt-Rsync Settings
-rsync:
-  dest: '/srv/www/mylesbraithwaite.com/www/html/'
-  host: 'myles@bear.mylesbraithwaite.com'
+# rsync Settings
+rsync: myles@bear.mylesbraithwaite.com:/srv/www/mylesbraithwaite.com/www/html/

@@ -1,5 +1,7 @@
 ---
 
+destination: ./.cache/stag/
+
 # URL Settings
 url: https://staging.mylesbraithwaite.com
 baseurl: ""
@@ -13,7 +15,5 @@ recaptcha_sitekey: 6Lf8-ygTAAAAAKWdLY5sYOgduRZo7mjTPHwhAVp3
 assets:
   baseurl: https://staging.mylesbraithwaite.com/assets/
 
-# Grunt-Rsync Settings
-rsync:
-  dest: /srv/www/mylesbraithwaite.com/staging/html/
-  host: myles@bear.mylesbraithwaite.com
+# rsync Settings
+rsync: myles@bear.mylesbraithwaite.com:/srv/www/mylesbraithwaite.com/staging/html/
