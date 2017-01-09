@@ -11,13 +11,17 @@ from boto.s3.key import Key
 from fabric.api import env, task
 
 
-@task
-def push():
-    """Push uploads to AWS S3."""
+def client():
     login, account, password = netrc.netrc().authenticators('aws')
     
     conn = S3Connection(login, password)
-    bucket = conn.get_bucket('assets.mylesbraithwaite.com')
+    return conn.get_bucket('assets.mylesbraithwaite.com')
+
+
+@task
+def push():
+    """Push uploads to AWS S3."""
+    bucket = client()
     
     # Upload Files
     for root, dirs, files in os.walk(join(env.root_dir, 'source/uploads')):
@@ -25,7 +29,7 @@ def push():
             if f.endswith('.swp') or f.startswith('.'):
                 continue
 
-            filename = join(root, f)
+            filename = join('uploads', root, f)
             modify_time = os.stat(filename)[ST_MTIME]
 
             key = bucket.get_key(filename)
@@ -43,4 +47,4 @@ def push():
 @task
 def pull():
     """Pull uploads from AWS S3."""
-    pass
+    bucket = client()
