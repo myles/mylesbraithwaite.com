@@ -1,9 +1,10 @@
-#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 from collections import OrderedDict
 from os.path import dirname, realpath, join
 
 import yaml
+from fabric.api import env, task
 
 
 def sort_yaml_file(yaml_file):
@@ -14,8 +15,9 @@ def sort_yaml_file(yaml_file):
     return yaml.dump(data, default_flow_style=False, explicit_start=True)
 
 
-def main():
-    data_dir = join(dirname(realpath(__file__)), '../source/_data')
+@task(default=True)
+def sort_yaml():
+    data_dir = join(env.root_dir, 'source/_data')
 
     # chdir(data_dir)
     # yaml_files = iglob('*.yml')
@@ -28,7 +30,3 @@ def main():
 
         with open(yaml_file, 'w') as fobj:
             fobj.write(raw.replace('\n-', '\n\n-'))
-
-
-if __name__ == '__main__':
-    main()
