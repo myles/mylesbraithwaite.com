@@ -1,21 +1,22 @@
 # -*- coding: utf-8 -*-
-import re
+"""Fabric Posts Tasks."""
 from datetime import datetime
 from os import makedirs
-from os.path import dirname, realpath, join, exists, basename
+from os.path import basename, exists, join
 
-from slugify import Slugify
 from frontmatter import Post, dump
+from slugify import Slugify
 
 from fabric.api import env, task
-from fabric.utils import error, puts
 from fabric.operations import prompt
+from fabric.utils import error, puts
 
 slugify = Slugify(to_lower=True)
 
 
 @task
 def new(post_type='simple'):
+    """Create a new Jekyll post."""
     if post_type not in ['simple', 'list', 'bookmark', 'article', 'quote']:
         raise error("The post type, '{0}', isn't supported.".format(post_type))
 
@@ -64,6 +65,7 @@ def new(post_type='simple'):
 
 @task
 def upload_path(name):
+    """Find the upload path for a post."""
     filename = basename(name)
     m = env.re_file_foramt.match(filename)
 

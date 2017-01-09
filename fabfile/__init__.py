@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
+"""Fabfile."""
 from fabric.api import task
 
-from . import config
+from . import config  # noqa: F401
 from . import jekyll
-from . import posts
+from . import posts  # noqa: F401
 from . import rsync
-from . import s3
-from . import sort_yaml
-from . import tags
+from . import s3  # noqa: F401
+from . import sort_yaml  # noqa: F401
+from . import tags  # noqa: F401
 
 
 @task

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""Fabric rsync Tasks."""
 from os.path import join
 
 from fabric.api import env, task
