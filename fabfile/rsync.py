@@ -7,6 +7,7 @@ from fabric.contrib.project import rsync_project
 
 @task
 def push(environment='stag'):
+    """Push website though rsync."""
     args = {}
 
     if environment == 'local':

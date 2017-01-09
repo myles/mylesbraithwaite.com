@@ -16,6 +16,7 @@ def jekyll(command, *args, **kwargs):
 
 @task
 def build(environment='stag'):
+    """Build your site."""
     config = [env.config_base_file]
 
     if environment == 'local':
@@ -32,4 +33,5 @@ def build(environment='stag'):
 
 @task
 def serve():
+    """Serve your site locally."""
     jekyll('serve', 'watch', 'drafts', 'future', 'unpublished', config=','.join([env.config_base_file, env.config_local_file]), limit_posts=50)
