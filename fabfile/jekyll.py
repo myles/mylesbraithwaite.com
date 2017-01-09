@@ -6,7 +6,7 @@ def jekyll(command, *args, **kwargs):
     opts = []
 
     for arg in args:
-        opts.append('--{}'.format(args))
+        opts.append('--{}'.format(arg))
 
     for key, value in kwargs.items():
         opts.append('--{0}={1}'.format(key, value))
