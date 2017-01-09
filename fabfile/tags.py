@@ -1,12 +1,12 @@
-#!/usr/bin/env python3
-
+# -*- coding: utf-8 -*-
 from glob import glob
 from itertools import groupby
 from os.path import dirname, realpath, join
 
 import yaml
-import click
 import frontmatter
+from fabric.api import env, task
+from fabric.utils import puts
 
 
 def post_list():
@@ -19,7 +19,7 @@ def post_list():
         A list of frontmatter.Post objects.
     """
 
-    posts_dir = join(dirname(realpath(__file__)), '../source/_posts')
+    posts_dir = join(env.root_dir, 'source/_posts')
 
     post_files = glob(join(posts_dir, '**', '*'))
 
@@ -42,8 +42,7 @@ def tag_yml():
     dict
         The contents of the `./source/_data/tags.yml` file convert to a dict.
     """
-    with open(join(dirname(realpath(__file__)),
-                   '../source/_data/tags.yml'), 'r') as fobj:
+    with open(join(env.root_dir, 'source/_data/tags.yml'), 'r') as fobj:
         return yaml.load(fobj.read())
 
 
@@ -118,13 +117,8 @@ def tag_get(slug):
     return tag_info
 
 
-@click.group()
-def cli():
-    pass
-
-
-@cli.command('list')
-def cli_list():
+@task
+def all():
     """List all the tags."""
 
     resp = []
@@ -132,25 +126,15 @@ def cli_list():
     for tag in tag_list():
         resp.append('{name} ({count})'.format(**tag))
 
-    click.echo_via_pager('\n'.join(resp))
+    puts('\n'.join(resp))
 
 
-@cli.command('get')
-@click.argument('slug', metavar='<slug>')
-@click.option('--edit', is_flag=True)
-def cli_get(slug, edit):
+@task
+def get(slug):
     """Get information about a tag."""
     tag = tag_get(slug)
 
-    click.secho('{name}'.format(**tag), fg='green')
+    puts('{name}'.format(**tag))
 
     for post in tag['posts']:
-        click.echo('{title} - {file_path}'.format(**post))
-
-    if edit:
-        for post in tag['posts']:
-            click.edit(filename=post['file_path'])
-
-
-if __name__ == '__main__':
-    cli()
+        puts('{title} - {file_path}'.format(**post))

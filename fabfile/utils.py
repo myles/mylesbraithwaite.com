@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 def merge_dicts(*dict_args):
     """
     Given any number of dicts, shallow copy and merge into a new dict,

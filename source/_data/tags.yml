@@ -1,9 +1,4 @@
 ---
-facebook:
-  name: Facebook
-computer-vision:
-  name: Computer Vision
-  wikipedia: https://en.wikipedia.org/wiki/Computer_vision
 1password:
   name: 1Password
 adam-savage:
@@ -53,6 +48,9 @@ community:
   name: Community
 complicated:
   name: Complicated
+computer-vision:
+  name: Computer Vision
+  wikipedia: https://en.wikipedia.org/wiki/Computer_vision
 couchdb:
   name: Apache CouchDB
 csharp:
@@ -94,6 +92,8 @@ ec2:
   name: Amazon Elastic Compute Cloud
 election:
   name: Election
+facebook:
+  name: Facebook
 failure:
   name: Failure
 fcc:
@@ -125,7 +125,7 @@ hannah-georgas:
   name: Hannah Georgas
 hierapolis:
   location:
-    lat: 37.925
+    lat: 37.924999999999997
     lon: 29.125833
   name: Hierapolis
 html:
@@ -179,8 +179,8 @@ math:
   name: Math
 mer-de-glace:
   location:
-    lat: 45.916111
-    lon: 6.937222
+    lat: 45.916111000000001
+    lon: 6.9372220000000002
   name: Mer de Glace
   wikipedia: https://en.wikipedia.org/wiki/Mer_de_Glace
 minecraft:
@@ -189,8 +189,8 @@ mobile-development:
   name: Mobile Development
 mont-blanc:
   location:
-    lat: 45.833611
-    lon: 6.865
+    lat: 45.833610999999998
+    lon: 6.8650000000000002
   name: Mont Blanc
   wikipedia: https://en.wikipedia.org/wiki/Mont_Blanchttps://en.wikipedia.org/wiki/Mont_Blanc
 music:
@@ -272,8 +272,8 @@ the-witch:
   name: The Witch
 toronto:
   location:
-    lat: 43.7
-    lon: -79.4
+    lat: 43.700000000000003
+    lon: -79.400000000000006
   name: Toronto
   parent: ontario
   title: Toronto, Ontario, Canada

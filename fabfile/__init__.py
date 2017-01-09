@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
-from os.path import join
-
-import yaml
-from fabric.api import env, task
+from fabric.api import task
 
 from . import config
 from . import jekyll
+from . import posts
 from . import rsync
+from . import s3
+from . import sort_yaml
+from . import tags
 
 
 @task

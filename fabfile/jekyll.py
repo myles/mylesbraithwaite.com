@@ -6,7 +6,7 @@ def jekyll(command, *args, **kwargs):
     opts = []
 
     for arg in args:
-        opts.append('--{}'.format(arg))
+        opts.append('--{0}'.format(arg))
 
     for key, value in kwargs.items():
         opts.append('--{0}={1}'.format(key, value))
@@ -34,4 +34,6 @@ def build(environment='stag'):
 @task
 def serve():
     """Serve your site locally."""
-    jekyll('serve', 'watch', 'drafts', 'future', 'unpublished', config=','.join([env.config_base_file, env.config_local_file]), limit_posts=50)
+    jekyll('serve', 'watch', 'drafts', 'future', 'unpublished',
+           config=','.join([env.config_base_file, env.config_local_file]),
+           limit_posts=50)

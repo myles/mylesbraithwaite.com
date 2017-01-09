@@ -20,6 +20,6 @@ def push(environment='stag'):
 
     else:
         args['local_dir'] = join(env.root_dir, env.config_stag['destination'])
-        args['remote_dir'] = env.config_stag['rsync']          
+        args['remote_dir'] = env.config_stag['rsync']
 
     rsync_project(**args)

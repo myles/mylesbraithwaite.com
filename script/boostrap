@@ -5,9 +5,14 @@ then
   echo 'bundler is required';
 fi
 
-if ! [ -f `which fab` ];
+if ! [ -f `which python2.7` ];
 then
-  echo 'fabric is required';
+  echo 'Python==2.7 is requried'
+fi
+
+if ! [ -f `which virtualenv` ];
+then
+  echo 'virtualenv is required'
 fi
 
 if ! [ -f `which bower` ];
@@ -15,5 +20,7 @@ then
   echo 'bower is required';
 fi
 
-bundle install
+bundle install --path=vendor/bundle/
 bower install
+virtualenv --python=python2.7 vendor/virtualenv
+./vendor/virtualenv/bin/pip install --requirments=requirments.txt

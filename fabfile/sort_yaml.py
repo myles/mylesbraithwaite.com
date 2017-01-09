@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from collections import OrderedDict
+from ordereddict import OrderedDict
 from os.path import dirname, realpath, join
 
 import yaml
