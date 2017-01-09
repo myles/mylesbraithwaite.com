@@ -1,10 +1,17 @@
-/.bundle/
 /build/
+/.cache/
 /.sass-cache/
-/node_modules/
+/source/uploads/
 /source/.asset-cache/
 /source/_assets/bower/
-/source/uploads/
-/vendor/
-/.cache/
+
+# Ruby Stuff
+/.bundle/
+/vendor/bundle/
+
+# Node.js Stuff
+/node_modules/
+
+# Python Stuff
 *.pyc
+/vendor/virtualenv/
