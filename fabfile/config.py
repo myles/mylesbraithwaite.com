@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from os.path import dirname, realpath, join
+import os
+from os.path import abspath, dirname, realpath, join
 
 import yaml
 
@@ -7,13 +8,13 @@ from fabric.api import env
 
 from .utils import merge_dicts
 
-env.root_dir = join(dirname(realpath(__file__)), '../')
+env.root_dir = abspath(join(dirname(realpath(__file__)), os.pardir))
 
 # Config Files
-env.config_base_file = join(env.root_dir, 'config/base.yml')
-env.config_local_file = join(env.root_dir, 'config/local.yml')
-env.config_prod_file = join(env.root_dir, 'config/prod.yml')
-env.config_stag_file = join(env.root_dir, 'config/stag.yml')
+env.config_base_file = abspath(join(env.root_dir, 'config/base.yml'))
+env.config_local_file = abspath(join(env.root_dir, 'config/local.yml'))
+env.config_prod_file = abspath(join(env.root_dir, 'config/prod.yml'))
+env.config_stag_file = abspath(join(env.root_dir, 'config/stag.yml'))
 
 # Prase Jekyll Config
 with open(env.config_base_file, 'r') as fobj:
