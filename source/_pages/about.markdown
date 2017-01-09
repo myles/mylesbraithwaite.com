@@ -5,6 +5,8 @@ title: About
 
 There are {{ site.posts | size }} published posts on this site, beginning in {% for post in site.posts reversed limit:1 %}{{ post.date | date: '%d %B %Y' }}{% endfor %}. The newest is {% for post in site.posts limit:1 %}"[{{ post.title }}]({{ post.url }})", from {{ post.date | date: '%d %B %Y' }}{% endfor %}.
 
+I've written **{% posts_word_count total %} words** in total. 
+
 {{ site.copy }}
 
 You can follow this website on [Twitter](https://twitter.com/MylesWeb), [Feedly](http://cloud.feedly.com/#subscription%2Ffeed%2Fhttps%3A%2F%2Fmylesbraithwaite.com%2Ffeeds%2F), or [RSS](https://mylesbraithwaite.com/feeds/).
