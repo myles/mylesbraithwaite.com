@@ -9,6 +9,6 @@
     "moment": "latest",
     "old-fashioned": "https://github.com/myles/old-fashioned.git",
     "picturefill": "latest",
-    "lightbox2": "^2.9.0"
+    "lightbox2": "latest"
   }
 }
