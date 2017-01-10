@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
+"""Fabic Tags Tasks."""
+
 from glob import glob
 from itertools import groupby
-from os.path import dirname, realpath, join
+from os.path import join
 
-import yaml
 import frontmatter
+import yaml
+
 from fabric.api import env, task
 from fabric.utils import puts
 
@@ -18,7 +21,6 @@ def post_list():
     list
         A list of frontmatter.Post objects.
     """
-
     posts_dir = join(env.root_dir, 'source/_posts')
 
     post_files = glob(join(posts_dir, '**', '*'))
@@ -35,7 +37,7 @@ def post_list():
 
 def tag_yml():
     """
-    Converts the `./source/_data/tags.yml` file to a Python dict.
+    Convert the `./source/_data/tags.yml` file to a Python dict.
 
     Returns
     -------
@@ -120,7 +122,6 @@ def tag_get(slug):
 @task
 def all():
     """List all the tags."""
-
     resp = []
 
     for tag in tag_list():

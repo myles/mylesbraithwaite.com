@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
+"""Fabric Jekyll Tasks and Wrapper."""
 from fabric.api import env, local, task
 
 
 def jekyll(command, *args, **kwargs):
+    """Jekyll command line wrapper."""
     opts = []
 
     for arg in args:

@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
+"""Get Fabric Configuration."""
 import os
 import re
-from os.path import abspath, dirname, realpath, join
+from os.path import abspath, dirname, join, realpath
 
 import yaml
 
