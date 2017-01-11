@@ -2,14 +2,22 @@
 <script type="text/javascript">
     var _paq = _paq || [];
 
-    _paq.push(["setDomains", ["{{ site.piwik.set_domains }}"]]);
+    {% if page.path == '404.markdown' %} // jshint ignore:line
+    _paq.push(['setDocumentTitle',
+               '404/URL = ' +
+               encodeURIComponent(document.location.pathname +
+                                  document.location.search) +
+               '/From = ' + encodeURIComponent(document.referrer)]);
+    {% endif %} // jshint ignore:line
+
+    _paq.push(['setDomains', ['{{ site.piwik.set_domains }}']]);
     _paq.push(['trackPageView']);
     _paq.push(['enableLinkTracking']);
 
     (function() {
-        var u = "//{{ site.piwik.baseurl }}/";
+        var u = '//{{ site.piwik.baseurl }}/';
 
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
         _paq.push(['setSiteId', '{{ site.piwik.site_id }}']);
 
         var d = document,
@@ -21,7 +29,7 @@
         g.defer = true;
         g.src = u + 'piwik.js';
 
-        s.parentNode.insertBefore(g,s);
+        s.parentNode.insertBefore(g, s);
     })();
 </script>
 <noscript><p><img src="//{{ site.piwik.baseurl }}/piwik.php?idsite={{ site.piwik.site_id }}" style="border:0;" alt="" /></p></noscript>
