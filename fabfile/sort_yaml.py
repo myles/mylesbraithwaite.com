@@ -3,7 +3,6 @@
 from os.path import join
 
 import yaml
-
 from fabric.api import env, task
 
 

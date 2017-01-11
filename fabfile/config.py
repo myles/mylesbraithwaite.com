@@ -5,7 +5,6 @@ import re
 from os.path import abspath, dirname, join, realpath
 
 import yaml
-
 from fabric.api import env
 
 from .utils import merge_dicts

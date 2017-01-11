@@ -5,10 +5,10 @@ from glob import glob
 from itertools import groupby
 from os.path import join
 
-import frontmatter
 import yaml
-
 from fabric.api import env
+
+import frontmatter
 
 
 def merge_dicts(*dict_args):

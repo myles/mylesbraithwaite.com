@@ -4,12 +4,12 @@ from datetime import datetime
 from os import makedirs
 from os.path import basename, exists, join
 
-from frontmatter import Post, dump
-from slugify import Slugify
-
 from fabric.api import env, task
 from fabric.operations import prompt
 from fabric.utils import error, puts
+from slugify import Slugify
+
+from frontmatter import Post, dump
 
 slugify = Slugify(to_lower=True)
 
