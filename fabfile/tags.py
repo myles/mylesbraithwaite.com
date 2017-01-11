@@ -4,7 +4,7 @@
 from fabric.api import task
 from fabric.utils import puts
 
-from .utils import tag_list, tag_get
+from .utils import tag_get, tag_list
 
 
 @task

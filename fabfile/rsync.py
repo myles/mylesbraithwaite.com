@@ -2,7 +2,7 @@
 """Fabric rsync Tasks."""
 from os.path import join
 
-from fabric.api import env, task, local
+from fabric.api import env, local, task
 
 
 @task
