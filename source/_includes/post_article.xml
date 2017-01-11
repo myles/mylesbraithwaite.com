@@ -1,2 +1,2 @@
 <title>{{ post.title | xml_escape }}</title>
-<description>{{ '<div class="feature-image"><img src="' | xml_escape }}{{ post.feature_image | prepend: post.url | prepend: site.upload_url | xml_escape }}{{ '"></div>' | xml_escape }}{{ post.content | xml_escape }}{% include c_feed_entry_footer.xml post=post %}</description>
+<description>{{ '<div class="feature-image"><img src="' | xml_escape }}{{ post.feature_image | prepend: post.url | prepend: site.upload_url | xml_escape }}{{ '"></div>' | xml_escape }}{{ post.content | xml_escape }}{% include c_feed_entry_footer.html post=post %}{% endcapture %}{{ footer | xml_escape }}</description>
