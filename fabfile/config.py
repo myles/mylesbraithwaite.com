@@ -20,6 +20,7 @@ env.config_stag_file = abspath(join(env.root_dir, 'config/stag.yml'))
 # File Templates
 env.tpl_post_path = 'source/_posts/{type}/{date}-{slug}.markdown'
 env.tpl_upload_path = 'source/uploads/{date}/{slug}'
+env.tpl_post_url = 'https://mylesbraithwaite.com/{date}/{slug}/'
 
 # Prase Jekyll Config
 with open(env.config_base_file, 'r') as fobj:

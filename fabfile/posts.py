@@ -27,7 +27,7 @@ def new(post_type='simple'):
     meta['tags'] = prompt('Tags').split(',')
     meta['slug'] = prompt('Slug')
     meta['layout'] = 'post_{0}'.format(post_type)
-    meta['cateogry'] = post_type
+    meta['category'] = post_type
     meta['date'] = now.isoformat()
 
     if meta['slug']:
