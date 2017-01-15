@@ -165,6 +165,8 @@ js:
   name: Javascript
 json:
   name: JSON
+kali:
+  name: Kali Linux
 longboard:
   name: Longboard
 lorem-ipsum:
@@ -183,6 +185,8 @@ mer-de-glace:
     lon: 6.9372220000000002
   name: Mer de Glace
   wikipedia: https://en.wikipedia.org/wiki/Mer_de_Glace
+metasploit:
+  name: Metasploit
 minecraft:
   name: Minecraft
 mobile-development:
@@ -305,6 +309,8 @@ website:
   name: Website
 wes-anderson:
   name: Wes Anderson
+wordpress:
+  name: WordPress
 xcode:
   name: Xcode
 xmpp:

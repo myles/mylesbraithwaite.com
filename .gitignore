@@ -1,5 +1,6 @@
 /build/
 /.cache/
+/vendor/
 /.sass-cache/
 /source/uploads/
 /source/.asset-cache/
