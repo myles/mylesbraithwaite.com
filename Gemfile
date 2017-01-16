@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'sass'
 gem 'netrc'
 gem 'uglifier'
-# This change was made via Snyk to fix a vulnerability
 gem 'nokogiri'
 gem 'redcarpet'
 gem 'breakpoint'
