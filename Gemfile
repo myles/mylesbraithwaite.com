@@ -4,7 +4,7 @@ gem 'sass'
 gem 'netrc'
 gem 'uglifier'
 # This change was made via Snyk to fix a vulnerability
-gem 'nokogiri', '= 1.5.3'
+gem 'nokogiri'
 gem 'redcarpet'
 gem 'breakpoint'
 gem 'mini_magick'
