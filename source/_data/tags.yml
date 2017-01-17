@@ -167,6 +167,8 @@ json:
   name: JSON
 kali:
   name: Kali Linux
+letsencrypt:
+  name: Let's Encrypt
 longboard:
   name: Longboard
 lorem-ipsum:
@@ -220,6 +222,8 @@ parody:
   name: Pardoy
 password:
   name: Password
+phishing:
+  name: Phishing
 photography:
   name: Photography
 postgres:
@@ -266,6 +270,8 @@ snowboarding:
   name: Snowboarding
 speaker-notes:
   name: Speaker Notes
+ssl:
+  name: SSL
 steve-jobs:
   name: Steve Jobs
 swift:
