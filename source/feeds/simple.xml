@@ -1,0 +1,18 @@
+---
+layout: feed
+skip_index: true
+permalink: /feeds/simple/index.xml
+link: /simple/
+---
+{% for post in site.categories.simple limit:site.paginate %}
+<item>
+  {% include post_article.xml post=post %}
+  <pubDate>{{ post.date | date_to_rfc822 | xml_escape }}</pubDate>
+  {% if post.updated %}<lastUpdate>{{ post.updated | date_to_rfc822 | xml_escape }}</lastUpdate>{% endif %}
+  <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url | xml_escape }}</guid>
+  {% for tag_id in post.tags %}
+	{% assign tag = site.data.tags[tag_id] %}
+	<category>{% if tag.name %}{{ tag.name | xml_escape }}{% else %}{{ tag_id | xml_escape }}{% endif %}</category>
+	{% endfor %}
+</item>
+{% endfor %}

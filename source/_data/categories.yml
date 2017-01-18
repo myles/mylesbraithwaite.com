@@ -2,15 +2,20 @@
 
 - name: Articles
   url: /article/
+  feed: /feeds/article/
 
 - name: Bookmarks
   url: /bookmark/
+  feed: /feeds/bookmark/
 
 - name: Lists
   url: /list/
+  feed: /feeds/list/
 
 - name: Quotes
   url: /quote/
+  feed: /feeds/quote/
 
 - name: Simple
   url: /simple/
+  feed: /feeds/simple/
