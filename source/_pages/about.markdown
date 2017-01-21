@@ -3,9 +3,12 @@ layout: page
 title: About
 ---
 
-There are {{ site.posts | size }} published posts on this site, beginning in {% for post in site.posts reversed limit:1 %}{{ post.date | date: '%d %B %Y' }}{% endfor %}. The newest is {% for post in site.posts limit:1 %}"[{{ post.title }}]({{ post.url }})", from {{ post.date | date: '%d %B %Y' }}{% endfor %}.
+{% assign post_count = site.posts | size %}
+{% assign reverse_posts = site.posts reversed %}
 
-I've written **{% posts_word_count total %} words** in total. 
+There are {{ site.posts | size }} published posts on this site. The newest is {% for post in posts limit:1 %}"[{{ post.title }}]({{ post.url }})", from {{ post.date | date: '%d %B %Y' }}{% endfor %}.
+
+I've written **{% posts_word_count total %} words** in total.
 
 {{ site.copy }}
 
