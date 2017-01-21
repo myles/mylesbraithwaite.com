@@ -2,7 +2,14 @@
   margin: 1rem 2rem;
 
   @at-root #{&}__header {
+    border-bottom: 1px solid $trans-black-7-5;
+    color: $colour-grey-light;
     margin-bottom: .5rem;
+    padding-bottom: .5rem;
+
+    &:hover {
+      color: $body-colour;
+    }
   }
 
   @at-root #{&}__feature-image {
@@ -14,7 +21,7 @@
   }
 
   @at-root #{&}__header-overlay {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: $trans-black-50;
     padding-bottom: 1rem;
     padding-top: 1rem;
     text-align: center;
@@ -29,6 +36,10 @@
     @at-root #{&}--overlay {
       color: $colour-white;
     }
+  }
+
+  @at-root #{&}__meta {
+    margin: 0;
   }
 
   @at-root #{&}__link {
