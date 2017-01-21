@@ -7,7 +7,7 @@
   }
 
   &__header,
-           #{&}__content {
+           &__content {
     @include media(min-width $large-screen) {
       @include span-columns(8);
       @include shift(2);

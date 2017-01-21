@@ -214,6 +214,6 @@
   }
 
   &__logo,
-           #{&}__sections,
-           #{&}__separator { @extend %hide; }
+           &__sections,
+           &__separator { @extend %hide; }
 }
