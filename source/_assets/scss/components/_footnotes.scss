@@ -3,21 +3,21 @@
   margin: 1em auto;
   padding: 0 2em;
 
-  @at-root #{&}__seperator {
+  &__seperator {
     width: 25%;
   }
 
-  @at-root #{&}__list {}
+  &__list {}
 
-  @at-root #{&}__item {}
+  &__item {}
 
-  @at-root #{&}__back-link {
+  &__back-link {
     font-family: serif;
   }
 }
 
 .footnote {
-  @at-root #{&}__link {
+  &__link {
     border-bottom: 0;
     line-height: 0;
 

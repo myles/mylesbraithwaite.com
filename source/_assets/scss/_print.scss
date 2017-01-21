@@ -5,15 +5,15 @@
 }
 
 .header {
-  @at-root #{&}__imprint {
+  &__imprint {
     background-color: $body-background;
   }
 
-  @at-root #{&}__title-link {
+  &__title-link {
     color: $body-colour;
   }
 
-  @at-root #{&}__navigation { @extend %hide; }
+  &__navigation { @extend %hide; }
 }
 
 .page {
@@ -21,7 +21,7 @@
 }
 
 .post {
-  @at-root #{&}__content {
+  &__content {
     h1,
     h2,
     h3,
@@ -202,18 +202,18 @@
 }
 
 .post-detail {
-  @at-root #{&}__footer { @extend %hide; }
+  &__footer { @extend %hide; }
 }
 
 .footer {
   background-color: $body-background;
   color: $body-colour;
 
-  @at-root #{&}__disclaimer {
+  &__disclaimer {
     color: $body-colour;
   }
 
-  @at-root #{&}__logo,
+  &__logo,
            #{&}__sections,
            #{&}__separator { @extend %hide; }
 }

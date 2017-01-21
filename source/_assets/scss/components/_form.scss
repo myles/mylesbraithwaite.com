@@ -1,16 +1,16 @@
 .form {
-  @at-root #{&}__group {
+  &__group {
     margin-right: 0;
 
-    @at-root #{&}-wrapper {
+    &-wrapper {
       margin: .5em .25em;
     }
 
-    @at-root #{&}--top-border {
+    &--top-border {
       border-top: 1px solid;
     }
 
-    @at-root #{&}--right-border {
+    &--right-border {
       border-right: 1px solid;
     }
   }

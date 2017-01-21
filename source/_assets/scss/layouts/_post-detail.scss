@@ -1,5 +1,5 @@
 .post-detail {
-  @at-root #{&}__comments {
+  &__comments {
     margin: 1rem 2rem;
   }
 }

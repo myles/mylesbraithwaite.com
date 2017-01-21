@@ -14,45 +14,45 @@ $card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width});
   max-width: 20rem;
   position: relative;
 
-  @at-root #{&}__block {
+  &__block {
     @include clearfix;
 
     padding: $spacer-x;
   }
 
-  @at-root #{&}__title {
+  &__title {
     font-weight: normal;
     margin-bottom: $spacer-y;
   }
 
-  @at-root #{&}__subtitle {
+  &__subtitle {
     font-weight: normal;
     margin-bottom: 0;
     margin-top: -($spacer-y / 2);
   }
 
-  @at-root #{&}__text {
+  &__text {
     &:last-child {
       margin-bottom: 0;
     }
   }
 
-  @at-root #{&}__image {
+  &__image {
     @include border-radius($card-border-radius-inner);
 
     max-width: 100%;
 
-    @at-root #{&}--top {
+    &--top {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
 
-    @at-root #{&}--bottom {
+    &--bottom {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
 
-    @at-root #{&}--overlay {
+    &--overlay {
       bottom: 0;
       left: 0;
       padding: 1.25rem;
@@ -68,7 +68,7 @@ $card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width});
   @include flex-flow(row wrap);
   @include justify-content(space-around);
 
-  @at-root #{&}__item {
+  &__item {
     @include align-self(stretch);
   }
 }

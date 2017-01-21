@@ -8,7 +8,7 @@
     text-align: center;
   }
 
-  @at-root #{&}__menu-button {
+  &__menu-button {
     display: block;
     float: right;
     margin: 0;
@@ -19,7 +19,7 @@
     }
   }
 
-  @at-root #{&}__list {
+  &__list {
     clear: both;
     display: none;
     margin: 0 auto;
@@ -33,12 +33,12 @@
       padding: 0;
     }
 
-    @at-root #{&}--show {
+    &--show {
       display: block;
     }
   }
 
-  @at-root #{&}__item {
+  &__item {
     display: block;
     text-align: right;
     width: 100%;
@@ -51,10 +51,10 @@
     }
   }
 
-  @at-root #{&}__link {
+  &__link {
     display: inline-block;
 
-    @at-root #{&}--active {
+    &--active {
       color: desaturate(darken($colour-primary, 20%), 30%);
     }
 

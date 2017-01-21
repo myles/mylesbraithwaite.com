@@ -1,5 +1,5 @@
 .post-list {
-  @at-root #{&}__separator {
+  &__separator {
     background-color: lighten($colour-primary, 40%);
     width: 10rem;
   }

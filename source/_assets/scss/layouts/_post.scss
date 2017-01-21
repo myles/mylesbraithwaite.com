@@ -1,7 +1,7 @@
 .post {
   margin: 1rem 2rem;
 
-  @at-root #{&}__header {
+  &__header {
     border-bottom: 1px solid $trans-black-7-5;
     color: $colour-grey-light;
     margin-bottom: .5rem;
@@ -12,7 +12,7 @@
     }
   }
 
-  @at-root #{&}__feature-image {
+  &__feature-image {
     background-position: center;
     background-repeat: no-repeat;
     height: 20rem;
@@ -20,7 +20,7 @@
     width: 100%;
   }
 
-  @at-root #{&}__header-overlay {
+  &__header-overlay {
     background-color: $trans-black-50;
     padding-bottom: 1rem;
     padding-top: 1rem;
@@ -28,22 +28,22 @@
     width: 100%;
   }
 
-  @at-root #{&}__title {
+  &__title {
     font-size: $font-size-heading-three;
     margin-bottom: 0;
     margin-top: 0;
 
-    @at-root #{&}--overlay {
+    &--overlay {
       color: $colour-white;
     }
   }
 
-  @at-root #{&}__meta {
+  &__meta {
     margin: 0;
   }
 
-  @at-root #{&}__link {
-    @at-root #{&}--overlay {
+  &__link {
+    &--overlay {
       color: $colour-white;
 
       // scss-lint:disable NestingDepth
@@ -55,22 +55,22 @@
     }
   }
 
-  @at-root #{&}__link-icon {
+  &__link-icon {
     height: 1em;
     vertical-align: middle;
     width: 1em;
   }
 
-  @at-root #{&}__abstract {
+  &__abstract {
     font-size: $font-size-heading-five;
     font-weight: normal;
     margin-bottom: 0;
     margin-top: 0;
 
-    @at-root #{&}--overlay {
+    &--overlay {
       color: $colour-white;
     }
   }
 
-  @at-root #{&}__content {}
+  &__content {}
 }
