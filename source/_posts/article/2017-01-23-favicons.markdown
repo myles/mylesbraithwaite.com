@@ -1,0 +1,31 @@
+---
+layout: post_article
+title: What's the Deal with Favicons, Touch Icons, Tile Icons and other Site Icons?
+date: '2017-01-23T15:12:07.715512'
+updated: 2016-01-23T15:50
+category: article
+tags:
+- icons
+- web-design
+---
+
+### `favicon.ico`
+
+* The <abbr title='Original Gangster'>O.G.</abbr> of site icons, originally introduced in Internet Explore 5.
+* [Microsoft's MSDN recommends](https://msdn.microsoft.com/library/gg491740.aspx "Customizing the Site Icon") 16x16, 32x32, and 48x48.
+* One ICO file can contain multiple graphics.
+
+#### Resources
+
+* [png2ico](http://www.winterdrache.de/freeware/png2ico/) - A cross platform PNG to ICO converter.
+* [Customizing the Site Icon](https://msdn.microsoft.com/library/gg491740.aspx) - MSDN documentation on `favicon.ico`.
+
+### `favicon.png`
+
+
+
+
+
+| Standard Icon Name | Sizes | HTML | Description | Resources |
+| ------------------ | ----- | ---- | ----------- | --------- |
+| `favicon.ico`      | 16x16, 24x24, 32x32, 48x48, 64x64 | ```<link rel='shortcut icon' href='/favicon.ico'>``` | `favicon.ico` was originally made for IE5 and is the default site icon. A single ICO file can contain multiple graphics. | [Cross platform PNG to ICO converter]() and [MSDN Article]( "Customizing the Site Icon") |
