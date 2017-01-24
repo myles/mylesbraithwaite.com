@@ -1,6 +1,11 @@
 .page {
   min-height: 90vh;
 
+  &__header,
+  &__content {
+    margin: 1rem 2rem;
+  }
+
   &__header {
     border-bottom: 1px solid lighten($colour-cape-code, 60%);
     margin-bottom: $spacer-x;
