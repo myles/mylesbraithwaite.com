@@ -1,21 +1,21 @@
 ---
 
-- name: Articles
+- feed: /feeds/article/
+  name: Articles
   url: /article/
-  feed: /feeds/article/
 
-- name: Bookmarks
+- feed: /feeds/bookmark/
+  name: Bookmarks
   url: /bookmark/
-  feed: /feeds/bookmark/
 
-- name: Lists
+- feed: /feeds/list/
+  name: Lists
   url: /list/
-  feed: /feeds/list/
 
-- name: Quotes
+- feed: /feeds/quote/
+  name: Quotes
   url: /quote/
-  feed: /feeds/quote/
 
-- name: Simple
+- feed: /feeds/simple/
+  name: Simple
   url: /simple/
-  feed: /feeds/simple/

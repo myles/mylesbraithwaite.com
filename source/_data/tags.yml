@@ -1,6 +1,4 @@
 ---
-icons:
-  name: Icons
 1password:
   name: 1Password
 adam-savage:
@@ -138,6 +136,8 @@ html5:
 iaas:
   name: IaaS
   title: Infrastructure as a Service
+icons:
+  name: Icons
 infosec:
   name: InfoSec
   title: Information security
@@ -255,6 +255,8 @@ raspberry-pi:
   name: Raspberry Pi
 remix:
   name: Remix
+right-to-repair:
+  name: Right to Repair
 saas:
   name: SaaS
   title: Software as a Service
@@ -296,6 +298,18 @@ twitter:
 ui:
   addr: UI
   name: User interface
+us:
+  name: United States
+us-ks:
+  name: Kansas
+us-ma:
+  name: Massachusetts
+us-mn:
+  name: Minnesota
+us-ne:
+  name: Nebraska
+us-ny:
+  name: New York State
 ux:
   abbr: UX
   name: User experience
