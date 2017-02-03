@@ -4,12 +4,11 @@ from datetime import datetime
 from netrc import netrc
 from os.path import basename, join
 
+from fabric.api import abort, env, task
+from fabric.utils import puts
 
 import frontmatter
 import requests
-
-from fabric.api import abort, env, task
-from fabric.utils import puts
 
 
 def shorturl(url):

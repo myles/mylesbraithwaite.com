@@ -4,9 +4,9 @@
   @include display(flex);
   @include align-items(stretch);
 
-  &--one {}
+  // &--one {}
 
-  &--two {}
+  // &--two {}
 
   &__story {
     @include display(flex);
@@ -32,7 +32,7 @@
 
     .read-next__button {
       background: $trans-white-75;
-      color: $trans-black-75
+      color: $trans-black-75;
     }
   }
 

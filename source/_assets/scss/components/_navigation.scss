@@ -54,12 +54,12 @@
   &__link {
     display: inline-block;
 
-    &--active {
-      color: desaturate(darken($colour-primary, 20%), 30%);
-    }
-
     @include media($large-screen) {
       padding-right: 1em;
+    }
+
+    &--active {
+      color: desaturate(darken($colour-primary, 20%), 30%);
     }
   }
 }
