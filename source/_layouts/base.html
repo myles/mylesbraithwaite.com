@@ -2,7 +2,7 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-feed">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@ layout: compress
         <meta http-equiv="cleartype" content="on">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+        <title class="p-name">{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
 
         <meta name="description" content="{{ site.description }}">
         <meta name="author" content="{{ site.data.author.name }} ({{ site.data.author.email }})">
