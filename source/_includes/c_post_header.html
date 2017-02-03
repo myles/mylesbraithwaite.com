@@ -6,7 +6,7 @@
     <div class="{% if include.post.feature_image %}post__header-overlay{% endif %}">
         <h1 class="post__title {% if include.post.feature_image %}post__title--overlay{% endif %} p-name">
             {% if include.post.bookmark %}
-                <a href="{% if include.post.bookmark.404 %}https://web.archive.org/web/{{ include.post.bookmark.url }}{% else %}{{ include.post.bookmark.url }}{% endif %}" class="post__link post__link--bookmark {% if include.post.feature_image %}post__link--overlay{% endif %} u-in-reply-to" {% if include.post.bookmark.title %}title="{{ include.post.bookmark.title }}{% endif %}">
+                <a href="{% if include.post.bookmark.404 %}https://web.archive.org/web/{{ include.post.bookmark.url }}{% else %}{{ include.post.bookmark.url }}{% endif %}" class="post__link post__link--bookmark {% if include.post.feature_image %}post__link--overlay{% endif %} u-in-reply-to" {% if include.post.bookmark.title %}title="{{ include.post.bookmark.title }}"{% endif %}>
                     {{ include.post.title | improve }}
                 </a>
             {% endif %}
