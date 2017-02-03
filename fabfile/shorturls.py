@@ -8,6 +8,7 @@ import requests
 import frontmatter
 
 from fabric.api import env, task
+from fabric.utils import puts
 
 
 def shorturl(url):
@@ -44,7 +45,15 @@ def add(post_path):
     with open(join(env.root_dir, post_path), 'r') as fobj:
         post = frontmatter.loads(fobj.read())
 
-    post.shorturl = shorturl(post_url)
+    content = post.content
+
+    meta = post.to_dict()
+    del(meta['content'])
+
+    meta['shorturl'] = shorturl(post_url)
 
     with open(join(env.root_dir, post_path), 'w') as fobj:
+        post = frontmatter.Post(content, **meta)
         frontmatter.dump(post, fobj)
+
+    puts('Updated {0}.'.format(post_path))
