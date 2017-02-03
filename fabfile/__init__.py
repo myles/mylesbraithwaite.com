@@ -8,6 +8,7 @@ from . import posts  # noqa: F401
 from . import rsync
 from . import s3  # noqa: F401
 from . import sort_yaml  # noqa: F401
+from . import shorturls  # noqa: F401
 from . import tags  # noqa: F401
 
 
