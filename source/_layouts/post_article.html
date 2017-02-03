@@ -2,12 +2,12 @@
 layout: post
 ---
 
-<div class="post post--article">
+<div class="post post--article h-entry">
     {% include c_post_header.html post=page %}
 
     <div id="js-content-expiry-alert" data-published="{{ page.date | date_to_xmlschema }}" data-updated="{% if page.updated %}{{ page.updated | date_to_xmlschema }}{% endif %}" data-refresh="{{ page.refresh }}"></div>
 
-    <section class="post__content">
+    <section class="post__content e-content">
         {{ content | improve }}
     </section>
 

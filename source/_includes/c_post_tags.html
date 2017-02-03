@@ -2,19 +2,19 @@
 
 <a href="/tag/{{ include.tag_id | uri_escape }}/" class="tag__link" rel="tag">
     {% if tag.abbr %}
-    <abbr title="{{ tag.name }}" class="tag__name">
+    <abbr title="{{ tag.name }}" class="tag__name p-category">
         {{ tag.abbr | improve }}
     </abbr>
     {% elsif tag.title %}
-    <span title="{{ tag.title }}" class="tag__name">
+    <span title="{{ tag.title }}" class="tag__name p-category">
         {{ tag.name | improve }}
     </span>
     {% elsif tag.name %}
-    <span class="tag__name">
+    <span class="tag__name p-category">
         {{ tag.name | improve }}
     </span>
     {% else %}
-    <span class="tag__name">
+    <span class="tag__name p-category">
         {{ include.tag_id | improve }}
     </span>
     {% endif %}
