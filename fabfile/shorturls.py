@@ -1,12 +1,12 @@
 """Short URLs"""
 import codecs
-import json
 from datetime import datetime
-from os.path import basename, join
 from netrc import netrc
+from os.path import basename, join
 
-import requests
+
 import frontmatter
+import requests
 
 from fabric.api import abort, env, task
 from fabric.utils import puts
