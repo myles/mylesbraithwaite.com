@@ -31,6 +31,9 @@ layout: compress
         {% if site.alexa_verify %}<meta name="alexaVerifyID" content="{{ site.alexa_verify }}">{% endif %}
         {% if site.yandex_verify %}<meta name="yandex-verification" content="{{ site.yandex_verify }}">{% endif %}
 
+        {% if site.pingback %}<link rel="pingback" href="{{ site.pingback }}">{% endif %}
+        {% if site.webmention %}<link rel="webmention" href="{{ site.webmention }}">{% endif %}
+
         {% if site.data.author.social.googleplus.url %}<link rel="author" href="{{ site.data.author.social.googleplus.url }}?rel=author">{% endif %}
 
         {% if page.recaptcha %}
