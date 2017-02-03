@@ -1,4 +1,5 @@
 """Short URLs"""
+import codecs
 import json
 from datetime import datetime
 from os.path import basename, join
@@ -7,7 +8,7 @@ from netrc import netrc
 import requests
 import frontmatter
 
-from fabric.api import env, task
+from fabric.api import abort, env, task
 from fabric.utils import puts
 
 
@@ -42,18 +43,20 @@ def add(post_path):
     post_url = env.tpl_post_url.format(date=date_obj.strftime('%Y/%j'),
                                        slug=m.group('slug'))
 
-    with open(join(env.root_dir, post_path), 'r') as fobj:
+    with codecs.open(join(env.root_dir, post_path), 'r', 'utf-8') as fobj:
         post = frontmatter.loads(fobj.read())
 
-    content = post.content
+    if post.get('shorturl'):
+        abort('Post already has a short url: {shorturl}.'.format(**post))
 
     meta = post.to_dict()
+    content = meta['content']
     del(meta['content'])
 
     meta['shorturl'] = shorturl(post_url)
 
-    with open(join(env.root_dir, post_path), 'w') as fobj:
-        post = frontmatter.Post(content, **meta)
-        frontmatter.dump(post, fobj)
+    with codecs.open(join(env.root_dir, post_path), 'w', 'utf-8') as fobj:
+        new_post = frontmatter.Post(content, **meta)
+        frontmatter.dump(new_post, fobj)
 
-    puts('Updated {0}.'.format(post_path))
+    puts('Added the short url: {shorturl}.'.format(**meta))
