@@ -20,6 +20,8 @@ layout: compress
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
         {% if site.onion_url %}<link rel="onion" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.onion_url }}">{% endif %}
 
+        {% if page.shorturl %}<link rel="shortlink" href="{{ page.shorturl }}">{% endif %}
+
         {% stylesheet style %}
 
         <link rel="alternate" type="application/atom+xml" title="{{ site.title }} | Feed" href="{{ "/feeds/" | prepend: site.baseurl | prepend: site.url }}">

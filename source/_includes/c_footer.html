@@ -34,13 +34,15 @@
 
         <ul class="footer__section">
             <li class="footer__section-item">
-                <h6 class="footer__section-title">Follow</h6>
+                <h6 class="footer__section-title">Follow Me</h6>
             </li>
-            <li class="footer__section-item">
-                <a href="/feeds/" class="footer__section-link">
-                    RSS Feed
+            {% for s in site.data.author.social %}
+            <li class="footer__section-item footer__section-item--{{ s[1].slug }}">
+                <a href="{{ s[1].url }}" class="footer__section-link footer__section-link--{{ s[1].slug }}" rel="me">
+                    {{ s[1].name }}
                 </a>
             </li>
+            {% endfor %}
         </ul>
     </div>
 
