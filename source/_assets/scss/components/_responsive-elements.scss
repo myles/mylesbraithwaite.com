@@ -1,29 +1,29 @@
 .responsive-video {
-  @at-root #{&}__wrapper {
+  &__wrapper {
     display: block;
     height: 0;
     overflow: hidden;
     padding-bottom: percentage(9 / 16);
     position: relative;
 
-    @at-root #{&}--21by9 {
+    &--21by9 {
       padding-bottom: percentage(9 / 21);
     }
 
-    @at-root #{&}--16by9 {
+    &--16by9 {
       padding-bottom: percentage(9 / 16);
     }
 
-    @at-root #{&}--4by3 {
+    &--4by3 {
       padding-bottom: percentage(3 / 4);
     }
 
-    @at-root #{&}--1by1 {
+    &--1by1 {
       padding-bottom: percentage(1 / 1);
     }
   }
 
-  @at-root #{&}__video {
+  &__video {
     @include position(absolute, 0 null null 0);
     @include size(100%);
 
@@ -32,24 +32,24 @@
 }
 
 .responsive-image {
-  @at-root #{&}__wrapper {
+  &__wrapper {
     margin: 0 auto;
     text-align: center;
   }
 
-  @at-root #{&}__image {
+  &__image {
     height: auto;
     max-width: 100%;
   }
 }
 
 .responsive-bandcamp {
-  @at-root #{&}__wrapper {
+  &__wrapper {
     @include display(flex);
     @include justify-content(center);
   }
 
-  @at-root #{&}__element {
+  &__element {
     border: 0;
     min-height: 720px;
     min-width: 400px;

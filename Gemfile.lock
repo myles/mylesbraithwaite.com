@@ -3,17 +3,17 @@ GEM
   specs:
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
-    breakpoint (2.7.0)
+    breakpoint (2.7.1)
       sass (~> 3.3)
       sassy-maps (< 1.0.0)
     colorator (1.1.0)
     execjs (2.7.0)
     fastimage (1.6.8)
       addressable (~> 2.3, >= 2.3.5)
-    ffi (1.9.14)
+    ffi (1.9.17)
     forwardable-extended (2.6.0)
     hike (1.2.3)
-    jekyll (3.3.1)
+    jekyll (3.4.0)
       addressable (~> 2.4)
       colorator (~> 1.0)
       jekyll-sass-converter (~> 1.0)
@@ -36,14 +36,14 @@ GEM
       mini_magick (~> 3.8.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
-    jekyll-sitemap (0.12.0)
+    jekyll-sitemap (1.0.0)
       jekyll (~> 3.3)
     jekyll-typogrify (0.3.2)
       titlecase
       typogruby
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
-    kramdown (1.13.1)
+    kramdown (1.13.2)
     liquid (3.0.6)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -54,20 +54,20 @@ GEM
     mini_portile2 (2.1.0)
     multi_json (1.12.1)
     netrc (0.11.0)
-    nokogiri (1.6.8.1)
+    nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
-    public_suffix (2.0.4)
+    public_suffix (2.0.5)
     rack (1.6.5)
     rb-fsevent (0.9.8)
-    rb-inotify (0.9.7)
+    rb-inotify (0.9.8)
       ffi (>= 0.5.0)
-    redcarpet (3.3.4)
+    redcarpet (3.4.0)
     rouge (1.11.1)
     rubypants (0.6.0)
     safe_yaml (1.0.4)
-    sass (3.4.22)
+    sass (3.4.23)
     sassy-maps (0.4.0)
       sass (~> 3.3)
     sprockets (2.12.4)
@@ -80,7 +80,7 @@ GEM
     titlecase (0.1.1)
     typogruby (1.0.18)
       rubypants
-    uglifier (3.0.3)
+    uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
     yui-compressor (0.12.0)
 
@@ -89,7 +89,7 @@ PLATFORMS
 
 DEPENDENCIES
   breakpoint
-  jekyll (>= 3.3.1)
+  jekyll (~> 3.4.0)
   jekyll-archives
   jekyll-assets
   jekyll-paginate
@@ -106,4 +106,4 @@ DEPENDENCIES
   yui-compressor
 
 BUNDLED WITH
-   1.12.5
+   1.13.7

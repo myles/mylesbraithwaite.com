@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
+"""Fabric rsync Tasks."""
 from os.path import join
 
-from fabric.api import env, task
-from fabric.contrib.project import rsync_project
+from fabric.api import env, local, task
 
 
 @task
@@ -20,6 +20,6 @@ def push(environment='stag'):
 
     else:
         args['local_dir'] = join(env.root_dir, env.config_stag['destination'])
-        args['remote_dir'] = env.config_stag['rsync']          
+        args['remote_dir'] = env.config_stag['rsync']
 
-    rsync_project(**args)
+    local('rsync -pthrvz {local_dir} {remote_dir}'.format(**args))

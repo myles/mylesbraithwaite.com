@@ -4,11 +4,11 @@
   @include display(flex);
   @include align-items(stretch);
 
-  @at-root #{&}--one {}
+  // &--one {}
 
-  @at-root #{&}--two {}
+  // &--two {}
 
-  @at-root #{&}__story {
+  &__story {
     @include display(flex);
     @include flex-grow(1);
 
@@ -22,7 +22,7 @@
     text-decoration: none;
   }
 
-  @at-root #{&}__story:hover {
+  &__story:hover {
     color: $colour-white;
     text-decoration: none;
 
@@ -32,18 +32,18 @@
 
     .read-next__button {
       background: $trans-white-75;
-      color: $trans-black-75
+      color: $trans-black-75;
     }
   }
 
-  @at-root #{&}__story-wrapper {
+  &__story-wrapper {
     background: $trans-black-75;
     padding: 6rem;
     transition: all .5s ease;
     width: 100%;
   }
 
-  @at-root #{&}__button {
+  &__button {
     border: $trans-white-50 1px solid;
     border-radius: 4px;
     color: $trans-white-75;
@@ -53,12 +53,12 @@
     transition: all .5s ease;
   }
 
-  @at-root #{&}__title {
+  &__title {
     color: $colour-white;
     margin-top: 1rem;
   }
 
-  @at-root #{&}__excerpt {
+  &__excerpt {
     color: $trans-white-75;
     margin: 0;
   }

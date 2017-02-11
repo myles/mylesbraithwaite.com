@@ -1,0 +1,79 @@
+---
+layout: post_article
+title: What's the Deal with Favicons, Touch Icons, Tile Icons and other Site Icons?
+date: 2017-02-03T20:00:00
+created: '2017-01-23T15:12:07.715512'
+category: article
+tags:
+- icons
+- web-design
+---
+
+### `favicon.ico`
+
+* The <abbr title='Original Gangster'>O.G.</abbr> of site icons, originally introduced in Internet Explore 5.
+* [Microsoft's MSDN recommends](https://msdn.microsoft.com/library/gg491740.aspx "Customising the Site Icon") 16x16, 32x32, and 48x48.
+* One ICO file can contain multiple graphics.
+
+#### Usage
+
+An ICO file contains multiple sizes you should (according to the HTML5 specification) include the `sizes=""` attribute:
+
+```html
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" type="image/vnd.microsoft.icon">
+```
+
+#### Resources
+
+* [png2ico](http://www.winterdrache.de/freeware/png2ico/) - A cross platform PNG to ICO converter.
+* [Customising the Site Icon](https://msdn.microsoft.com/library/gg491740.aspx) - MSDN documentation on `favicon.ico`.
+
+### `favicon.png`
+
+* The current [HTML5 specifications](http://w3c.github.io/html/links.html#link-type-icon "4.8.6.5. Link type icon").
+* Allows for specifying size icons in multiple sizes using the attributes `rel="icon"` and `sizes=""` within a tag.
+
+#### Usage
+
+A `<link>` element for every size of the icon:
+
+```html
+<link rel="icon" href="favicon16x16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="favicon32x32.png" sizes="32x32" type="image/png">
+```
+
+#### Resources
+
+* [What browsers support using a PNG icon](http://caniuse.com/#feat=link-icon-png)
+
+### `favicon.svg`
+
+* Firefox >=50 supports using a SVG file as a Favicon.
+* Safari has partial support using an unofficial attribute (see [`rel=mask-icon`](#heading-code-rel-mask-icon-code) for more information).
+
+#### Usage
+
+```html
+<link rel="icon" href="favicon.svg" sizes="any" type="image/svg+xml">
+```
+
+#### Resources
+
+* [What browsers support a SVG favicon](http://caniuse.com/#feat=link-icon-svg)
+
+### `rel=mask-icon`
+
+* An unofficial attribute that is only supported on Safari for macOS and iOS.
+* Vector image needs to be on a transparent background and 100% black.
+
+#### Usage
+
+* The `color=""` attribute sets the display colour of the image. You can use any HTML compatible image reference.
+
+```html
+<link rel="mask-icon" href="favicon.ico" color="red">
+```
+
+#### Resources
+
+* [Apple Developer documentation](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_9_0.html#//apple_ref/doc/uid/TP40014305-CH9-SW20)

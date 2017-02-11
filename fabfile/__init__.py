@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
-from os.path import join
+"""Fabfile."""
+from fabric.api import task
 
-import yaml
-from fabric.api import env, task
-
-from . import config
-from . import jekyll
-from . import rsync
+from . import config  # noqa: F401
+from . import jekyll  # noqa: F401
+from . import posts  # noqa: F401
+from . import rsync  # noqa: F401
+from . import s3  # noqa: F401
+from . import shorturls  # noqa: F401
+from . import sort_yaml  # noqa: F401
+from . import tags  # noqa: F401
 
 
 @task

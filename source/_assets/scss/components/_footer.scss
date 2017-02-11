@@ -10,8 +10,8 @@ $footer-disclaimer-colour: transparentize($footer-colour, .6);
   padding: ($spacer-y * 2) $spacer-x;
   width: 100%;
 
-  @at-root #{&}__logo {
-    @include radial-gradient(rgba(0, 0, 0, .2), transparent);
+  &__logo {
+    @include radial-gradient($trans-black-25, transparent);
 
     display: block;
     height: $footer-logo-width + 5rem;
@@ -21,12 +21,12 @@ $footer-disclaimer-colour: transparentize($footer-colour, .6);
     width: $footer-logo-width + 5rem;
   }
 
-  @at-root #{&}__image {
+  &__image {
     margin-top: 1rem;
     width: $footer-logo-width;
   }
 
-  @at-root #{&}__sections {
+  &__sections {
     @include display(flex);
     @include flex-wrap(wrap);
     @include justify-content(center);
@@ -34,7 +34,7 @@ $footer-disclaimer-colour: transparentize($footer-colour, .6);
     margin-bottom: $spacer-x;
   }
 
-  @at-root #{&}__section {
+  &__section {
     @include flex-basis(13em);
     @include flex-shrink(0);
 
@@ -42,20 +42,20 @@ $footer-disclaimer-colour: transparentize($footer-colour, .6);
     padding: 0;
   }
 
-  @at-root #{&}__section-item {
+  &__section-item {
     @include list-unstyled;
 
     line-height: 1.5em;
     text-align: center;
   }
 
-  @at-root #{&}__section-title {
+  &__section-title {
     color: $footer-colour;
     font-size: 1em;
     margin-bottom: .4em;
   }
 
-  @at-root #{&}__section-link {
+  &__section-link {
     color: $footer-link-colour;
     text-decoration: none;
 
@@ -65,14 +65,14 @@ $footer-disclaimer-colour: transparentize($footer-colour, .6);
     }
   }
 
-  @at-root #{&}__separator {
+  &__separator {
     border: 1px solid transparentize($footer-disclaimer-colour, .3);
     height: 1px;
     margin: 0 auto $spacer-x;
     width: 12em;
   }
 
-  @at-root #{&}__disclaimer {
+  &__disclaimer {
     color: $footer-disclaimer-colour;
     font-size: .9em;
     line-height: 1.5em;
@@ -92,7 +92,7 @@ $footer-disclaimer-colour: transparentize($footer-colour, .6);
     // scss-lint:enable NestingDepth, SelectorFormat
   }
 
-  @at-root #{&}__heart {
+  &__heart {
     @include size(1.5em);
 
     fill: $colour-primary;

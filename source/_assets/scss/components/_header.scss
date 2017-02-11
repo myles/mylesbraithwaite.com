@@ -5,7 +5,7 @@ $header-imprint-background-colour: desaturate(darken($colour-primary, 20%), 30%)
   margin-bottom: 1em;
   text-align: center;
 
-  @at-root #{&}__imprint {
+  &__imprint {
     @include display(flex);
     @include align-items(center);
     @include justify-content(center);
@@ -14,7 +14,7 @@ $header-imprint-background-colour: desaturate(darken($colour-primary, 20%), 30%)
     color: $header-imprint-colour;
     padding: 1em 0;
 
-    @at-root #{&}--bg-image {
+    &--bg-image {
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -22,12 +22,12 @@ $header-imprint-background-colour: desaturate(darken($colour-primary, 20%), 30%)
     }
   }
 
-  @at-root #{&}__title {
+  &__title {
     font-weight: 100;
     margin: 0;
   }
 
-  @at-root #{&}__title-link {
+  &__title-link {
     color: $header-imprint-colour;
     text-decoration: none;
 
@@ -37,7 +37,7 @@ $header-imprint-background-colour: desaturate(darken($colour-primary, 20%), 30%)
     }
   }
 
-  @at-root #{&}__navigation {
+  &__navigation {
     margin: .5em 0;
 
     .navigation {

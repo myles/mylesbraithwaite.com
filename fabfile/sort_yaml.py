@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-
-from collections import OrderedDict
-from os.path import dirname, realpath, join
+"""Fabric Sort YAML Task."""
+from os.path import join
 
 import yaml
 from fabric.api import env, task
 
 
 def sort_yaml_file(yaml_file):
+    """Quick function to sort a YAML document."""
     with open(yaml_file, 'r') as fobj:
         raw = fobj.read()
         data = yaml.load(raw)
@@ -17,6 +17,7 @@ def sort_yaml_file(yaml_file):
 
 @task(default=True)
 def sort_yaml():
+    """Sort some YAML data files."""
     data_dir = join(env.root_dir, 'source/_data')
 
     # chdir(data_dir)

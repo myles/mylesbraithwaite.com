@@ -1,9 +1,9 @@
 .archive {
-  @at-root #{&}__title {}
+  // &__title {}
 
-  @at-root #{&}__group-title {}
+  // &__group-title {}
 
-  @at-root #{&}__link {
+  &__link {
     display: block;
     text-decoration: none;
 
@@ -12,31 +12,31 @@
     }
   }
 
-  @at-root #{&}__item {
+  &__item {
     line-height: $font-size-heading-three;
     margin-bottom: $spacer-y;
     padding: $spacer 0;
     vertical-align: middle;
 
-    @at-root #{&}-title,
-             #{&}-meta {
+    &-title,
+             &-meta {
       display: block;
       margin-bottom: 0;
       margin-top: 0;
       vertical-align: middle;
     }
 
-    @at-root #{&}-meta {
+    &-meta {
       @include span-columns(2);
       text-align: right;
     }
 
-    @at-root #{&}-title {
+    &-title {
       @extend %heading-three;
       @include span-columns(10);
     }
 
-    @at-root #{&}-icon {
+    &-icon {
       @include size(1em);
 
       vertical-align: middle;

@@ -1,18 +1,13 @@
 .page {
   min-height: 90vh;
 
-  @at-root #{&}__header {
+  &__header,
+  &__content {
+    margin: 1rem 2rem;
+  }
+
+  &__header {
     border-bottom: 1px solid lighten($colour-cape-code, 60%);
     margin-bottom: $spacer-x;
   }
-
-  @at-root #{&}__header,
-           #{&}__content {
-    @include media(min-width $large-screen) {
-      @include span-columns(8);
-      @include shift(2);
-    }
-  }
-
-  @at-root #{&}__title {}
 }

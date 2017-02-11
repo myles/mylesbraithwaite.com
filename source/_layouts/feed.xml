@@ -10,19 +10,19 @@ layout: null
 		<title>{{ site.title | xml_escape }}</title>
 		{% endif %}
 
-		{% if page.description %}
-		<description>{{ page.description | xml_escape }}</description>
+		{% if page.subtitle %}
+		<description>{{ page.subtitle | xml_escape }}</description>
 		{% else %}
-		<description>{{ site.description | xml_escape }}</description>
+		<description>{{ site.subtitle | xml_escape }}</description>
 		{% endif %}
 
     {% if page.link %}
-    <link>{{ page.link | xml_escape }}</link>
+    <link>{{ page.link | prepend: site.baseurl | prepend: site.url | xml_escape }}</link>
     {% else %}
 		<link>{{ site.baseurl | prepend: site.url | xml_escape }}/</link>
     {% endif %}
 
-		<atom:link href="{{ page.url | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
+		<atom:link href="{{ page.url | replace:'index.xml','' | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
 
 		<pubDate>{{ site.time | date_to_rfc822 | xml_escape }}</pubDate>
 		<lastBuildDate>{{ site.time | date_to_rfc822 | xml_escape }}</lastBuildDate>

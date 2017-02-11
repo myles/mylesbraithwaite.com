@@ -25,5 +25,14 @@ piwik:
 # Google Analytics Settings
 google_analytics_tacking_code: 'UA-1642439-2'
 
+# Search Engine Settings
+google_verify: wXrllbKtdZfN1RaZfZW8K3ZPq0Iaf0LEP91x7DteBqI
+bing_verify: A46832B420EF0C2C771BA8538C0B2B38
+yandex_verify: 80d31d8e9c5e56d9
+
+# webmention Settings
+pingback: https://webmention.io/mylesbraithwaite.com/xmlrpc
+webmention: https://webmention.io/mylesbraithwaite.com/webmention
+
 # rsync Settings
 rsync: myles@bear.mylesbraithwaite.com:/srv/www/mylesbraithwaite.com/www/html/

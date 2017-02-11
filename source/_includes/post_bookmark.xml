@@ -27,4 +27,4 @@
 {% endif %}
 {% endcapture %}
 
-<description>{{ description | xml_escape }}{% include c_feed_entry_footer.xml post=post %}</description>
+<description>{{ description | xml_escape }}{% capture footer %}{% include c_feed_entry_footer.html post=post %}{% endcapture %}{{ footer | xml_escape }}</description>

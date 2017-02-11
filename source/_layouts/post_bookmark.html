@@ -2,10 +2,10 @@
 layout: post
 ---
 
-<div class="post post--bookmark">
+<div class="post post--bookmark h-entry">
     {% include c_post_header.html post=page %}
 
-    <section class="post__content">
+    <section class="post__content e-content">
         {% if page.quote %}
         <blockquote class="blockquote" cite="{{ page.bookmark.url }}">
             {{ content | improve }}
