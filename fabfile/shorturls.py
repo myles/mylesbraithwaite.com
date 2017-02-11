@@ -42,11 +42,13 @@ def add(post_path):
     post_url = env.tpl_post_url.format(date=date_obj.strftime('%Y/%j'),
                                        slug=m.group('slug'))
 
-    with codecs.open(join(env.root_dir, post_path), 'r', 'utf-8') as fobj:
+    with codecs.open(join(env.root_dir,
+                          post_path), 'r', 'utf-8') as fobj:
         post = frontmatter.loads(fobj.read())
 
     if post.get('shorturl'):
-        abort('Post already has a short url: {shorturl}.'.format(**post))
+        abort('Post already has a short url: '
+              '{shorturl}.'.format(**post))
 
     meta = post.to_dict()
     content = meta['content']
@@ -54,7 +56,8 @@ def add(post_path):
 
     meta['shorturl'] = shorturl(post_url)
 
-    with codecs.open(join(env.root_dir, post_path), 'w', 'utf-8') as fobj:
+    with codecs.open(join(env.root_dir, post_path), 'w',
+                     'utf-8') as fobj:
         new_post = frontmatter.Post(content, **meta)
         frontmatter.dump(new_post, fobj)
 

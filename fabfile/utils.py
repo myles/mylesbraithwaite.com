@@ -41,7 +41,8 @@ def post_list():
 
     for post_file in post_files:
         post = frontmatter.load(post_file)
-        post['file_path'] = post_file.replace(posts_dir, './source/_posts')
+        post['file_path'] = post_file.replace(posts_dir,
+                                              './source/_posts')
         post_list.append(post)
 
     return post_list

@@ -12,7 +12,8 @@ def sort_yaml_file(yaml_file):
         raw = fobj.read()
         data = yaml.load(raw)
 
-    return yaml.dump(data, default_flow_style=False, explicit_start=True)
+    return yaml.dump(data, default_flow_style=False,
+                     explicit_start=True)
 
 
 @task(default=True)
@@ -23,7 +24,8 @@ def sort_yaml():
     # chdir(data_dir)
     # yaml_files = iglob('*.yml')
 
-    yaml_files = [join(data_dir, 'tags.yml'), join(data_dir, 'navigation.yml'),
+    yaml_files = [join(data_dir, 'tags.yml'), join(data_dir,
+                                                   'navigation.yml'),
                   join(data_dir, 'categories.yml')]
 
     for yaml_file in yaml_files:

@@ -14,7 +14,8 @@ def push():
         'exclude': '".DS_Store"'
     }
 
-    local('aws s3 sync {local} {remote} --exclude {exclude}'.format(**config))
+    local('aws s3 sync {local} {remote} '
+          '--exclude {exclude}'.format(**config))
 
 
 @task
@@ -26,4 +27,5 @@ def pull():
         'exclude': '".DS_Store"'
     }
 
-    local('aws s3 sync {local} {remote} --exclude {exclude}'.format(**config))
+    local('aws s3 sync {local} {remote} '
+          '--exclude {exclude}'.format(**config))

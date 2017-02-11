@@ -37,5 +37,6 @@ def build(environment='stag'):
 def serve():
     """Serve your site locally."""
     jekyll('serve', 'watch', 'drafts', 'future', 'unpublished',
-           config=','.join([env.config_base_file, env.config_local_file]),
+           config=','.join([env.config_base_file,
+                            env.config_local_file]),
            limit_posts=50)
