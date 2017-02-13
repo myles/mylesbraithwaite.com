@@ -1,0 +1,33 @@
+---
+layout: base
+---
+
+<div class="sg-comp">
+    <div class="page__header sg-comp__header">
+        <h2 class="sg-comp__title">{{ page.title }}</h2>
+        <dl class="sg-comp__meta">
+            {% if page.usage %}
+            <dt class="sg-comp__term sg-comp__term--usage">Usage</dt>
+            <dd class="sg-comp__definition sg-comp__definition--usage">{{ page.usage }}</dd>
+            {% endif %}
+
+            {% if page.include %}
+            <dt class="sg-comp__term sg-comp__term--include">Include template</dt>
+            <dd class="sg-comp__definition sg-comp__definition--include"><a href="https://github.com/myles/mylesbraithwaite.com/blob/master/source/_includes/{{ page.include }}">source/_includes/{{ page.include }}</a></dd>
+            {% endif %}
+
+            {% if page.scss %}
+            <dt class="sg-comp__term sg-comp__term--scss">SCSS parital</dt>
+            <dd class="sg-comp__definition sg-comp__definition--scss"><a href="https://github.com/myles/mylesbraithwaite.com/blob/master/source/_assets/scss/components/{{ page.scss }}">source/_assets/scss/components/{{ page.scss }}</a></dd>
+            {% endif %}
+        </dl>
+    </div>
+    <div class="page__content sg-comp__content">
+        <div class="sg-comp__output">
+            {{ content }}
+        </div>
+        <div class="sg-comp__code">
+            {% highlight html %}{{ content }}{% endhighlight %}
+        </div>
+    </div>
+</div>

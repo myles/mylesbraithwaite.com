@@ -113,7 +113,13 @@ defaults:
       path: _wiki
       type: wiki
     values:
-      layout: wiki
+      layout: page_wiki
+
+  - scope:
+      path: _style
+      type: style
+    values:
+      layout: page_style
 
 # HTML Compression
 compress_html:

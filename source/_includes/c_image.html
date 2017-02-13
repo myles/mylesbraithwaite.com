@@ -3,7 +3,13 @@
         {% picture {{ include.src }} alt="{{ include.alt | improve }}" data-downloadable="true" class="responsive-image__image" %}
 
         {% if include.caption %}
-        <figcaption class="responsive-image__caption">{{ include.caption }}</figcaption>
+        <figcaption class="responsive-image__caption">
+            {% if include.caption_link %}
+            <a href="{{ include.caption_link }}" {% if include.caption_title %}title="{{ include.caption_title }}"{% endif %}>{{ include.caption }}</a>
+            {% else %}
+            {{ include.caption }}
+            {% endif %}
+        </figcaption>
         {% endif %}
     </div>
 </figure>
