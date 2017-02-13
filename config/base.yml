@@ -46,6 +46,10 @@ paginate_path: /page:num/
 # Collections
 # See: <https://jekyllrb.com/docs/collections/>
 collections:
+  style:
+    output: true
+    permalink: /style/:path/
+
   pages:
     output: true
     permalink: /:path/

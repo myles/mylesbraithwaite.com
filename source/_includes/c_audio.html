@@ -1,0 +1,5 @@
+<audio class="responsive-audio" controls="controls">
+    {% for source in include.sources %}
+    <source src="{{ source.url | prepend: site.upload_url }}" {% if source.type %}type="{{ source.type }}"{% endif %}>
+    {% endfor %}
+</audio>

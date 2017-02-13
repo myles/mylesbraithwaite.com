@@ -1,0 +1,46 @@
+.sg {
+  &__component {
+    background-color: $colour-white;
+    border: 1px solid $colour-grey-lighter;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+}
+
+.sg-comp {
+  &__header {
+    border-bottom: 1px solid $colour-grey-lighter;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+  }
+
+  &__title {
+    margin: 0;
+    padding-bottom: .5rem;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__term {
+    flex-basis: 20%;
+    padding-right: .5rem;
+  }
+
+  &__definition {
+    flex-basis: 80%;
+    padding-left: .5rem;
+  }
+
+  &__code {
+    display: none;
+  }
+}

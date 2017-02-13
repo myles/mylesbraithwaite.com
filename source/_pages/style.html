@@ -1,0 +1,40 @@
+---
+layout: page
+title: Living Style Guide
+page_css_class: style
+---
+
+<div class="sg">
+    {% for comp in site.style %}
+    <div class="sg__component sg-comp">
+        <div class="sg-comp__header">
+            <h2 class="sg-comp__title">{{ comp.title }}</h2>
+            <dl class="sg-comp__meta">
+                {% if comp.usage %}
+                <dt class="sg-comp__term sg-comp__term--usage">Usage</dt>
+                <dd class="sg-comp__definition sg-comp__definition--usage">{{ comp.usage }}</dd>
+                {% endif %}
+
+                {% if comp.include %}
+                <dt class="sg-comp__term sg-comp__term--include">Include template</dt>
+                <dd class="sg-comp__definition sg-comp__definition--include"><a href="https://github.com/myles/mylesbraithwaite.com/blob/master/source/_includes/{{ comp.include }}">source/_includes/{{ comp.include }}</a></dd>
+                {% endif %}
+
+                {% if comp.scss %}
+                <dt class="sg-comp__term sg-comp__term--scss">SCSS parital</dt>
+                <dd class="sg-comp__definition sg-comp__definition--scss"><a href="https://github.com/myles/mylesbraithwaite.com/blob/master/source/_assets/scss/components/{{ comp.scss }}">source/_assets/scss/components/{{ comp.scss }}</a></dd>
+                {% endif %}
+            </dl>
+        </div>
+        <div class="sg-comp__content">
+            <div class="sg-comp__output">
+                {{ comp.output }}
+            </div>
+            <div class="sg-comp__code">
+                {% highlight html %}{{ comp.output }}{% endhighlight %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+</div>
