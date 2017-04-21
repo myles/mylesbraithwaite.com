@@ -1,6 +1,4 @@
 ---
-architecture:
-  name: Architecture
 1password:
   name: 1Password
 adam-savage:
@@ -9,6 +7,8 @@ android:
   name: Android
 apple:
   name: Apple
+architecture:
+  name: Architecture
 art:
   name: Art
 aws:
@@ -35,6 +35,13 @@ brutal-design:
   wikipedia: https://en.wikipedia.org/wiki/Brutalist_architecture
 btsync:
   name: BtSync
+calpe:
+  location:
+    lat: 38.645000000000003
+    lon: 0.044166999999999998
+  name: Calpe
+  parent: spain
+  title: Calpe, Spain
 canada:
   name: Canada
 casl:
@@ -274,6 +281,8 @@ snippets:
   name: Snippets
 snowboarding:
   name: Snowboarding
+spain:
+  name: Spain
 speaker-notes:
   name: Speaker Notes
 ssl:
@@ -293,15 +302,6 @@ toronto:
   name: Toronto
   parent: ontario
   title: Toronto, Ontario, Canada
-spain:
-  name: Spain
-calpe:
-  location:
-    lat: 38.645
-    lon: 0.044167
-  name: Calpe
-  parent: spain
-  title: Calpe, Spain
 turkey:
   name: Turkey
 twitter:
