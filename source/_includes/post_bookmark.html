@@ -27,6 +27,8 @@
             </p>
             {% endif %}
         </blockquote>
+        {% elsif post.excerpt %}
+        {{ post.excerpt }}
         {% else %}
         {{ post.content }}
         {% endif %}

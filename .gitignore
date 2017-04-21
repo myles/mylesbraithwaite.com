@@ -16,3 +16,8 @@
 # Python Stuff
 *.pyc
 /vendor/virtualenv/
+
+# macOS Stuff
+.DS_Store
+.Ulysses-Group.plist
+

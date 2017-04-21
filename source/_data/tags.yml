@@ -1,4 +1,6 @@
 ---
+architecture:
+  name: Architecture
 1password:
   name: 1Password
 adam-savage:
@@ -291,6 +293,15 @@ toronto:
   name: Toronto
   parent: ontario
   title: Toronto, Ontario, Canada
+spain:
+  name: Spain
+calpe:
+  location:
+    lat: 38.645
+    lon: 0.044167
+  name: Calpe
+  parent: spain
+  title: Calpe, Spain
 turkey:
   name: Turkey
 twitter:

@@ -3,6 +3,8 @@
 source: ./source/
 destination: ./build/
 
+excerpt_separator: <!--more-->
+
 # Rubygems
 gems:
   - jekyll-watch
