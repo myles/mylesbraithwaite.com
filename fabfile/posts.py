@@ -15,14 +15,12 @@ slugify = Slugify(to_lower=True)
 
 
 @task
-def new(post_type='simple'):
+def new(post_type='simple', timestamp=datetime.now()):
     """Create a new Jekyll post."""
     if post_type not in ['simple', 'list', 'bookmark', 'article',
                          'quote']:
         raise error("The post type, '{0}', "
                     "isn't supported.".format(post_type))
-
-    now = datetime.now()
 
     meta = {}
     meta['title'] = prompt('Title')
@@ -30,7 +28,7 @@ def new(post_type='simple'):
     meta['slug'] = prompt('Slug')
     meta['layout'] = 'post_{0}'.format(post_type)
     meta['category'] = post_type
-    meta['date'] = now.isoformat()
+    meta['date'] = timestamp.isoformat()
 
     if meta['slug']:
         meta['slug'] = slugify(meta['slug'])
@@ -46,11 +44,11 @@ def new(post_type='simple'):
 
     post = Post(content, **meta)
 
-    post_path = env.tpl_post_path.format(date=now.strftime('%Y-%m-%d'),
+    post_path = env.tpl_post_path.format(date=timestamp.strftime('%Y-%m-%d'),
                                          type=post_type,
                                          slug=meta['slug'])
 
-    upload_path = env.tpl_upload_path.format(date=now.strftime('%Y/%j'),
+    upload_path = env.tpl_upload_path.format(date=timestamp.strftime('%Y/%j'),
                                              slug=meta['slug'])
 
     if exists(join(env.root_dir, post_path)):
