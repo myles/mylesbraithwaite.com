@@ -1,0 +1,27 @@
+---
+layout: null
+---
+{
+  "version": "https://jsonfeed.org/version/1",
+  {% if page.title %}
+  "title": {{ page.title | jsonify }},
+  {% else %}
+  "title": {{ site.title | jsonify }},
+  {% endif %}
+
+  "home_page_url": {{ page.link | prepend: site.baseurl | prepend: site.url | jsonify }},
+  "feed_url": {{ page.url | prepend: site.baseurl | prepend: site.url | jsonify }},
+
+  "icon": "{% asset_path favicon144x144.png %}",
+  "favicon": "{% asset_path favicon96x96.png %}",
+
+  "author": {
+    "name": {{ site.data.author.name | jsonify }},
+    "url": {{ site.data.author.homepage | jsonify }}
+  },
+
+  "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL — https://jsonfeed.org/feed.json — and add it your reader.",
+  "items": [
+    {{ content }}
+  ]
+}

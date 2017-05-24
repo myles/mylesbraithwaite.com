@@ -2,7 +2,7 @@
 layout: feed
 skip_index: true
 permalink: /feeds/list/index.xml
-list: /list/
+link: /list/
 ---
 {% for post in site.categories.list limit:site.paginate %}
 <item>

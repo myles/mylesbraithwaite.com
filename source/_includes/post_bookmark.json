@@ -1,0 +1,35 @@
+"title": {{ post.title | jsonify }},
+"external_url": {{ post.bookmark.url | jsonify }},
+
+{% if post.feature_image %}
+"image": {{ post.feature_image | prepend: post.url | prepend: site.upload_url | jsonify }},
+{% endif %}
+
+{% capture description %}
+{% if page.quote %}
+<blockquote class="blockquote" cite="{{ page.bookmark.url }}">
+  {{ post.content | improve }}
+
+  {% if page.bookmark.title and page.bookmark.author %}
+  <p class="blockquote__footer">
+    <cite>{{ page.bookmark.title | improve }}</cite> by
+    <a href="{{ page.bookmark.url }}">{{ page.bookmark.author | improve }}</a>.
+  </p>
+  {% elsif page.bookmark.title %}
+  <p class="blockquote__footer">
+    <cite>
+      <a href="{{ page.bookmark.url }}">{{ page.bookmark.title | improve }}</a>
+    </cite>
+  </p>
+  {% elsif page.bookmark.author %}
+  <p class="blockquote__footer">
+    <a href="{{ page.bookmark.url }}">{{ page.bookmark.atuhor | improve }}</a>
+  </p>
+  {% endif %}
+</blockquote>
+{% else %}
+  {{ post.content | improve }}
+{% endif %}
+{% endcapture %}
+
+"content_html": {{ description | jsonify }},

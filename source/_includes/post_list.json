@@ -1,0 +1,5 @@
+"title": {{ post.title | jsonify }},
+"content_html": {{ post.content | jsonify }},
+{% if post.feature_image %}
+"image": {{ post.feature_image | prepend: post.url | prepend: site.upload_url | jsonify }},
+{% endif %}
