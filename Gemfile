@@ -15,7 +15,7 @@ gem 'jekyll', '~> 3.4.0'
 
 group :jekyll_plugins do
   gem 'jekyll-watch'
-  gem 'jekyll-assets'
+  gem 'jekyll-assets', '>= 0.4.1'
   gem 'jekyll-sitemap'
   gem 'jekyll-archives'
   gem 'jekyll-paginate'
