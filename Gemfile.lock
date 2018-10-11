@@ -51,11 +51,11 @@ GEM
     mercenary (0.3.6)
     mini_magick (3.8.1)
       subexec (~> 0.2.1)
-    mini_portile2 (2.1.0)
+    mini_portile2 (2.3.0)
     multi_json (1.12.1)
     netrc (0.11.0)
-    nokogiri (1.7.0.1)
-      mini_portile2 (~> 2.1.0)
+    nokogiri (1.8.5)
+      mini_portile2 (~> 2.3.0)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -99,11 +99,11 @@ DEPENDENCIES
   jekyll-watch
   mini_magick
   netrc
-  nokogiri
+  nokogiri (>= 1.8.5)
   redcarpet
   sass
   uglifier
   yui-compressor
 
 BUNDLED WITH
-   1.13.7
+   1.16.6
